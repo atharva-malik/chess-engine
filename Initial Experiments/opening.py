@@ -19,10 +19,7 @@ while True:
         print(move)
     else:
         print("NOOOOO")
-        print(openings[0])
+        print(("pos " + pos + " -")[0:-6])
         break
-    print(board)
-    inp = input("Enter Your Move: ")
-    board.push_san(inp)
-
+    
 print(board.fen())
