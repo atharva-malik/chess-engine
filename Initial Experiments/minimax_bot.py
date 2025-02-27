@@ -1,4 +1,4 @@
-import chess, json, random
+import chess, json, random, time
 
 class Bot:
     def __init__(self, board=chess.Board(), colour="w", turn=0):
@@ -32,11 +32,41 @@ class Bot:
     def getFenForOpening(self):
         return self.board.fen()[0:-4]
 
+    def getBestMove(self, depth=10, board=chess.Board(), colour="w"):
+        if colour == "w":
+            best_eval = float('-inf')
+            best_move = None
+            for move in board.legal_moves:
+                board.push(move)
+                evaluation = self.minimax(depth, -9999, 9999, True, board)
+                board.pop()
+                if evaluation > best_eval:
+                    best_eval = evaluation
+                    best_move = move
+        #TODO: This should not be used yet, see if it works later
+        else:
+            best_eval = float('inf')
+            best_move = None
+            for move in board.legal_moves:
+                board.push(move)
+                evaluation = self.minimax(depth, -9999, 9999, False, board)
+                board.pop()
+                if evaluation < best_eval:
+                    best_eval = evaluation
+                    best_move = move
+        return best_move
+
     def minimax(self, depth, alpha, beta, isMaximizing, board=chess.Board()):
-        if depth == 0:
-            return self.evaluateMiddleGame()
-        elif board.is_checkmate():
-            return None
+        if board.is_checkmate():
+            if board.outcome().winner == chess.WHITE:
+                return 9999
+            elif board.outcome().winner == chess.BLACK:
+                return -9999
+            else:
+                return 0
+        elif depth == 0:
+            #TODO: Test what the heck is wrong with this
+            return self.evaluateMiddleGame(board)
         
         if isMaximizing:
             maxEval = -9999
@@ -62,17 +92,14 @@ class Bot:
             return minEval
         
     
-    def evaluateMiddleGame(self, perspective=1):
+    def evaluateMiddleGame(self, board):
         """The evaluation function for the middle game
-
-        Args:
-            perspective (int, optional): A positive would mean from white's perspective, negative would mean from. Defaults to 1.
 
         Returns:
             float: the evaluation of the position
         """
         #? Going to start with a simple evaluation where it values piece value over anything else
-        pieces = self.getNumberOfPieces()
+        pieces = self.getNumberOfPieces(board)
         whiteEval = 0
         blackEval = 0
         
@@ -88,15 +115,25 @@ class Bot:
         blackEval += pieces["r"] * 5
         blackEval += pieces["q"] * 9
         
-        return (whiteEval - blackEval) * perspective
+        return (whiteEval - blackEval)
 
-    def getNumberOfPieces(self):
+    def getNumberOfPieces(self, board):
         pieces = {"r": 0, "n": 0, "b": 0, "q": 0, "k": 0, "p": 0, "R": 0, "N": 0, "B": 0, "Q": 0, "K": 0, "P": 0}
-        board = str(self.board)
-        for i in board:
+        for i in str(board):
             if i in pieces.keys():
                 pieces[i] += 1
         return pieces
 
     def __str__(self):
-        return str(self.board)
+        symbols = {
+            'r': '♜', 'n': '♞', 'b': '♝', 'q': '♛', 'k': '♚', 'p': '♟',
+            'R': '♖', 'N': '♘', 'B': '♗', 'Q': '♕', 'K': '♔', 'P': '♙'
+        }
+        board_str = str(self.board)
+        for piece, symbol in symbols.items():
+            board_str = board_str.replace(piece, symbol)
+        return board_str
+
+
+if __name__ == "__main__":
+    import interface
