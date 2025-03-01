@@ -6,33 +6,27 @@ class Bot:
         self.colour = colour #* Set the colour, w for white, b for black
         self.turn = turn #* Set the turn, 0 for white, 1 for black
         self.gameStage = "O" #* Set the game stage, O for opening, M for middle game, E for end game
+        self.openingBook = json.load(fp=open("Initial Experiments\\OpeningBook\\book.json", "r"))
     
-    def getMove(self):
+    def getBestMove(self, depth=10, board=chess.Board(), colour=None):
+        colour = self.colour if colour == None else colour
         if self.gameStage == "O":
             return self.openingMove()
         elif self.gameStage == "M":
-            return self.middleGameMove()
-        elif self.gameStage == "E":
-            return self.endGameMove()
+            return self.minimax(depth, board, colour)
     
     def openingMove(self):
-        moves = json.load(fp=open("Initial Experiments\\OpeningBook\\book.json", "r"))
+        moves = self.openingBook
         try:
             return random.choice(moves[self.getFenForOpening()])
         except KeyError:
             self.gameStage = "M"
             return self.middleGameMove()
-    
-    def middleGameMove(self):
-        pass
-
-    def endGameMove(self):
-        pass
 
     def getFenForOpening(self):
         return self.board.fen()[0:-4]
 
-    def getBestMove(self, depth=10, board=chess.Board(), colour=None):
+    def middleGameMove(self, depth=10, board=chess.Board(), colour=None):
         colour = self.colour if colour == None else colour
         if colour == "w":
             best_eval = float('-inf')
@@ -45,7 +39,6 @@ class Bot:
                 if evaluation > best_eval:
                     best_eval = evaluation
                     best_move = move
-        #TODO: This should not be used yet, see if it works later
         else:
             best_eval = float('inf')
             best_move = None
@@ -94,8 +87,7 @@ class Bot:
                 if beta <= alpha:
                     break
             return minEval
-        
-    
+
     def evaluateMiddleGame(self, board):
         """The evaluation function for the middle game
 
@@ -234,9 +226,9 @@ class Bot:
         whiteEval = 0
         blackEval = 0
         
-        for col in boardList:
-            for row in col:
-                pass
+        # for col in boardList:
+        #     for row in col:
+        #         pass
         
         whiteEval += pieces["P"] * 100
         whiteEval += pieces["N"] * 300
@@ -264,6 +256,7 @@ class Bot:
             scored_moves.append((move, score))
         return [move for move, score in sorted(scored_moves, key=lambda x: x[1], reverse=True)]
 
+    #! Probably going to deprecate this function
     def getNumberOfPieces(self, board):
         pieces = {"r": 0, "n": 0, "b": 0, "q": 0, "k": 0, "p": 0, "R": 0, "N": 0, "B": 0, "Q": 0, "K": 0, "P": 0}
         for i in str(board):
