@@ -13,24 +13,26 @@ class Bot:
     
     def getBestMove(self, depth=10, board=chess.Board(), colour=None):
         colour = self.colour if colour == None else colour
+        print("Starting Timing")
+        time_start = time()
         if self.gameStage == "O":
-            return self.openingMove()
+            return self.openingMove(depth, board, colour)
         elif self.gameStage == "M":
-            return self.minimax(depth, board, colour)
+            print("Time taken to realise not opening: ", time() - time_start)
+            return self.middleGameMove(depth, board, colour)
     
-    def openingMove(self):
+    def openingMove(self, depth=10, board=chess.Board(), colour=None):
         moves = self.openingBook
         try:
             return choice(moves[self.getFenForOpening()])
         except KeyError:
             self.gameStage = "M"
-            return self.middleGameMove()
+            return self.middleGameMove(depth, board, colour)
 
     def getFenForOpening(self):
         return self.board.fen()[0:-4]
 
     def middleGameMove(self, depth=10, board=chess.Board(), colour=None):
-        start = time()
         colour = self.colour if colour == None else colour
         if colour == "w":
             best_eval = float('-inf')
@@ -38,7 +40,10 @@ class Bot:
             moves = self.orderMoves(list(board.legal_moves), board)
             for move in moves:
                 board.push(move)
+                print("Timing Minimax")
+                time_start = time()
                 evaluation = self.minimax(depth, -9999, 9999, False, board)
+                print("Timing Minimax Done", time() - time_start)
                 board.pop()
                 if evaluation > best_eval:
                     best_eval = evaluation
@@ -54,18 +59,16 @@ class Bot:
                 if evaluation < best_eval:
                     best_eval = evaluation
                     best_move = move
-        print(time() - start)
-        quit()
-        return best_move
+        return best_move.uci()
 
     def minimax(self, depth, alpha, beta, isMaximizing, board=chess.Board()):
         if board.is_checkmate():
             if board.outcome().winner == chess.WHITE:
                 return 9999
-            elif board.outcome().winner == chess.BLACK:
-                return -9999
             else:
-                return 0
+                return -9999
+        elif board.is_stalemate():
+            return 0
         elif depth == 0:
             return self.evaluateThePosition(board)
         

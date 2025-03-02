@@ -1,2 +1,4 @@
 chess
 psutil
+cython
+setuptools

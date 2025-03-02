@@ -1,43 +1,64 @@
-import chess
+import chess, psutil
 from json import load
 from random import choice
 from time import time
+from os import getpid
 
-class Bot:
-    def __init__(self, board=chess.Board(), colour="w", turn=0):
+#! What's New?
+# Going to use Cython to speed up the minimax algorithm
+
+DEF_FANCY_INT = 9999
+
+cdef class Bot:
+    cdef object board
+    cdef str colour
+    cdef int turn
+    cdef str gameStage
+    cdef dict openingBook
+
+    def __cinit__(self, board=chess.Board(), colour="w", turn=0):
         self.board = board #* Initialise the board
         self.colour = colour #* Set the colour, w for white, b for black
         self.turn = turn #* Set the turn, 0 for white, 1 for black
         self.gameStage = "O" #* Set the game stage, O for opening, M for middle game, E for end game
-        self.openingBook = load(fp=open("Initial Experiments\\OpeningBook\\book.json", "r"))
-    
-    def getBestMove(self, depth=10, board=chess.Board(), colour=None):
+        self.openingBook = load(fp=open("Initial Experiments\\OpeningBook\\book.json", "r"))        
+
+    cpdef str getBestMove(self, int depth=10, object board=chess.Board(), str colour=None):
         colour = self.colour if colour == None else colour
+        time_start = time()
         if self.gameStage == "O":
-            return self.openingMove()
+            return self.openingMove(depth, board, colour)
         elif self.gameStage == "M":
-            return self.minimax(depth, board, colour)
+            return self.middleGameMove(depth, board, colour)
     
-    def openingMove(self):
+    cdef str openingMove(self, int depth, object board, str colour):
+        cdef dict moves
         moves = self.openingBook
         try:
             return choice(moves[self.getFenForOpening()])
         except KeyError:
             self.gameStage = "M"
-            return self.middleGameMove()
+            return self.middleGameMove(depth, board, colour)
 
-    def getFenForOpening(self):
+    cdef str getFenForOpening(self):
         return self.board.fen()[0:-4]
 
-    def middleGameMove(self, depth=10, board=chess.Board(), colour=None):
-        start = time()
+    cdef str middleGameMove(self, int depth=10, object board=chess.Board(), str colour=None):
+        cdef float best_eval
+        cdef object best_move
+        cdef list moves
+        cdef float evaluation
+        cdef object move
+
         colour = self.colour if colour == None else colour
+
         if colour == "w":
             best_eval = float('-inf')
             best_move = None
             moves = self.orderMoves(list(board.legal_moves), board)
             for move in moves:
                 board.push(move)
+                time_start = time()
                 evaluation = self.minimax(depth, -9999, 9999, False, board)
                 board.pop()
                 if evaluation > best_eval:
@@ -54,27 +75,59 @@ class Bot:
                 if evaluation < best_eval:
                     best_eval = evaluation
                     best_move = move
-        print(time() - start)
-        quit()
-        return best_move
+        return best_move.uci()
 
-    def minimax(self, depth, alpha, beta, isMaximizing, board=chess.Board()):
+    # cdef float minimax(self, int depth, float alpha, float beta, bint maximizing_player, object board):
+    #     if board.is_checkmate():
+    #         if board.outcome().winner == chess.WHITE:
+    #             return 9999
+    #         else:
+    #             return -9999
+    #     elif depth == 0:
+    #         return self.evaluateThePosition(board)
+
+    #     if maximizing_player:
+    #         value = -9999
+    #         for child in self.orderMoves(list(board.legal_moves), board):
+    #             board.push(child)
+    #             value = max(value, self.minimax(depth - 1, alpha, beta, False, board))
+    #             board.pop()
+    #             alpha = max(alpha, value)
+    #             if alpha >= beta:
+    #                 break  # Beta cutoff
+    #         return value
+    #     else:
+    #         value = 9999
+    #         for child in self.orderMoves(list(board.legal_moves), board):
+    #             board.push(child)
+    #             value = min(value, self.minimax(depth - 1, alpha, beta, True, board))
+    #             board.pop()
+    #             beta = min(beta, value)
+    #             if alpha >= beta:
+    #                 break  # Alpha cutoff
+    #         return value
+
+    cpdef float minimax(self, int depth, float alpha, float beta, bint isMaximizing, board): # **cdef here - Correct and more efficient!**
         if board.is_checkmate():
             if board.outcome().winner == chess.WHITE:
-                return 9999
-            elif board.outcome().winner == chess.BLACK:
-                return -9999
+                return DEF_FANCY_INT
             else:
-                return 0
+                return -DEF_FANCY_INT
+        elif board.is_stalemate():
+            return 0
         elif depth == 0:
             return self.evaluateThePosition(board)
-        
+
+        cdef float maxEval, minEval, evaluation
+        cdef move
+        cdef list moves
+
         if isMaximizing:
-            maxEval = -9999
+            maxEval = -DEF_FANCY_INT
             moves = self.orderMoves(list(board.legal_moves), board)
             for move in moves:
                 board.push(move)
-                evaluation = self.minimax(depth - 1, alpha, beta, False, board)
+                evaluation = self.minimax(depth - 1, alpha, beta, False, board) # Recursive call to cdef minimax - FAST
                 board.pop()
                 maxEval = max(maxEval, evaluation)
                 alpha = max(alpha, evaluation)
@@ -82,11 +135,12 @@ class Bot:
                     break
             return maxEval
         else:
-            minEval = 9999
+            # ... (rest of the minimizing part, same logic but using cdef minimax for recursion)
+            minEval = DEF_FANCY_INT
             moves = self.orderMoves(list(board.legal_moves), board)
             for move in moves:
                 board.push(move)
-                evaluation = self.minimax(depth - 1, alpha, beta, True, board)
+                evaluation = self.minimax(depth - 1, alpha, beta, True, board) # Recursive call to cdef minimax - FAST
                 board.pop()
                 minEval = min(minEval, evaluation)
                 beta = min(beta, evaluation)
@@ -94,7 +148,13 @@ class Bot:
                     break
             return minEval
 
-    def evaluateThePosition(self, board):
+    cpdef float evaluateThePosition(self, board):
+        cdef list w_pawn, b_pawn, w_knight, b_knight, w_bishop, b_bishop, w_rook, b_rook, w_queen, b_queen, w_king_mid, b_king_mid, w_king_end, b_king_end
+        cdef list boardList = self.makeBoardList(board)
+        cdef float evaluation = 0
+        cdef int col = 0
+        cdef int row = 0
+        cdef str piece
         """The evaluation function for the game
 
         Returns:
@@ -226,45 +286,45 @@ class Bot:
         ###-------           End of definitions           -------###
         
         #? Going to start with a simple evaluation where it values piece value over anything else
-        boardList = self.makeBoardList(board)
-        whiteEval = 0
-        blackEval = 0
-        
+
         for col in range(8):
             for row in range(8):
                 piece = boardList[col][row]
                 if piece == " " or piece == ".":
                     continue
                 if piece == "P":
-                    whiteEval += 100 + w_pawn[col][row]
+                    evaluation += 100 + w_pawn[col][row]
                 elif piece == "N":
-                    whiteEval += 300 + w_knight[col][row]
+                    evaluation += 300 + w_knight[col][row]
                 elif piece == "B":
-                    whiteEval += 300 + w_bishop[col][row]
+                    evaluation += 300 + w_bishop[col][row]
                 elif piece == "R":
-                    whiteEval += 500 + w_rook[col][row]
+                    evaluation += 500 + w_rook[col][row]
                 elif piece == "Q":
-                    whiteEval += 900 + w_queen[col][row]
+                    evaluation += 900 + w_queen[col][row]
                 elif piece == "K":
-                    whiteEval += 10000 + w_king_mid[col][row]
+                    evaluation += 10000 + w_king_mid[col][row]
                 elif piece == "p":
-                    blackEval += 100 + b_pawn[col][row]
+                    evaluation -= 100 + b_pawn[col][row]
                 elif piece == "n":
-                    blackEval += 300 + b_knight[col][row]
+                    evaluation -= 300 + b_knight[col][row]
                 elif piece == "b":
-                    blackEval += 300 + b_bishop[col][row]
+                    evaluation -= 300 + b_bishop[col][row]
                 elif piece == "r":
-                    blackEval += 500 + b_rook[col][row]
+                    evaluation -= 500 + b_rook[col][row]
                 elif piece == "q":
-                    blackEval += 900 + b_queen[col][row]
+                    evaluation -= 900 + b_queen[col][row]
                 elif piece == "k":
-                    blackEval += 10000 + b_king_mid[col][row]
+                    evaluation -= 10000 + b_king_mid[col][row]
         
-        return (whiteEval - blackEval)/100
+        return (evaluation)/100
 
-    def orderMoves(self, moves: list, board):
+    cdef list orderMoves(self, list moves, object board):
         # Prioritize captures and checks
-        scored_moves = []
+        cdef list scored_moves = []
+        cdef object move
+        cdef float score
+
         for move in moves:
             score = 0
             if board.is_capture(move):
@@ -274,15 +334,14 @@ class Bot:
             scored_moves.append((move, score))
         return [move for move, score in sorted(scored_moves, key=lambda x: x[1], reverse=True)]
 
-    #! Probably going to deprecate this function
-    def getNumberOfPieces(self, board):
-        pieces = {"r": 0, "n": 0, "b": 0, "q": 0, "k": 0, "p": 0, "R": 0, "N": 0, "B": 0, "Q": 0, "K": 0, "P": 0}
-        for i in str(board):
-            if i in pieces.keys():
-                pieces[i] += 1
-        return pieces
+    cpdef object getBoard(self):
+        return self.board
 
-    def makeBoardList(self, board):
+    cdef list makeBoardList(self, object board):
+        cdef str board_str
+        cdef list board_list
+        cdef list temp
+        cdef str i
         board_str = str(board)
         board_list = []
         temp = board_str.split("\n")
@@ -291,6 +350,11 @@ class Bot:
         return board_list
 
     def __str__(self):
+        cdef dict symbols
+        cdef str board_str
+        cdef str piece
+        cdef str symbol
+
         symbols = {
             'R': '♜', 'N': '♞', 'B': '♝', 'Q': '♛', 'K': '♚', 'P': '♟',
             'r': '♖', 'n': '♘', 'b': '♗', 'q': '♕', 'k': '♔', 'p': '♙'
@@ -301,5 +365,22 @@ class Bot:
         return board_str
 
 
+# def set_process_priority(pid, priority_class):
+#     try:
+#         process = psutil.Process(pid)
+#         process.nice(priority_class)
+
+#     except psutil.NoSuchProcess as e:
+#         raise psutil.NoSuchProcess(f"Process with PID {pid} not found: {e}")
+#     except psutil.AccessDenied as e:
+#         raise psutil.AccessDenied(f"Permission denied to change process priority: {e}")
+#     except ValueError as e:
+#         raise ValueError(f"Invalid priority class: {e}")
+
+# def set_own_priority(priority_class):
+#     pid = getpid()
+#     set_process_priority(pid, priority_class)
+
 if __name__ == "__main__":
+    # set_own_priority(psutil.HIGH_PRIORITY_CLASS)
     import interface
