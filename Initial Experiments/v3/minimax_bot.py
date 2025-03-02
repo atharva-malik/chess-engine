@@ -1,7 +1,10 @@
 import chess
 from json import load
 from random import choice
-from time import time
+
+#! What's New?
+# Better Evaluation!
+#   - It now takes into account the piece positioning!
 
 class Bot:
     def __init__(self, board=chess.Board(), colour="w", turn=0):
@@ -30,7 +33,6 @@ class Bot:
         return self.board.fen()[0:-4]
 
     def middleGameMove(self, depth=10, board=chess.Board(), colour=None):
-        start = time()
         colour = self.colour if colour == None else colour
         if colour == "w":
             best_eval = float('-inf')
@@ -54,8 +56,6 @@ class Bot:
                 if evaluation < best_eval:
                     best_eval = evaluation
                     best_move = move
-        print(time() - start)
-        quit()
         return best_move
 
     def minimax(self, depth, alpha, beta, isMaximizing, board=chess.Board()):

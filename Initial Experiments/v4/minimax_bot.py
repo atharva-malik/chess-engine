@@ -1,7 +1,9 @@
-import chess
+import chess, psutil
 from json import load
 from random import choice
-from time import time
+
+#! What's New?
+# Attempted to improve times by multiprocessing
 
 class Bot:
     def __init__(self, board=chess.Board(), colour="w", turn=0):
@@ -16,7 +18,7 @@ class Bot:
         if self.gameStage == "O":
             return self.openingMove()
         elif self.gameStage == "M":
-            return self.minimax(depth, board, colour)
+            return self.middleGameMove(depth, board, colour)
     
     def openingMove(self):
         moves = self.openingBook
@@ -30,7 +32,6 @@ class Bot:
         return self.board.fen()[0:-4]
 
     def middleGameMove(self, depth=10, board=chess.Board(), colour=None):
-        start = time()
         colour = self.colour if colour == None else colour
         if colour == "w":
             best_eval = float('-inf')
@@ -54,9 +55,7 @@ class Bot:
                 if evaluation < best_eval:
                     best_eval = evaluation
                     best_move = move
-        print(time() - start)
-        quit()
-        return best_move
+        return best_move.uci()
 
     def minimax(self, depth, alpha, beta, isMaximizing, board=chess.Board()):
         if board.is_checkmate():
@@ -301,5 +300,61 @@ class Bot:
         return board_str
 
 
+#? Idea 1: Increase priority of the process
+def set_process_priority(pid, priority_class):
+    """
+    Sets the priority of a process.
+
+    Args:
+        pid (int): The process ID.
+        priority_class (int): The priority class.  Use the psutil constants.
+            Examples:
+                psutil.IDLE_PRIORITY_CLASS
+                psutil.BELOW_NORMAL_PRIORITY_CLASS
+                psutil.NORMAL_PRIORITY_CLASS
+                psutil.ABOVE_NORMAL_PRIORITY_CLASS
+                psutil.HIGH_PRIORITY_CLASS
+                psutil.REALTIME_PRIORITY_CLASS (Use with extreme caution)
+
+    Raises:
+        psutil.NoSuchProcess: If the process with the given PID does not exist.
+        psutil.AccessDenied: If the current user does not have permission to change the process's priority.
+        ValueError: If an invalid priority class is provided.
+    """
+    try:
+        process = psutil.Process(pid)
+        process.nice(priority_class)
+
+    except psutil.NoSuchProcess as e:
+        raise psutil.NoSuchProcess(f"Process with PID {pid} not found: {e}")
+    except psutil.AccessDenied as e:
+        raise psutil.AccessDenied(f"Permission denied to change process priority: {e}")
+    except ValueError as e:
+        raise ValueError(f"Invalid priority class: {e}")
+
+def set_own_priority(priority_class):
+    """
+    Sets the priority of the current process.
+
+    Args:
+        priority_class (int): The priority class.  Use the psutil constants.
+            Examples:
+                psutil.IDLE_PRIORITY_CLASS
+                psutil.BELOW_NORMAL_PRIORITY_CLASS
+                psutil.NORMAL_PRIORITY_CLASS
+                psutil.ABOVE_NORMAL_PRIORITY_CLASS
+                psutil.HIGH_PRIORITY_CLASS
+                psutil.REALTIME_PRIORITY_CLASS (Use with extreme caution)
+
+    Raises:
+        psutil.NoSuchProcess: If the process with the given PID does not exist.
+        psutil.AccessDenied: If the current user does not have permission to change the process's priority.
+        ValueError: If an invalid priority class is provided.
+    """
+    pid = os.getpid()
+    set_process_priority(pid, priority_class)
+
+
 if __name__ == "__main__":
+    set_own_priority(psutil.HIGH_PRIORITY_CLASS)
     import interface
