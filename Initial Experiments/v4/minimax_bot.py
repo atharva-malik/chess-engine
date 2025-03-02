@@ -1,6 +1,7 @@
 import chess, psutil
 from json import load
 from random import choice
+from os import getpid
 
 #! What's New?
 # Attempted to improve times by multiprocessing
@@ -351,9 +352,8 @@ def set_own_priority(priority_class):
         psutil.AccessDenied: If the current user does not have permission to change the process's priority.
         ValueError: If an invalid priority class is provided.
     """
-    pid = os.getpid()
+    pid = getpid()
     set_process_priority(pid, priority_class)
-
 
 if __name__ == "__main__":
     set_own_priority(psutil.HIGH_PRIORITY_CLASS)

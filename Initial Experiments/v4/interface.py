@@ -21,11 +21,11 @@ while True:
     print(bot.evaluateThePosition(bot.board))
     if turn == 0:
         start = time()
-        bot.board.push(bot.middleGameMove(5, bot.board, "w"))
+        bot.board.push_san(bot.middleGameMove(5, bot.board, "w"))
         print("White time taken: ", time() - start)
         turn = 1
     elif turn == 1:
         start = time()
-        bot.board.push(bot.middleGameMove(5, bot.board, "b"))
+        bot.board.push_san(bot.middleGameMove(5, bot.board, "b"))
         print("Black time taken: ", time() - start)
         turn = 0
