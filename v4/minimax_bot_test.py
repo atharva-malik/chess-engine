@@ -1,10 +1,7 @@
-import chess, psutil
+import chess
 from json import load
 from random import choice
-from os import getpid
-
-#! What's New?
-# Attempted to improve times by multiprocessing
+from time import time
 
 class Bot:
     def __init__(self, board=chess.Board(), colour="w", turn=0):
@@ -12,22 +9,22 @@ class Bot:
         self.colour = colour #* Set the colour, w for white, b for black
         self.turn = turn #* Set the turn, 0 for white, 1 for black
         self.gameStage = "O" #* Set the game stage, O for opening, M for middle game, E for end game
-        self.openingBook = load(fp=open("Initial Experiments\\OpeningBook\\book.json", "r"))
+        self.openingBook = load(fp=open("OpeningBook\\book.json", "r"))
     
     def getBestMove(self, depth=10, board=chess.Board(), colour=None):
         colour = self.colour if colour == None else colour
         if self.gameStage == "O":
-            return self.openingMove()
+            return self.openingMove(depth, board, colour)
         elif self.gameStage == "M":
             return self.middleGameMove(depth, board, colour)
     
-    def openingMove(self):
+    def openingMove(self, depth=10, board=chess.Board(), colour=None):
         moves = self.openingBook
         try:
             return choice(moves[self.getFenForOpening()])
         except KeyError:
             self.gameStage = "M"
-            return self.middleGameMove()
+            return self.middleGameMove(depth, board, colour)
 
     def getFenForOpening(self):
         return self.board.fen()[0:-4]
@@ -62,10 +59,10 @@ class Bot:
         if board.is_checkmate():
             if board.outcome().winner == chess.WHITE:
                 return 9999
-            elif board.outcome().winner == chess.BLACK:
-                return -9999
             else:
-                return 0
+                return -9999
+        elif board.is_stalemate():
+            return 0
         elif depth == 0:
             return self.evaluateThePosition(board)
         
@@ -301,60 +298,5 @@ class Bot:
         return board_str
 
 
-#? Idea 1: Increase priority of the process
-def set_process_priority(pid, priority_class):
-    """
-    Sets the priority of a process.
-
-    Args:
-        pid (int): The process ID.
-        priority_class (int): The priority class.  Use the psutil constants.
-            Examples:
-                psutil.IDLE_PRIORITY_CLASS
-                psutil.BELOW_NORMAL_PRIORITY_CLASS
-                psutil.NORMAL_PRIORITY_CLASS
-                psutil.ABOVE_NORMAL_PRIORITY_CLASS
-                psutil.HIGH_PRIORITY_CLASS
-                psutil.REALTIME_PRIORITY_CLASS (Use with extreme caution)
-
-    Raises:
-        psutil.NoSuchProcess: If the process with the given PID does not exist.
-        psutil.AccessDenied: If the current user does not have permission to change the process's priority.
-        ValueError: If an invalid priority class is provided.
-    """
-    try:
-        process = psutil.Process(pid)
-        process.nice(priority_class)
-
-    except psutil.NoSuchProcess as e:
-        raise psutil.NoSuchProcess(f"Process with PID {pid} not found: {e}")
-    except psutil.AccessDenied as e:
-        raise psutil.AccessDenied(f"Permission denied to change process priority: {e}")
-    except ValueError as e:
-        raise ValueError(f"Invalid priority class: {e}")
-
-def set_own_priority(priority_class):
-    """
-    Sets the priority of the current process.
-
-    Args:
-        priority_class (int): The priority class.  Use the psutil constants.
-            Examples:
-                psutil.IDLE_PRIORITY_CLASS
-                psutil.BELOW_NORMAL_PRIORITY_CLASS
-                psutil.NORMAL_PRIORITY_CLASS
-                psutil.ABOVE_NORMAL_PRIORITY_CLASS
-                psutil.HIGH_PRIORITY_CLASS
-                psutil.REALTIME_PRIORITY_CLASS (Use with extreme caution)
-
-    Raises:
-        psutil.NoSuchProcess: If the process with the given PID does not exist.
-        psutil.AccessDenied: If the current user does not have permission to change the process's priority.
-        ValueError: If an invalid priority class is provided.
-    """
-    pid = getpid()
-    set_process_priority(pid, priority_class)
-
 if __name__ == "__main__":
-    set_own_priority(psutil.HIGH_PRIORITY_CLASS)
     import interface
