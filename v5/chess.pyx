@@ -31,21 +31,21 @@ cdef class Board:
     cdef str[8][8] Board
     cdef int[][] bitboards
     ###------- Definitions of the white bitboards -------###
-    cdef long white_pawns
-    cdef long white_knights
-    cdef long white_bishops
-    cdef long white_rooks
-    cdef long white_queens
-    cdef long white_king
-    cdef long w_en_passant_rank
+    cdef long white_pawns       = 0000000000000000000000000000000000000000000000000000000000000000
+    cdef long white_knights     =
+    cdef long white_bishops     =
+    cdef long white_rooks       =
+    cdef long white_queens      =
+    cdef long white_king        =
+    cdef long w_en_passant_rank =
     ###-------         end of definitions         -------###
     ###------- Definitions of the black bitboards -------###
-    cdef long black_pawns = 
-    cdef long black_knights = 
-    cdef long black_bishops = 
-    cdef long black_rooks = 
-    cdef long black_queens = 
-    cdef long black_king = 
+    cdef long black_pawns       = 
+    cdef long black_knights     = 
+    cdef long black_bishops     = 
+    cdef long black_rooks       = 
+    cdef long black_queens      = 
+    cdef long black_king        = 
     cdef long b_en_passant_rank = 
     ###-------         end of definitions         -------###
     cdef str FEN
