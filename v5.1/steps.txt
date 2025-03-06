@@ -1,0 +1,2 @@
+1. Press Fn+F1 and run cmake:build
+2. Run the file
