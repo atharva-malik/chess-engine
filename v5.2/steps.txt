@@ -1,5 +1,4 @@
-1. Press Fn+F1 and run cmake:build
-2. Run the file
+1. cd build;cmake ..;cmake --build . --config Debug;cd ..;echo "";echo "";build/Debug/chess_bot
 
 // void Board::print_board(){
 //     std::cout << "    A B C D E F G H" << std::endl << std::endl; // Print column labels

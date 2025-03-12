@@ -121,6 +121,25 @@
     "fstream": "cpp",
     "sstream": "cpp",
     "bitset": "cpp",
-    "map": "cpp"
-  }
+    "map": "cpp",
+    "list": "cpp",
+    "optional": "cpp",
+    "xhash": "cpp",
+    "any": "cpp",
+    "chrono": "cpp",
+    "codecvt": "cpp",
+    "filesystem": "cpp",
+    "forward_list": "cpp",
+    "iomanip": "cpp",
+    "ranges": "cpp",
+    "ratio": "cpp",
+    "span": "cpp",
+    "valarray": "cpp",
+    "xtree": "cpp",
+    "string_view": "cpp",
+    "numbers": "cpp",
+    "text_encoding": "cpp",
+    "variant": "cpp"
+  },
+  "C_Cpp.default.compilerPath": "c:\\msys64\\mingw64\\bin\\g++.exe"
 }
