@@ -4,6 +4,7 @@ File for testing the chess implementation
 #include <iostream>
 #include "includes/chess.hpp"
 #include "includes/bot.cpp"
+#include <chrono>
 
 using namespace chess;
 
@@ -28,15 +29,23 @@ uint64_t perft(Board& board, int depth) {
 }
 
 int main () {
+    // Bot bot;
     Bot bot("8/7p/5kp1/p1b1r3/P1P5/1P3B1P/4p2K/4B3 w - - 2 45", 'm');
     // Bot bot("8/8/8/k7/4Q3/8/8/3K4 w - - 0 1");
     
     auto start = std::chrono::high_resolution_clock::now();
     std::cout << bot.get_best_move(5, bot.board, 'w') << std::endl;
-    // bot.evaluate(bot.board);
+    // bot.move("e1a5", bot.board);
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     std::cout << "Function execution time: " << duration.count() << " microseconds" << std::endl;
+
+    // start = std::chrono::high_resolution_clock::now();
+    // bot.better_evaluate(bot.board);
+    // // bot.move("e1a5", bot.board);
+    // end = std::chrono::high_resolution_clock::now();
+    // duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+    // std::cout << "Function execution time: " << duration.count() << " microseconds" << std::endl;
 
     // char turn = 'w';
     // std::string move;
