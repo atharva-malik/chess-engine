@@ -173,7 +173,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
-    else if (depth == 0) return Bot::evaluate(board);
+    else if (depth == 0) return Bot::quiescence(board, alpha, beta);
 
     Move move = Move();
     Movelist moves = Movelist();
@@ -214,6 +214,52 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     }
 }
 
+float Bot::quiescence(Board& board, float alpha, float beta) {
+    float stand_pat = this->evaluate(board); // Static evaluation
+    float DELTA_MARGIN = 6.0f; // Delta pruning margin. This function can be made better by tuning DELTA_MARGIN.
+
+    if (stand_pat >= beta) {
+        return beta;
+    }
+    if (alpha < stand_pat) {
+        alpha = stand_pat;
+    }
+
+    std::vector<Move> captures = this->generateCaptures(board); // Generate capture moves.
+    std::vector<Move> checks = this->generateChecks(board); // Generate check moves.
+
+    for (const auto& move : captures) {
+        int capturedPieceValue = piece_values[board.at(move.to())]; // Get captured piece value.
+
+        if (stand_pat + capturedPieceValue + DELTA_MARGIN < alpha) { // Delta pruning
+            continue; // Skip this capture
+        }
+
+        board.makeMove(move);
+        float score = -Bot::quiescence(board, -beta, -alpha); // Recursive call.
+        board.unmakeMove(move);
+        if (score >= beta) {
+            return score;
+        }
+        if (score > alpha) {
+            alpha = score;
+        }
+    }
+
+    for (const auto& move : checks) {
+        board.makeMove(move);
+        float score = -Bot::quiescence(board, -beta, -alpha); // Recursive call.
+        board.unmakeMove(move);
+        if (score >= beta) {
+            return score;
+        }
+        if (score > alpha) {
+            alpha = score;
+        }
+    }
+
+    return alpha;
+}
 
 std::vector<Move> Bot::generateCaptures(Board& board) {
     std::vector<Move> captures;

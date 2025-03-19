@@ -1,0 +1,3 @@
+Niels Lohmann - https://github.com/nlohmann/json/
+
+Max (Disservin) - https://github.com/Disservin/chess-library
