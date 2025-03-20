@@ -1,0 +1,73 @@
+c2c4
+rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1
+Function execution time: 1 milliseconds
+d7d5
+rnbqkbnr/ppp1pppp/8/3p4/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2
+Function execution time: 0 milliseconds
+b1c3
+rnbqkbnr/ppp1pppp/8/3p4/2P5/2N5/PP1PPPPP/R1BQKBNR b KQkq - 1 2
+Function execution time: 0 milliseconds
+d5c4
+rnbqkbnr/ppp1pppp/8/8/2p5/2N5/PP1PPPPP/R1BQKBNR w KQkq - 0 3
+Function execution time: 327 milliseconds
+d1a4
+rnbqkbnr/ppp1pppp/8/8/Q1p5/2N5/PP1PPPPP/R1B1KBNR b KQkq - 1 3
+Function execution time: 379 milliseconds
+b8d7
+r1bqkbnr/pppnpppp/8/8/Q1p5/2N5/PP1PPPPP/R1B1KBNR w KQkq - 2 4
+Function execution time: 88 milliseconds
+g1f3
+r1bqkbnr/pppnpppp/8/8/Q1p5/2N2N2/PP1PPPPP/R1B1KB1R b KQkq - 3 4
+Function execution time: 461 milliseconds
+c7c6
+r1bqkbnr/pp1npppp/2p5/8/Q1p5/2N2N2/PP1PPPPP/R1B1KB1R w KQkq - 0 5
+Function execution time: 336 milliseconds
+a4c4
+r1bqkbnr/pp1npppp/2p5/8/2Q5/2N2N2/PP1PPPPP/R1B1KB1R b KQkq - 0 5
+Function execution time: 626 milliseconds
+d7f6
+r1bqkbnr/pp2pppp/2p2n2/8/2Q5/2N2N2/PP1PPPPP/R1B1KB1R w KQkq - 1 6
+Function execution time: 1050 milliseconds
+c3e4
+r1bqkbnr/pp2pppp/2p2n2/8/2Q1N3/5N2/PP1PPPPP/R1B1KB1R b KQkq - 2 6
+Function execution time: 1228 milliseconds
+f6e4
+r1bqkbnr/pp2pppp/2p5/8/2Q1n3/5N2/PP1PPPPP/R1B1KB1R w KQkq - 0 7
+Function execution time: 669 milliseconds
+c4e4
+r1bqkbnr/pp2pppp/2p5/8/4Q3/5N2/PP1PPPPP/R1B1KB1R b KQkq - 0 7
+Function execution time: 664 milliseconds
+g8f6
+r1bqkb1r/pp2pppp/2p2n2/8/4Q3/5N2/PP1PPPPP/R1B1KB1R w KQkq - 1 8
+Function execution time: 9614 milliseconds
+e4h4
+r1bqkb1r/pp2pppp/2p2n2/8/7Q/5N2/PP1PPPPP/R1B1KB1R b KQkq - 2 8
+Function execution time: 6627 milliseconds
+d8d5
+r1b1kb1r/pp2pppp/2p2n2/3q4/7Q/5N2/PP1PPPPP/R1B1KB1R w KQkq - 3 9
+Function execution time: 13041 milliseconds
+h4f4
+r1b1kb1r/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KB1R b KQkq - 4 9
+Function execution time: 11904 milliseconds
+h8g8
+r1b1kbr1/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KB1R w KQq - 5 10
+Function execution time: 19530 milliseconds
+h1g1
+r1b1kbr1/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KBR1 b Qq - 6 10
+Function execution time: 15919 milliseconds
+g8h8
+r1b1kb1r/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KBR1 w Qq - 7 11
+Function execution time: 17030 milliseconds
+g1h1
+r1b1kb1r/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KB1R b Qq - 8 11
+Function execution time: 14899 milliseconds
+h8g8
+r1b1kbr1/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KB1R w Qq - 9 12
+Function execution time: 19015 milliseconds
+h1g1
+r1b1kbr1/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KBR1 b Qq - 10 12
+Function execution time: 16899 milliseconds
+g8h8
+r1b1kb1r/pp2pppp/2p2n2/3q4/5Q2/5N2/PP1PPPPP/R1B1KBR1 w Qq - 11 13
+Function execution time: 17801 milliseconds
+g1h1

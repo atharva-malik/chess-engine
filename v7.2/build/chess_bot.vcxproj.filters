@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Atharva\Programming\Python\Python Scripts\chess-engine\v7.2\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Atharva\Programming\Python\Python Scripts\chess-engine\v7.2\includes\chess.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Atharva\Programming\Python\Python Scripts\chess-engine\v7.2\includes\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Atharva\Programming\Python\Python Scripts\chess-engine\v7.2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F41DEA3-713E-3AF6-90F1-19E4C30083C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{700C776F-3146-312E-B957-D41CA49C8511}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
