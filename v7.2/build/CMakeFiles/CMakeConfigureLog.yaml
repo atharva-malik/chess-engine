@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 3/20/2025 7:08:39 PM.
+      Build started 3/22/2025 2:44:33 PM.
       
       Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\4.0.0-rc2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.74
+      Time Elapsed 00:00:00.89
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 3/20/2025 7:08:40 PM.
+      Build started 3/22/2025 2:44:34 PM.
       
       Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\4.0.0-rc2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.45
+      Time Elapsed 00:00:00.56
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-jdkw2k"
-      binary: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-jdkw2k"
+      source: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-2445i5"
+      binary: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-2445i5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-jdkw2k'
+        Change Dir: 'C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-2445i5'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_00fcc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_849cb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 3/20/2025 7:08:41 PM.
+        Build started 3/22/2025 2:44:35 PM.
         
-        Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jdkw2k\\cmTC_00fcc.vcxproj" on node 1 (default targets).
+        Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2445i5\\cmTC_849cb.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_00fcc.dir\\Debug\\".
+          Creating directory "cmTC_849cb.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jdkw2k\\Debug\\".
-          Creating directory "cmTC_00fcc.dir\\Debug\\cmTC_00fcc.tlog\\".
+          Creating directory "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2445i5\\Debug\\".
+          Creating directory "cmTC_849cb.dir\\Debug\\cmTC_849cb.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_00fcc.dir\\Debug\\cmTC_00fcc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_00fcc.dir\\Debug\\cmTC_00fcc.tlog\\unsuccessfulbuild".
+          Creating "cmTC_849cb.dir\\Debug\\cmTC_849cb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_849cb.dir\\Debug\\cmTC_849cb.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_00fcc.dir\\Debug\\\\" /Fd"cmTC_00fcc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_849cb.dir\\Debug\\\\" /Fd"cmTC_849cb.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33812 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_00fcc.dir\\Debug\\\\" /Fd"cmTC_00fcc.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_849cb.dir\\Debug\\\\" /Fd"cmTC_849cb.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jdkw2k\\Debug\\cmTC_00fcc.exe" /INCREMENTAL /ILK:"cmTC_00fcc.dir\\Debug\\cmTC_00fcc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-jdkw2k/Debug/cmTC_00fcc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-jdkw2k/Debug/cmTC_00fcc.lib" /MACHINE:X64  /machine:x64 cmTC_00fcc.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_00fcc.vcxproj -> C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jdkw2k\\Debug\\cmTC_00fcc.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2445i5\\Debug\\cmTC_849cb.exe" /INCREMENTAL /ILK:"cmTC_849cb.dir\\Debug\\cmTC_849cb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-2445i5/Debug/cmTC_849cb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-2445i5/Debug/cmTC_849cb.lib" /MACHINE:X64  /machine:x64 cmTC_849cb.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_849cb.vcxproj -> C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2445i5\\Debug\\cmTC_849cb.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_00fcc.dir\\Debug\\cmTC_00fcc.tlog\\unsuccessfulbuild".
-          Touching "cmTC_00fcc.dir\\Debug\\cmTC_00fcc.tlog\\cmTC_00fcc.lastbuildstate".
-        Done Building Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jdkw2k\\cmTC_00fcc.vcxproj" (default targets).
+          Deleting file "cmTC_849cb.dir\\Debug\\cmTC_849cb.tlog\\unsuccessfulbuild".
+          Touching "cmTC_849cb.dir\\Debug\\cmTC_849cb.tlog\\cmTC_849cb.lastbuildstate".
+        Done Building Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2445i5\\cmTC_849cb.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.45
+        Time Elapsed 00:00:00.56
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-35cd7u"
-      binary: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-35cd7u"
+      source: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-xavx4j"
+      binary: "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-xavx4j"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-35cd7u'
+        Change Dir: 'C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-xavx4j'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e09d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4f568.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 3/20/2025 7:08:41 PM.
+        Build started 3/22/2025 2:44:36 PM.
         
-        Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35cd7u\\cmTC_e09d3.vcxproj" on node 1 (default targets).
+        Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xavx4j\\cmTC_4f568.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_e09d3.dir\\Debug\\".
+          Creating directory "cmTC_4f568.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35cd7u\\Debug\\".
-          Creating directory "cmTC_e09d3.dir\\Debug\\cmTC_e09d3.tlog\\".
+          Creating directory "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xavx4j\\Debug\\".
+          Creating directory "cmTC_4f568.dir\\Debug\\cmTC_4f568.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_e09d3.dir\\Debug\\cmTC_e09d3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_e09d3.dir\\Debug\\cmTC_e09d3.tlog\\unsuccessfulbuild".
+          Creating "cmTC_4f568.dir\\Debug\\cmTC_4f568.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_4f568.dir\\Debug\\cmTC_4f568.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e09d3.dir\\Debug\\\\" /Fd"cmTC_e09d3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4f568.dir\\Debug\\\\" /Fd"cmTC_4f568.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.40.33812 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e09d3.dir\\Debug\\\\" /Fd"cmTC_e09d3.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4f568.dir\\Debug\\\\" /Fd"cmTC_4f568.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35cd7u\\Debug\\cmTC_e09d3.exe" /INCREMENTAL /ILK:"cmTC_e09d3.dir\\Debug\\cmTC_e09d3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-35cd7u/Debug/cmTC_e09d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-35cd7u/Debug/cmTC_e09d3.lib" /MACHINE:X64  /machine:x64 cmTC_e09d3.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_e09d3.vcxproj -> C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35cd7u\\Debug\\cmTC_e09d3.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xavx4j\\Debug\\cmTC_4f568.exe" /INCREMENTAL /ILK:"cmTC_4f568.dir\\Debug\\cmTC_4f568.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-xavx4j/Debug/cmTC_4f568.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.2/build/CMakeFiles/CMakeScratch/TryCompile-xavx4j/Debug/cmTC_4f568.lib" /MACHINE:X64  /machine:x64 cmTC_4f568.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_4f568.vcxproj -> C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xavx4j\\Debug\\cmTC_4f568.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_e09d3.dir\\Debug\\cmTC_e09d3.tlog\\unsuccessfulbuild".
-          Touching "cmTC_e09d3.dir\\Debug\\cmTC_e09d3.tlog\\cmTC_e09d3.lastbuildstate".
-        Done Building Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-35cd7u\\cmTC_e09d3.vcxproj" (default targets).
+          Deleting file "cmTC_4f568.dir\\Debug\\cmTC_4f568.tlog\\unsuccessfulbuild".
+          Touching "cmTC_4f568.dir\\Debug\\cmTC_4f568.tlog\\cmTC_4f568.lastbuildstate".
+        Done Building Project "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v7.2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xavx4j\\cmTC_4f568.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.43
+        Time Elapsed 00:00:00.55
         
       exitCode: 0
   -

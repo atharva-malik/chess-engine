@@ -1,0 +1,5 @@
+1. Place the source code in the engines folder
+2. Add namespaces to the bot.h and bot.cpp file
+3. Correct the main file
+4. Compile the code
+5. Run the botvbot

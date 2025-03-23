@@ -42,7 +42,7 @@ std::string Bot::get_best_move(Board& board, char colour) {
         return this->middle_game_move(d, board, colour);
     }else {
         int d = Bot::determineDepth(board);
-        return this->middle_game_move(d, board, colour); // TODO: Implement endgame move selection
+        return this->middle_game_move(1, board, colour); // TODO: Implement endgame move selection
     }
 }
 
@@ -143,6 +143,7 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
             if (evaluation > best_eval) {
                 best_eval = evaluation;
                 best_move = move;
+                if (best_eval == 9999.0f) break; //* Break if mate
             }
         }
     }
@@ -159,6 +160,7 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
             if (evaluation < best_eval){
                 best_eval = evaluation;
                 best_move = move;
+                if (best_eval == -9999.0f) break; //* Break if mate
             }
         }
     }
@@ -168,8 +170,8 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
 float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board){
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
-        if (board.sideToMove() == Color::WHITE) return 9999.0f;
-        else return -9999.0f;
+        if (board.sideToMove() == Color::WHITE) return -9999.0f;
+        else return 9999.0f;
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
@@ -463,13 +465,13 @@ int Bot::determineDepth(const Board& board) {
     if (pieceCount > 28 && pawnCount > 12) {
         return 3;
     } else if (pieceCount > 22 && pawnCount > 8) {
-        return 4;
-    } else if (pieceCount > 12 && pawnCount > 2) {
         return 5;
+    } else if (pieceCount > 12 && pawnCount > 2) {
+        return 7;
     } else if (pieceCount > 5 && pawnCount > 1) {
-        return 6;
+        return 9;
     } else {
         this->game_stage = 'e';
-        return 7;
+        return 11;
     }
 }
