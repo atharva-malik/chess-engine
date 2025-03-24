@@ -12566,3 +12566,1079 @@ Response sent: bestmove b4f4
 Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4
 Make moves after setting position: 37
 Command received: go
+Response sent: bestmove g8e7
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7
+Make moves after setting position: 38
+Command received: go
+Response sent: bestmove f4f7
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7
+Make moves after setting position: 39
+Command received: go
+Response sent: bestmove d7d6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6
+Make moves after setting position: 40
+Command received: go
+Response sent: bestmove f7h5
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5
+Make moves after setting position: 41
+Command received: go
+Response sent: bestmove c7c6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6
+Make moves after setting position: 42
+Command received: go
+Response sent: bestmove h5g4
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4
+Make moves after setting position: 43
+Command received: go
+Response sent: bestmove e7d5
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5
+Make moves after setting position: 44
+Command received: go
+Response sent: bestmove g4g6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6
+Make moves after setting position: 45
+Command received: go
+Response sent: bestmove d5f6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6
+Make moves after setting position: 46
+Command received: go
+Response sent: bestmove g6f6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6
+Make moves after setting position: 47
+Command received: go
+Response sent: bestmove d6c5
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6 d6c5
+Make moves after setting position: 48
+Command received: go
+Response sent: bestmove f6c6
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6 d6c5 f6c6
+Make moves after setting position: 49
+Command received: go
+Response sent: bestmove c5b4
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6 d6c5 f6c6 c5b4
+Make moves after setting position: 50
+Command received: go
+Response sent: bestmove a2a3
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6 d6c5 f6c6 c5b4 a2a3
+Make moves after setting position: 51
+Command received: go
+Response sent: bestmove b4a5
+Command received: position startpos moves f2f4 e7e6 g1f3 d7d5 g2g3 b7b6 e2e3 a7a6 b1c3 b6b5 c3b5 a6b5 f1b5 c8d7 d1e2 d5d4 f3d4 b8c6 d4c6 f8b4 c6d8 g7g5 d8f7 h7h5 f7h8 e8e7 b5d7 e6e5 d7c6 g5g4 c6a8 e7e6 e2c4 e6d7 c4b4 e5f4 b4f4 g8e7 f4f7 d7d6 f7h5 c7c6 h5g4 e7d5 g4g6 d5f6 g6f6 d6c5 f6c6 c5b4 a2a3 b4a5
+Make moves after setting position: 52
+Command received: go
+Response sent: bestmove b2b4
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos
+Command received: go
+Response sent: bestmove g1f3
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3
+Make moves after setting position: 1
+Command received: go
+Response sent: bestmove b8c6
+Command received: position startpos moves g1f3 b8c6
+Make moves after setting position: 2
+Command received: go
+Response sent: bestmove d2d3
+Command received: position startpos moves g1f3 b8c6 d2d3
+Make moves after setting position: 3
+Command received: go
+Response sent: bestmove g7g5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5
+Make moves after setting position: 4
+Command received: go
+Response sent: bestmove c1g5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5
+Make moves after setting position: 5
+Command received: go
+Response sent: bestmove c6d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4
+Make moves after setting position: 6
+Command received: go
+Response sent: bestmove f3d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4
+Make moves after setting position: 7
+Command received: go
+Response sent: bestmove h7h5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5
+Make moves after setting position: 8
+Command received: go
+Response sent: bestmove d4f5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5
+Make moves after setting position: 9
+Command received: go
+Response sent: bestmove h5h4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4
+Make moves after setting position: 10
+Command received: go
+Response sent: bestmove g5e3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3
+Make moves after setting position: 11
+Command received: go
+Response sent: bestmove g8f6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6
+Make moves after setting position: 12
+Command received: go
+Response sent: bestmove e3d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4
+Make moves after setting position: 13
+Command received: go
+Response sent: bestmove f6e4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4
+Make moves after setting position: 14
+Command received: go
+Response sent: bestmove d4h8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8
+Make moves after setting position: 15
+Command received: go
+Response sent: bestmove c7c5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5
+Make moves after setting position: 16
+Command received: go
+Response sent: bestmove d3e4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4
+Make moves after setting position: 17
+Command received: go
+Response sent: bestmove b7b6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6
+Make moves after setting position: 18
+Command received: go
+Response sent: bestmove f5h4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4
+Make moves after setting position: 19
+Command received: go
+Response sent: bestmove a8b8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8
+Make moves after setting position: 20
+Command received: go
+Response sent: bestmove b1c3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3
+Make moves after setting position: 21
+Command received: go
+Response sent: bestmove b8b7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7
+Make moves after setting position: 22
+Command received: go
+Response sent: bestmove h4f3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3
+Make moves after setting position: 23
+Command received: go
+Response sent: bestmove d8c7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7
+Make moves after setting position: 24
+Command received: go
+Response sent: bestmove h8e5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5
+Make moves after setting position: 25
+Command received: go
+Response sent: bestmove c5c4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4
+Make moves after setting position: 26
+Command received: go
+Response sent: bestmove e5c7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7
+Make moves after setting position: 27
+Command received: go
+Response sent: bestmove b7c7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7
+Make moves after setting position: 28
+Command received: go
+Response sent: bestmove c3b5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5
+Make moves after setting position: 29
+Command received: go
+Response sent: bestmove f8h6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6
+Make moves after setting position: 30
+Command received: go
+Response sent: bestmove b5c7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7
+Make moves after setting position: 31
+Command received: go
+Response sent: bestmove e8d8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8
+Make moves after setting position: 32
+Command received: go
+Response sent: bestmove c7b5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5
+Make moves after setting position: 33
+Command received: go
+Response sent: bestmove h6c1
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1
+Make moves after setting position: 34
+Command received: go
+Response sent: bestmove a1c1
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1
+Make moves after setting position: 35
+Command received: go
+Response sent: bestmove a7a6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6
+Make moves after setting position: 36
+Command received: go
+Response sent: bestmove b5c3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3
+Make moves after setting position: 37
+Command received: go
+Response sent: bestmove b6b5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5
+Make moves after setting position: 38
+Command received: go
+Response sent: bestmove d1d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4
+Make moves after setting position: 39
+Command received: go
+Response sent: bestmove c8b7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7
+Make moves after setting position: 40
+Command received: go
+Response sent: bestmove f3e5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5
+Make moves after setting position: 41
+Command received: go
+Response sent: bestmove b7c8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8
+Make moves after setting position: 42
+Command received: go
+Response sent: bestmove e5f7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7
+Make moves after setting position: 43
+Command received: go
+Response sent: bestmove d8e8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8
+Make moves after setting position: 44
+Command received: go
+Response sent: bestmove d4h8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8
+Make moves after setting position: 45
+Command received: go
+Response sent: bestmove e8f7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7
+Make moves after setting position: 46
+Command received: go
+Response sent: bestmove h8c8
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8
+Make moves after setting position: 47
+Command received: go
+Response sent: bestmove b5b4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4
+Make moves after setting position: 48
+Command received: go
+Response sent: bestmove c8c4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4
+Make moves after setting position: 49
+Command received: go
+Response sent: bestmove f7g7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7
+Make moves after setting position: 50
+Command received: go
+Response sent: bestmove c4b4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4
+Make moves after setting position: 51
+Command received: go
+Response sent: bestmove g7f7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7
+Make moves after setting position: 52
+Command received: go
+Response sent: bestmove b4b7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7
+Make moves after setting position: 53
+Command received: go
+Response sent: bestmove f7f6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6
+Make moves after setting position: 54
+Command received: go
+Response sent: bestmove b7d7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7
+Make moves after setting position: 55
+Command received: go
+Response sent: bestmove f6f7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7
+Make moves after setting position: 56
+Command received: go
+Response sent: bestmove c3d5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5
+Make moves after setting position: 57
+Command received: go
+Response sent: bestmove f7g6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6
+Make moves after setting position: 58
+Command received: go
+Response sent: bestmove d7e7
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7
+Make moves after setting position: 59
+Command received: go
+Response sent: bestmove g6h5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5
+Make moves after setting position: 60
+Command received: go
+Response sent: bestmove d5f4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4
+Make moves after setting position: 61
+Command received: go
+Response sent: bestmove h5g4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4
+Make moves after setting position: 62
+Command received: go
+Response sent: bestmove f2f3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3
+Make moves after setting position: 63
+Command received: go
+Response sent: bestmove g4f4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4
+Make moves after setting position: 64
+Command received: go
+Response sent: bestmove g2g3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3
+Make moves after setting position: 65
+Command received: go
+Response sent: bestmove f4e3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3
+Make moves after setting position: 66
+Command received: go
+Response sent: bestmove e7a3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3
+Make moves after setting position: 67
+Command received: go
+Response sent: bestmove e3d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4
+Make moves after setting position: 68
+Command received: go
+Response sent: bestmove a3a6
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6
+Make moves after setting position: 69
+Command received: go
+Response sent: bestmove d4e3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3
+Make moves after setting position: 70
+Command received: go
+Response sent: bestmove a6a3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3
+Make moves after setting position: 71
+Command received: go
+Response sent: bestmove e3d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4
+Make moves after setting position: 72
+Command received: go
+Response sent: bestmove c2c3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3
+Make moves after setting position: 73
+Command received: go
+Response sent: bestmove d4e3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3 d4e3
+Make moves after setting position: 74
+Command received: go
+Response sent: bestmove c3c4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3 d4e3 c3c4
+Make moves after setting position: 75
+Command received: go
+Response sent: bestmove e3d4
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3 d4e3 c3c4 e3d4
+Make moves after setting position: 76
+Command received: go
+Response sent: bestmove e2e3
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3 d4e3 c3c4 e3d4 e2e3
+Make moves after setting position: 77
+Command received: go
+Response sent: bestmove d4e5
+Command received: position startpos moves g1f3 b8c6 d2d3 g7g5 c1g5 c6d4 f3d4 h7h5 d4f5 h5h4 g5e3 g8f6 e3d4 f6e4 d4h8 c7c5 d3e4 b7b6 f5h4 a8b8 b1c3 b8b7 h4f3 d8c7 h8e5 c5c4 e5c7 b7c7 c3b5 f8h6 b5c7 e8d8 c7b5 h6c1 a1c1 a7a6 b5c3 b6b5 d1d4 c8b7 f3e5 b7c8 e5f7 d8e8 d4h8 e8f7 h8c8 b5b4 c8c4 f7g7 c4b4 g7f7 b4b7 f7f6 b7d7 f6f7 c3d5 f7g6 d7e7 g6h5 d5f4 h5g4 f2f3 g4f4 g2g3 f4e3 e7a3 e3d4 a3a6 d4e3 a6a3 e3d4 c2c3 d4e3 c3c4 e3d4 e2e3 d4e5
+Make moves after setting position: 78
+Command received: go
+Response sent: bestmove a3e7
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos
+Command received: go
+Response sent: bestmove d2d4
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4
+Make moves after setting position: 1
+Command received: go
+Response sent: bestmove e7e5
+Command received: position startpos moves d2d4 e7e5
+Make moves after setting position: 2
+Command received: go
+Response sent: bestmove g1f3
+Command received: position startpos moves d2d4 e7e5 g1f3
+Make moves after setting position: 3
+Command received: go
+Response sent: bestmove e5e4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4
+Make moves after setting position: 4
+Command received: go
+Response sent: bestmove f3d2
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2
+Make moves after setting position: 5
+Command received: go
+Response sent: bestmove d7d5
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5
+Make moves after setting position: 6
+Command received: go
+Response sent: bestmove e2e3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3
+Make moves after setting position: 7
+Command received: go
+Response sent: bestmove f8b4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4
+Make moves after setting position: 8
+Command received: go
+Response sent: bestmove f2f3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3
+Make moves after setting position: 9
+Command received: go
+Response sent: bestmove e4f3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3
+Make moves after setting position: 10
+Command received: go
+Response sent: bestmove g2f3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3
+Make moves after setting position: 11
+Command received: go
+Response sent: bestmove b8c6
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6
+Make moves after setting position: 12
+Command received: go
+Response sent: bestmove h2h3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3
+Make moves after setting position: 13
+Command received: go
+Response sent: bestmove c8e6
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6
+Make moves after setting position: 14
+Command received: go
+Response sent: bestmove e1f2
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2
+Make moves after setting position: 15
+Command received: go
+Response sent: bestmove d8h4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4
+Make moves after setting position: 16
+Command received: go
+Response sent: bestmove f2e2
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2
+Make moves after setting position: 17
+Command received: go
+Response sent: bestmove g8f6
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6
+Make moves after setting position: 18
+Command received: go
+Response sent: bestmove c2c4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4
+Make moves after setting position: 19
+Command received: go
+Response sent: bestmove d5c4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4
+Make moves after setting position: 20
+Command received: go
+Response sent: bestmove b1a3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4 b1a3
+Make moves after setting position: 21
+Command received: go
+Response sent: bestmove b4a3
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4 b1a3 b4a3
+Make moves after setting position: 22
+Command received: go
+Response sent: bestmove d2e4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4 b1a3 b4a3 d2e4
+Make moves after setting position: 23
+Command received: go
+Response sent: bestmove f6e4
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4 b1a3 b4a3 d2e4 f6e4
+Make moves after setting position: 24
+Command received: go
+Response sent: bestmove a1b1
+Command received: position startpos moves d2d4 e7e5 g1f3 e5e4 f3d2 d7d5 e2e3 f8b4 f2f3 e4f3 g2f3 b8c6 h2h3 c8e6 e1f2 d8h4 f2e2 g8f6 c2c4 d5c4 b1a3 b4a3 d2e4 f6e4 a1b1
+Make moves after setting position: 25
+Command received: go
+Response sent: bestmove h4f2
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos
+Command received: go
+Response sent: bestmove e2e4
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4
+Make moves after setting position: 1
+Command received: go
+Response sent: bestmove e7e5
+Command received: position startpos moves e2e4 e7e5
+Make moves after setting position: 2
+Command received: go
+Response sent: bestmove f2f4
+Command received: position startpos moves e2e4 e7e5 f2f4
+Make moves after setting position: 3
+Command received: go
+Response sent: bestmove g8f6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6
+Make moves after setting position: 4
+Command received: go
+Response sent: bestmove b1c3
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3
+Make moves after setting position: 5
+Command received: go
+Response sent: bestmove d7d6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6
+Make moves after setting position: 6
+Command received: go
+Response sent: bestmove g1f3
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3
+Make moves after setting position: 7
+Command received: go
+Response sent: bestmove c8g4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4
+Make moves after setting position: 8
+Command received: go
+Response sent: bestmove f1c4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4
+Make moves after setting position: 9
+Command received: go
+Response sent: bestmove f6e4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4
+Make moves after setting position: 10
+Command received: go
+Response sent: bestmove c3e4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4
+Make moves after setting position: 11
+Command received: go
+Response sent: bestmove d8h4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4
+Make moves after setting position: 12
+Command received: go
+Response sent: bestmove f3h4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4
+Make moves after setting position: 13
+Command received: go
+Response sent: bestmove g7g6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6
+Make moves after setting position: 14
+Command received: go
+Response sent: bestmove d1g4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4
+Make moves after setting position: 15
+Command received: go
+Response sent: bestmove b7b6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6
+Make moves after setting position: 16
+Command received: go
+Response sent: bestmove g4c8
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8
+Make moves after setting position: 17
+Command received: go
+Response sent: bestmove e8e7
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7
+Make moves after setting position: 18
+Command received: go
+Response sent: bestmove c8c7
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7
+Make moves after setting position: 19
+Command received: go
+Response sent: bestmove b8d7
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7
+Make moves after setting position: 20
+Command received: go
+Response sent: bestmove e4d6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6
+Make moves after setting position: 21
+Command received: go
+Response sent: bestmove f7f5
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5
+Make moves after setting position: 22
+Command received: go
+Response sent: bestmove c4d5
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5
+Make moves after setting position: 23
+Command received: go
+Response sent: bestmove f8h6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6
+Make moves after setting position: 24
+Command received: go
+Response sent: bestmove d5a8
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8
+Make moves after setting position: 25
+Command received: go
+Response sent: bestmove g6g5
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5
+Make moves after setting position: 26
+Command received: go
+Response sent: bestmove h4f5
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5
+Make moves after setting position: 27
+Command received: go
+Response sent: bestmove e7f6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6
+Make moves after setting position: 28
+Command received: go
+Response sent: bestmove c7d7
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7
+Make moves after setting position: 29
+Command received: go
+Response sent: bestmove e5f4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4
+Make moves after setting position: 30
+Command received: go
+Response sent: bestmove d7e7
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7
+Make moves after setting position: 31
+Command received: go
+Response sent: bestmove f6g6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7 f6g6
+Make moves after setting position: 32
+Command received: go
+Response sent: bestmove e7e6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7 f6g6 e7e6
+Make moves after setting position: 33
+Command received: go
+Response sent: bestmove g6h5
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7 f6g6 e7e6 g6h5
+Make moves after setting position: 34
+Command received: go
+Response sent: bestmove e6h6
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7 f6g6 e7e6 g6h5 e6h6
+Make moves after setting position: 35
+Command received: go
+Response sent: bestmove h5g4
+Command received: position startpos moves e2e4 e7e5 f2f4 g8f6 b1c3 d7d6 g1f3 c8g4 f1c4 f6e4 c3e4 d8h4 f3h4 g7g6 d1g4 b7b6 g4c8 e8e7 c8c7 b8d7 e4d6 f7f5 c4d5 f8h6 d5a8 g6g5 h4f5 e7f6 c7d7 e5f4 d7e7 f6g6 e7e6 g6h5 e6h6 h5g4
+Make moves after setting position: 36
+Command received: go
+Response sent: bestmove h2h3
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos
+Command received: go
+Response sent: bestmove c2c4
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves c2c4
+Make moves after setting position: 1
+Command received: go
+Response sent: bestmove e7e6
+Command received: position startpos moves c2c4 e7e6
+Make moves after setting position: 2
+Command received: go
+Response sent: bestmove b1c3
+Command received: position startpos moves c2c4 e7e6 b1c3
+Make moves after setting position: 3
+Command received: go
+Response sent: bestmove c7c5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5
+Make moves after setting position: 4
+Command received: go
+Response sent: bestmove e2e4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4
+Make moves after setting position: 5
+Command received: go
+Response sent: bestmove d7d6
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6
+Make moves after setting position: 6
+Command received: go
+Response sent: bestmove a2a3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3
+Make moves after setting position: 7
+Command received: go
+Response sent: bestmove c8d7
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7
+Make moves after setting position: 8
+Command received: go
+Response sent: bestmove h2h3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3
+Make moves after setting position: 9
+Command received: go
+Response sent: bestmove g8e7
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7
+Make moves after setting position: 10
+Command received: go
+Response sent: bestmove g2g3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3
+Make moves after setting position: 11
+Command received: go
+Response sent: bestmove d8b6
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6
+Make moves after setting position: 12
+Command received: go
+Response sent: bestmove a3a4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4
+Make moves after setting position: 13
+Command received: go
+Response sent: bestmove b8c6
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6
+Make moves after setting position: 14
+Command received: go
+Response sent: bestmove f2f3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3
+Make moves after setting position: 15
+Command received: go
+Response sent: bestmove c6d4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4
+Make moves after setting position: 16
+Command received: go
+Response sent: bestmove f3f4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4
+Make moves after setting position: 17
+Command received: go
+Response sent: bestmove e8c8
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8
+Make moves after setting position: 18
+Command received: go
+Response sent: bestmove e1f2
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2
+Make moves after setting position: 19
+Command received: go
+Response sent: bestmove f7f5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5
+Make moves after setting position: 20
+Command received: go
+Response sent: bestmove b2b3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3
+Make moves after setting position: 21
+Command received: go
+Response sent: bestmove b6b3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3
+Make moves after setting position: 22
+Command received: go
+Response sent: bestmove d2d3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3
+Make moves after setting position: 23
+Command received: go
+Response sent: bestmove b3c3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3
+Make moves after setting position: 24
+Command received: go
+Response sent: bestmove a4a5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5
+Make moves after setting position: 25
+Command received: go
+Response sent: bestmove c3a1
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1
+Make moves after setting position: 26
+Command received: go
+Response sent: bestmove g3g4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4
+Make moves after setting position: 27
+Command received: go
+Response sent: bestmove a1a5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5
+Make moves after setting position: 28
+Command received: go
+Response sent: bestmove f2g3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3
+Make moves after setting position: 29
+Command received: go
+Response sent: bestmove f5e4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4
+Make moves after setting position: 30
+Command received: go
+Response sent: bestmove g3f2
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2
+Make moves after setting position: 31
+Command received: go
+Response sent: bestmove e4d3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3
+Make moves after setting position: 32
+Command received: go
+Response sent: bestmove d1d3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3
+Make moves after setting position: 33
+Command received: go
+Response sent: bestmove d7c6
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6
+Make moves after setting position: 34
+Command received: go
+Response sent: bestmove d3d4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4
+Make moves after setting position: 35
+Command received: go
+Response sent: bestmove c5d4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4
+Make moves after setting position: 36
+Command received: go
+Response sent: bestmove f1e2
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2
+Make moves after setting position: 37
+Command received: go
+Response sent: bestmove c6h1
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1
+Make moves after setting position: 38
+Command received: go
+Response sent: bestmove f4f5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5
+Make moves after setting position: 39
+Command received: go
+Response sent: bestmove e6f5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5
+Make moves after setting position: 40
+Command received: go
+Response sent: bestmove h3h4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4
+Make moves after setting position: 41
+Command received: go
+Response sent: bestmove a5e5
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5
+Make moves after setting position: 42
+Command received: go
+Response sent: bestmove f2f1
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1
+Make moves after setting position: 43
+Command received: go
+Response sent: bestmove e5g3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1 e5g3
+Make moves after setting position: 44
+Command received: go
+Response sent: bestmove e2d3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1 e5g3 e2d3
+Make moves after setting position: 45
+Command received: go
+Response sent: bestmove g3d3
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1 e5g3 e2d3 g3d3
+Make moves after setting position: 46
+Command received: go
+Response sent: bestmove f1f2
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1 e5g3 e2d3 g3d3 f1f2
+Make moves after setting position: 47
+Command received: go
+Response sent: bestmove f5g4
+Command received: position startpos moves c2c4 e7e6 b1c3 c7c5 e2e4 d7d6 a2a3 c8d7 h2h3 g8e7 g2g3 d8b6 a3a4 b8c6 f2f3 c6d4 f3f4 e8c8 e1f2 f7f5 b2b3 b6b3 d2d3 b3c3 a4a5 c3a1 g3g4 a1a5 f2g3 f5e4 g3f2 e4d3 d1d3 d7c6 d3d4 c5d4 f1e2 c6h1 f4f5 e6f5 h3h4 a5e5 f2f1 e5g3 e2d3 g3d3 f1f2 f5g4
+Make moves after setting position: 48
+Command received: go

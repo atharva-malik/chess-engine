@@ -1,25 +1,25 @@
 #include "bot7.2.h"
 //5806 milliseconds
-using namespace Bot1;
-Bot::Bot() {
+
+Bot1::Bot::Bot() {
     this->load_openings_data();
     this->board.setFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     this->game_stage = 'o';
 }
 
-Bot::Bot(std::string fen) {
+Bot1::Bot::Bot(std::string fen) {
     this->board.setFen(fen);
     this->load_openings_data();
     this->game_stage = 'o';
 }
 
-Bot::Bot(std::string fen, char game_stage) {
+Bot1::Bot::Bot(std::string fen, char game_stage) {
     this->board.setFen(fen);
     this->load_openings_data();
     this->game_stage = game_stage;
 }
 
-bool Bot::load_openings_data() {
+bool Bot1::Bot::load_openings_data() {
     std::ifstream file("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v5.2\\includes\\OpeningBook\\book.json");
     if (!file.is_open()) {
         std::cerr << "Error: Could not open openings.json" << std::endl;
@@ -35,24 +35,24 @@ bool Bot::load_openings_data() {
     }
 }
 
-std::string Bot::get_best_move(Board& board, char colour) {
-    if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen());
+std::string Bot1::Bot::get_best_move(Board& board, char colour) {
+    if (this->game_stage == 'o') return Bot1::Bot::get_opening_move(board.getFen());
     else if (this->game_stage == 'm'){
         // isEndgame(board);
-        int d = Bot::determineDepth(board);
+        int d = Bot1::Bot::determineDepth(board);
         return this->middle_game_move(d, board, colour);
     }else {
-        int d = Bot::determineDepth(board);
-        return this->middle_game_move(1, board, colour); // TODO: Implement endgame move selection
+        int d = Bot1::Bot::determineDepth(board);
+        return this->middle_game_move(d, board, colour); // TODO: Implement endgame move selection
     }
 }
 
-std::string Bot::get_opening_move(const std::string& fen) {
+std::string Bot1::Bot::get_opening_move(const std::string& fen) {
     if (this->openings_data.empty()) { // Check if the JSON data is loaded
         std::cerr << "Error: Openings data not loaded." << std::endl;
         return {};
     }
-    std::string converted_fen = Bot::convert_fen(fen);
+    std::string converted_fen = Bot1::Bot::convert_fen(fen);
     if (this->openings_data.contains(converted_fen)) {
         std::vector<std::string> moves = this->openings_data[converted_fen].get<std::vector<std::string>>();
         return (moves)[this->get_random_index(moves)];
@@ -60,17 +60,17 @@ std::string Bot::get_opening_move(const std::string& fen) {
         this->game_stage = 'm';
         Color colour = this->board.sideToMove();
         char colour_char = (colour == Color::WHITE) ? 'w' : 'b';
-        return Bot::get_best_move(this->board, colour_char);
+        return Bot1::Bot::get_best_move(this->board, colour_char);
     }
 }
 
-std::string Bot::convert_fen(std::string fen) {
+std::string Bot1::Bot::convert_fen(std::string fen) {
     std::string converted_fen;
     converted_fen = fen.erase(fen.length() - 4, 4);
     return converted_fen;
 }
 
-int Bot::get_random_index(const std::vector<std::string>& vec){
+int Bot1::Bot::get_random_index(const std::vector<std::string>& vec){
     if (vec.empty()) {
         std::cerr << "Warning: Vector is empty. Returning 0." << std::endl;
         return 0;
@@ -84,7 +84,7 @@ int Bot::get_random_index(const std::vector<std::string>& vec){
 
 }
 
-void Bot::print_board(const std::string& fen) {
+void Bot1::Bot::print_board(const std::string& fen) {
     char pieceChars[] = {
         'r', 'n', 'b', 'q', 'k', 'p',
         'R', 'N', 'B', 'Q', 'K', 'P'
@@ -123,7 +123,7 @@ void Bot::print_board(const std::string& fen) {
     }
 }
 
-std::string Bot::middle_game_move(int depth, Board& board, char colour){
+std::string Bot1::Bot::middle_game_move(int depth, Board& board, char colour){
     float best_eval;
     Move best_move = Move();
     Movelist moves = Movelist();
@@ -136,10 +136,10 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++) {
             move = moves[i];
-            // Bot::int_move(move, board);
+            // Bot1::Bot::int_move(move, board);
             board.makeMove(move);
             evaluation = this->minimax(depth, -9999, 9999, false, board);
-            // Bot::int_unmove(move, board);
+            // Bot1::Bot::int_unmove(move, board);
             board.unmakeMove(move);
             if (evaluation > best_eval) {
                 best_eval = evaluation;
@@ -153,10 +153,10 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             Move move = moves[i];
-            // Bot::int_move(move, board);
+            // Bot1::Bot::int_move(move, board);
             board.makeMove(move);
             evaluation = this->minimax(depth, -9999, 9999, true, board);
-            // Bot::int_unmove(move, board);
+            // Bot1::Bot::int_unmove(move, board);
             board.unmakeMove(move);
             if (evaluation < best_eval){
                 best_eval = evaluation;
@@ -168,7 +168,7 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
     return uci::moveToUci(best_move);
 }
 
-float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board){
+float Bot1::Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board){
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
         if (board.sideToMove() == Color::WHITE) return -9999.0f;
@@ -176,7 +176,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
-    // else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
+    // else if (depth == 0) return Bot1::Bot::quiescence(board, alpha, beta, Bot1::Bot::volatility(board));
     else if (depth == 0) return this->evaluate(board);
 
     Move move = Move();
@@ -188,10 +188,10 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             move = moves[i];
-            // Bot::int_move(move, board);
+            // Bot1::Bot::int_move(move, board);
             board.makeMove(move);
             evaluation = this->minimax(depth - 1, alpha, beta, false, board);
-            // Bot::int_unmove(move, board);
+            // Bot1::Bot::int_unmove(move, board);
             board.unmakeMove(move);
             maxEval = std::max(maxEval, evaluation);
             alpha = std::max(alpha, evaluation);
@@ -205,10 +205,10 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             move = moves[i];
-            // Bot::int_move(move, board);
+            // Bot1::Bot::int_move(move, board);
             board.makeMove(move);
             evaluation = this->minimax(depth - 1, alpha, beta, true, board);
-            // Bot::int_unmove(move, board);
+            // Bot1::Bot::int_unmove(move, board);
             board.unmakeMove(move);
             minEval = std::min(minEval, evaluation);
             beta = std::min(beta, evaluation);
@@ -218,7 +218,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     }
 }
 
-float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
+float Bot1::Bot::quiescence(Board& board, float alpha, float beta, int depth) {
     float stand_pat = this->evaluate(board); // Static evaluation
     float DELTA_MARGIN = 6.0f; // Delta pruning margin. This function can be made better by tuning DELTA_MARGIN.
 
@@ -244,7 +244,7 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
         }
 
         board.makeMove(move);
-        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        float score = -Bot1::Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
         board.unmakeMove(move);
         if (score >= beta) {
             return score;
@@ -256,7 +256,7 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
 
     for (const auto& move : checks) {
         board.makeMove(move);
-        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        float score = -Bot1::Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
         board.unmakeMove(move);
         if (score >= beta) {
             return score;
@@ -269,7 +269,7 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
     return alpha;
 }
 
-std::vector<Move> Bot::generateCaptures(Board& board) {
+std::vector<Move> Bot1::Bot::generateCaptures(Board& board) {
     std::vector<Move> captures;
     Move move;
     Movelist moves = Movelist();
@@ -284,14 +284,14 @@ std::vector<Move> Bot::generateCaptures(Board& board) {
     return captures;
 }
 
-std::vector<Move> Bot::generateChecks(Board& board) {
+std::vector<Move> Bot1::Bot::generateChecks(Board& board) {
     std::vector<Move> checks;
     Move move;
     Movelist moves = Movelist();
     movegen::legalmoves(moves, board);
     for (int i = 0; i < moves.size(); i++) {
         move = moves[i];
-        if (!Bot::isCheck(move, board)) {
+        if (!Bot1::Bot::isCheck(move, board)) {
             continue;
         }
         checks.push_back(move);
@@ -299,7 +299,7 @@ std::vector<Move> Bot::generateChecks(Board& board) {
     return checks;
 }
 
-int Bot::volatility(Board& board){
+int Bot1::Bot::volatility(Board& board){
     int volatility;
     Movelist moves = Movelist();
     movegen::legalmoves<movegen::MoveGenType::CAPTURE>(moves, board);
@@ -307,7 +307,7 @@ int Bot::volatility(Board& board){
     return volatility+4;
 }
 
-float Bot::evaluate(Board& board){
+float Bot1::Bot::evaluate(Board& board){
     int score = 0;
 
     Square sq;
@@ -380,7 +380,7 @@ float Bot::evaluate(Board& board){
     return score/100.0f;
 }
 
-void Bot::order_moves(Movelist& moves, Board& board){
+void Bot1::Bot::order_moves(Movelist& moves, Board& board){
     std::vector<std::pair<int, Move>> scored_moves;
 
     for (const auto& move : moves) {
@@ -409,7 +409,7 @@ void Bot::order_moves(Movelist& moves, Board& board){
     }
 }
 
-bool Bot::isCheck(Move move, Board& board) {
+bool Bot1::Bot::isCheck(Move move, Board& board) {
     Color stm = board.sideToMove();
     int square = 0;
     if (stm == Color(0)) {
@@ -424,7 +424,7 @@ bool Bot::isCheck(Move move, Board& board) {
     return is_check;
 }
 
-int Bot::determineDepth(const Board& board) {
+int Bot1::Bot::determineDepth(const Board& board) {
     int pieceCount = 0;
     int pawnCount = 0;
     Bitboard pawns = board.pieces(PieceType::PAWN);
