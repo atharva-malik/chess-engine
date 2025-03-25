@@ -32,30 +32,6 @@ void ReceiveCommand(std::string message, UciPlayer& player){
 }
 
 int main () {
-    Bot bot("5k2/p6p/5Pp1/3Br3/2P4B/1P1pb2P/P3p2K/4R3 b - - 2 39", 'm');
-    
-    auto start = std::chrono::high_resolution_clock::now();
-    std::cout << bot.get_best_move(bot.board, 'w') << std::endl;
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
-
-    bot = Bot("k7/8/1K6/3N4/8/7B/8/8 w - - 0 1", 'm');
-    
-    start = std::chrono::high_resolution_clock::now();
-    std::cout << bot.get_best_move(bot.board, 'w') << std::endl;
-    end = std::chrono::high_resolution_clock::now();
-    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
-
-    bot = Bot("4rq2/Q2P1k2/4p1p1/5pp1/8/1P6/PBP3N1/2K1R3 w - - 0 1", 'm');
-    
-    start = std::chrono::high_resolution_clock::now();
-    std::cout << bot.get_best_move(bot.board, 'w') << std::endl;
-    end = std::chrono::high_resolution_clock::now();
-    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
-
     UciPlayer player;
     std::string command = "";
     LogToFile("\n\nSTARTING UCI bot");

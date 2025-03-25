@@ -207,7 +207,7 @@ class Bot{
         PieceTables piece_tables;
         int piece_values[13] = {1, 3, 3, 5, 9, 100, 1, 3, 3, 5, 9, 100, 0};
         
-        std::string get_opening_move(const std::string& fen);
+        std::string get_opening_move(const std::string& fen, char colour);
         std::string middle_game_move(int depth, Board& board, char colour);
         
         // void Bot::int_move(Move move, Board& board);

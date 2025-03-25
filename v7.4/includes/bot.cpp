@@ -21,7 +21,7 @@ Bot::Bot(std::string fen, char game_stage) {
 bool Bot::load_openings_data() {
     std::ifstream file("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json");
     if (!file.is_open()) {
-        std::cerr << "Error: Could not open openings.json" << std::endl;
+        // std::cerr << "Error: Could not open openings.json" << std::endl;
         return false;
     }
 
@@ -29,13 +29,13 @@ bool Bot::load_openings_data() {
         this->openings_data = json::parse(file);
         return true;
     } catch (json::parse_error& e) {
-        std::cerr << "JSON parse error: " << e.what() << std::endl;
+        // std::cerr << "JSON parse error: " << e.what() << std::endl;
         return false;
     }
 }
 
 std::string Bot::get_best_move(Board& board, char colour) {
-    if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen());
+    if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen(), colour);
     else if (this->game_stage == 'm'){
         // isEndgame(board);
         int d = Bot::determineDepth(board);
@@ -46,10 +46,11 @@ std::string Bot::get_best_move(Board& board, char colour) {
     }
 }
 
-std::string Bot::get_opening_move(const std::string& fen) {
+std::string Bot::get_opening_move(const std::string& fen, char colour) {
     if (this->openings_data.empty()) { // Check if the JSON data is loaded
-        std::cerr << "Error: Openings data not loaded." << std::endl;
-        return {};
+        // std::cerr << "Error: Openings data not loaded." << std::endl;
+        this->game_stage = 'm';
+        return Bot::get_best_move(this->board, colour);
     }
     std::string converted_fen = Bot::convert_fen(fen);
     if (this->openings_data.contains(converted_fen)) {
@@ -57,9 +58,7 @@ std::string Bot::get_opening_move(const std::string& fen) {
         return (moves)[this->get_random_index(moves)];
     } else {
         this->game_stage = 'm';
-        Color colour = this->board.sideToMove();
-        char colour_char = (colour == Color::WHITE) ? 'w' : 'b';
-        return Bot::get_best_move(this->board, colour_char);
+        return Bot::get_best_move(this->board, colour);
     }
 }
 
