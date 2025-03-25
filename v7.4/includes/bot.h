@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <random>
+#include <thread>
+#include <future>
 #include "json.hpp"
 #include "chess.hpp"
 
@@ -12,26 +14,53 @@ using namespace chess;
 struct PieceTables {
     /*
     The goal with the pawns is to let them shelter the king,
-    punish creating holes in the castle, and to push them to promotion.
+    punish creating holes in the castle, and to push them to fight.
     */
     int w_pawn[8][8] = {
         {100,100,100,100,100,100,100,100}, 
         {150,150,150,150,150,150,150,150}, 
-        {110,110,120,130,130,120,110,110}, 
-        {105,105,110,125,125,110,105,105}, 
+        {100,100,120,130,130,120,100,100}, 
+        {100,100,110,125,125,110,100,100}, 
         {100,100,100,120,120,100,100,100}, 
         {105, 95, 90,100,100, 90, 95,105}, 
         {105,110,110, 80, 80,110,110,105}, 
         {100,100,100,100,100,100,100,100}
     };
     int b_pawn[8][8] = {
-        {100,100,100,100,100,100,100,100}, 
-        {105,110,110, 80, 80,110,110,105},
+        {100,100,100,100,100,100,100,100},
+        {105,110,110, 80, 80,110,110,105}, 
         {105, 95, 90,100,100, 90, 95,105}, 
         {100,100,100,120,120,100,100,100}, 
-        {105,105,110,125,125,110,105,105}, 
-        {110,110,120,130,130,120,110,110}, 
+        {100,100,110,125,125,110,100,100}, 
+        {100,100,120,130,130,120,100,100}, 
         {150,150,150,150,150,150,150,150}, 
+        {100,100,100,100,100,100,100,100}
+    };
+
+    /*
+    The goal in the endgame is to try and get the pawns to promote.
+    Since the side pawns are more likely to promote, we give them a
+    slight advantage.
+    */
+
+    int w_pawn_end[8][8] = {
+        {100,100,100,100,100,100,100,100}, 
+        {160,150,150,150,150,150,150,160}, 
+        {140,135,135,135,135,135,135,140}, 
+        {125,120,120,120,120,120,120,125}, 
+        {115,110,110,110,110,110,110,115}, 
+        {107,105,105,105,105,105,105,107}, 
+        {100,100,100,100,100,100,100,100}, 
+        {100,100,100,100,100,100,100,100}
+    };
+    int b_pawn_end[8][8] = {
+        {100,100,100,100,100,100,100,100}, 
+        {100,100,100,100,100,100,100,100}, 
+        {107,105,105,105,105,105,105,107}, 
+        {115,110,110,110,110,110,110,115}, 
+        {125,120,120,120,120,120,120,125}, 
+        {140,135,135,135,135,135,135,140}, 
+        {160,150,150,150,150,150,150,160}, 
         {100,100,100,100,100,100,100,100}
     };
 
@@ -200,32 +229,39 @@ class Bot{
         void print_board(const std::string& fen);
         
         std::string get_best_move(Board& board, char colour);
-        // void Bot::move(std::string uci_move, Board& board);
+        static void Bot::LogToFile(const std::string& message);
     private:
         json openings_data;
-        char game_stage = 'o';
         PieceTables piece_tables;
+        char game_stage = 'o';
         int piece_values[13] = {1, 3, 3, 5, 9, 100, 1, 3, 3, 5, 9, 100, 0};
+        std::vector<std::string> killer_moves;
         
         std::string get_opening_move(const std::string& fen, char colour);
         std::string middle_game_move(int depth, Board& board, char colour);
-        
-        // void Bot::int_move(Move move, Board& board);
-        // void Bot::int_unmove(Move move, Board& board);
-        
+
         // Helper functions
         float minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board);
         float quiescence(Board& board, float alpha, float beta, int depth);
-        float evaluate(Board& board);
+        float eval_mid(Board board);
+        float eval_end(Board board);
+        
+        // Helpers for the Helpers
+        std::string OpeningBookPath = "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json";
+        std::string convert_fen(std::string fen);
         
         std::vector<Move> generateCaptures(Board& board);
         std::vector<Move> generateChecks(Board& board);
+        
         int volatility(Board& board);
         int determineDepth(const Board& board);
+        int get_random_index(const std::vector<std::string>& vec);
+        
+        float calculate_phase(Board board);
+        
         bool isCheck(Move move, Board& board);
         bool inCheck(Board& board);
         bool load_openings_data();
+        
         void order_moves(Movelist& moves, Board& board);
-        std::string convert_fen(std::string fen);
-        int get_random_index(const std::vector<std::string>& vec);
 };

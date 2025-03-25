@@ -1,4 +1,5 @@
 #include "bot.h"
+
 //5806 milliseconds
 Bot::Bot() {
     this->load_openings_data();
@@ -19,9 +20,9 @@ Bot::Bot(std::string fen, char game_stage) {
 }
 
 bool Bot::load_openings_data() {
-    std::ifstream file("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json");
+    std::ifstream file(Bot::OpeningBookPath);
     if (!file.is_open()) {
-        // std::cerr << "Error: Could not open openings.json" << std::endl;
+        Bot::LogToFile("Error: Could not open openings.json");
         return false;
     }
 
@@ -29,7 +30,7 @@ bool Bot::load_openings_data() {
         this->openings_data = json::parse(file);
         return true;
     } catch (json::parse_error& e) {
-        // std::cerr << "JSON parse error: " << e.what() << std::endl;
+        Bot::LogToFile("JSON parse error: "); Bot::LogToFile(e.what());
         return false;
     }
 }
@@ -37,7 +38,6 @@ bool Bot::load_openings_data() {
 std::string Bot::get_best_move(Board& board, char colour) {
     if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen(), colour);
     else if (this->game_stage == 'm'){
-        // isEndgame(board);
         int d = Bot::determineDepth(board);
         return this->middle_game_move(d, board, colour);
     }else {
@@ -48,7 +48,7 @@ std::string Bot::get_best_move(Board& board, char colour) {
 
 std::string Bot::get_opening_move(const std::string& fen, char colour) {
     if (this->openings_data.empty()) { // Check if the JSON data is loaded
-        // std::cerr << "Error: Openings data not loaded." << std::endl;
+        Bot::LogToFile("Error: Openings data not loaded.");
         this->game_stage = 'm';
         return Bot::get_best_move(this->board, colour);
     }
@@ -175,7 +175,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         return 0.0f;
     }
     // else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
-    else if (depth == 0) return this->evaluate(board);
+    else if (depth == 0) return this->eval_mid(board);
 
     Move move = Move();
     Movelist moves = Movelist();
@@ -218,7 +218,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
 }
 
 float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
-    float stand_pat = this->evaluate(board); // Static evaluation
+    float stand_pat = this->eval_mid(board); // Static evaluation
     float DELTA_MARGIN = 6.0f; // Delta pruning margin. This function can be made better by tuning DELTA_MARGIN.
 
     if (depth == 0) {
@@ -306,12 +306,13 @@ int Bot::volatility(Board& board){
     return volatility+4;
 }
 
-float Bot::evaluate(Board& board){
+float Bot::eval_mid(Board board){
     int score = 0;
 
     Square sq;
 
-    //todo: find a way to make it more efficient
+    std::future<float> future_result = std::async(std::launch::async, &Bot::eval_end, this, board);
+
     for (int rank = 0; rank < 8; ++rank) {
         for (int file = 0; file < 8; ++file) {
             sq = Square(rank * 8 + file);
@@ -341,8 +342,7 @@ float Bot::evaluate(Board& board){
                     break;
                 case 5:
                     // White King
-                    if (this->game_stage != 'e') score += this->piece_tables.w_king_mid[rank][file];
-                    else score += this->piece_tables.w_king_end[rank][file];
+                    score += this->piece_tables.w_king_mid[rank][file];
                     break;
                 case 6:
                     // Black Pawn
@@ -366,8 +366,7 @@ float Bot::evaluate(Board& board){
                     break;
                 case 11:
                     // Black King
-                    if (this->game_stage != 'e') score -= this->piece_tables.b_king_mid[rank][file];
-                    else score -= this->piece_tables.b_king_end[rank][file];
+                    score -= this->piece_tables.b_king_mid[rank][file];
                     break;
                 default:
                     std::cout << "Error" << std::endl;
@@ -375,7 +374,84 @@ float Bot::evaluate(Board& board){
             }
         }
     }
+    float end_eval = future_result.get() * 100.0f;
     //todo: make it hate losing castling rights
+    float phase = Bot::calculate_phase(board);
+    float eval = ((score * (256 - phase)) + (end_eval * phase)) / 256;
+    return eval/100.0f;
+}
+
+float Bot::eval_end(Board board){
+    int score = 0;
+
+    Square sq;
+
+    for (int rank = 0; rank < 8; ++rank) {
+        for (int file = 0; file < 8; ++file) {
+            sq = Square(rank * 8 + file);
+            // As the game gets towards the end of the game, the value of the pieces change
+            // They no longer have 'bad' squares except for the king and the pawns. The other
+            // pieces should just support these pieces and help them promote.
+            // todo: If this makes it worse, rewrite piece tables to be more active
+            switch (board.at(sq)){
+                case 12:
+                    // Nothing
+                    break;
+                case 0:
+                    // White Pawn
+                    score += this->piece_tables.w_pawn_end[rank][file];
+                    break;
+                case 1:
+                    // White Knight
+                    score += 300;
+                    break;
+                case 2:
+                    // White Bishop
+                    score += 300;
+                    break;
+                case 3:
+                    // White Rook
+                    score += 500;
+                    break;
+                case 4:
+                    // White Queen
+                    score += 900;
+                    break;
+                case 5:
+                    // White King
+                    score += this->piece_tables.w_king_end[rank][file];
+                    break;
+                case 6:
+                    // Black Pawn
+                    score -= this->piece_tables.b_pawn_end[rank][file];
+                    break;
+                case 7:
+                    // Black Knight
+                    score -= 300;
+                    break;
+                case 8:
+                    // Black Bishop
+                    score -= 300;
+                    break;
+                case 9:
+                    // Black Rook
+                    score -= 500;
+                    break;
+                case 10:
+                    // Black Queen
+                    score -= 900;
+                    break;
+                case 11:
+                    // Black King
+                    score -= this->piece_tables.b_king_end[rank][file];
+                    break;
+                default:
+                    std::cout << "Error" << std::endl;
+                    break;
+            }
+        }
+    }
+    
     return score/100.0f;
 }
 
@@ -497,4 +573,30 @@ int Bot::determineDepth(const Board& board) {
         this->game_stage = 'e';
         return 11;
     }
+}
+
+void Bot::LogToFile(const std::string& message) {
+    std::ofstream outfile("log.txt", std::ios_base::app);
+    outfile << message << std::endl;
+}
+
+float Bot::calculate_phase(Board board){
+    float phase;
+    float PawnPhase = 0;
+    float KnightPhase = 1;
+    float BishopPhase = 1;
+    float RookPhase = 2;
+    float QueenPhase = 4;
+    float TotalPhase = PawnPhase*16 + KnightPhase*4 + BishopPhase*4 + RookPhase*4 + QueenPhase*2;
+
+    phase = TotalPhase;
+
+    phase -= board.pieces(PieceType::PAWN).count() * PawnPhase;
+    phase -= board.pieces(PieceType::KNIGHT).count() * KnightPhase;
+    phase -= board.pieces(PieceType::BISHOP).count() * BishopPhase;
+    phase -= board.pieces(PieceType::ROOK).count() * RookPhase;
+    phase -= board.pieces(PieceType::QUEEN).count() * QueenPhase;
+
+    phase = (phase * 256 + (TotalPhase / 2)) / TotalPhase;
+    return phase;
 }

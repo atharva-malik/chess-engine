@@ -11,7 +11,7 @@ using namespace chess;
 using namespace helpers;
 
 void ReceiveCommand(std::string message, UciPlayer& player){
-    LogToFile("Command received: " + message);
+    Bot::LogToFile("Command received: " + message);
     message = trim(message);
 	std::string messageType = lower(split(message, ' ')[0]);
     
@@ -28,18 +28,18 @@ void ReceiveCommand(std::string message, UciPlayer& player){
     // }
     else if (messageType == "quit") player.Quit(); //todo implement this
     else if (messageType == "d") Respond(player.getFen()); //* display the board
-    else LogToFile("Unrecognized command: " + messageType + " | " + message);
+    else Bot::LogToFile("Unrecognized command: " + messageType + " | " + message);
 }
 
 int main () {
     UciPlayer player;
     std::string command = "";
-    LogToFile("\n\nSTARTING UCI bot");
+    Bot::LogToFile("\n\nSTARTING UCI bot");
     while (lower(command) != "quit")
     {
         std::getline(std::cin, command);
         ReceiveCommand(command, player);
     }
-    LogToFile("CLOSING UCI bot");
+    Bot::LogToFile("CLOSING UCI bot");
     return 0;
 }

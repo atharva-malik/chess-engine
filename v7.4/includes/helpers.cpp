@@ -42,14 +42,9 @@ namespace helpers
         return tokens;
     }
 
-    void LogToFile(const std::string& message) {
-        std::ofstream outfile("log.txt", std::ios_base::app);
-        outfile << message << std::endl;
-    }
-
     void Respond(std::string message) {
         std::cout << message << std::endl;
-        LogToFile("Response sent: " + message);
+        Bot::LogToFile("Response sent: " + message);
     }
 
     bool stringContains(const std::string& str, const std::string& substring) {
@@ -150,7 +145,7 @@ namespace helpers
                 player.MakeMove(move);
             }
 
-            LogToFile("Make moves after setting position: " + std::to_string(moveList.size()));
+            Bot::LogToFile("Make moves after setting position: " + std::to_string(moveList.size()));
         }
     }
 

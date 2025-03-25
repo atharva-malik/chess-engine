@@ -1,0 +1,4009 @@
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Command received: uci
+Response sent: option name Debug Log File type string default <empty>
+Response sent: id name Fury
+Response sent: id author Atharva
+
+y type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Clear Hash type button
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Ponder type check default false
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Ponder type check default false
+ 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: uciok
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+
+
+STARTING UCI bot
+Response sent: option name Ponder type check default false
+Command received: uci
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: id name Fury
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: id author Atharva
+
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name Clear Hash type button
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name Ponder type check default false
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+
+
+STARTING UCI bot
+name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name UCI_Chess960 type check default false
+Response sent: uciok
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: id name Fury
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: id author Atharva
+
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name NumaPolicy type string default auto
+mpty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Ponder type check default false
+Response sent: option name Clear Hash type button
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Ponder type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_ShowWDL type check default false
+
+
+STARTING UCI bot
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name SyzygyPath type string default <empty>
+Command received: uci
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: id name Fury
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: id author Atharva
+
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: uciok
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+
+
+STARTING UCI bot
+Response sent: id name Fury
+Command received: uci
+Response sent: id author Atharva
+
+Response sent: id name Fury
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: id author Atharva
+
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name Clear Hash type button
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Ponder type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+
+
+STARTING UCI bot
+Response sent: id author Atharva
+
+Command received: uci
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: id name Fury
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Ponder type check default false
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name UCI_LimitStrength type check default false
+ 5000
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: id author Atharva
+
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+3554432
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+ax 33554432
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Ponder type check default false
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name Syzygy50MoveRule type check default true
+ max 100
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: uciok
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Command received: ucinewgame
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Command received: ucinewgame
+Command received: ucinewgame
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+y
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Command received: ucinewgame
+Response sent: uciok
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name NumaPolicy type string default auto
+3554432
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Ponder type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+56
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: uciok
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Command received: ucinewgame
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Command received: ucinewgame
+Response sent: uciok
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+
+
+STARTING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+game
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Command received: ucinewgame
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove b7b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove b7b6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove b8c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: isready
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove g7g6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Make moves after setting position: 3
+Response sent: bestmove d7d6
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove d7d5
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6
+Make moves after setting position: 3
+Command received: isready
+600100 btime 600100 winc 100 binc 100
+Response sent: bestmove b7b6
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove d7d6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 3
+ves e2e4 b7b6 d2d4 e7e6
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove d7d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove c7c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5
+Make moves after setting position: 3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600100 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600196 winc 100 binc 100
+Response sent: bestmove c1f4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove g2g3
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Command received: isready
+4
+Response sent: readyok
+Command received: isready
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3
+Response sent: readyok
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600196 winc 100 binc 100
+Response sent: bestmove f1b5
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 4
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove b2b3
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove e2e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4
+Make moves after setting position: 4
+Command received: isready
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: go wtime 600100 btime 600159 winc 100 binc 100
+Command received: go wtime 600100 btime 600196 winc 100 binc 100
+Response sent: bestmove e2e3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Response sent: bestmove b1d2
+Command received: isready
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3
+Response sent: readyok
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 4
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600196 winc 100 binc 100
+Response sent: bestmove e2e3
+Command received: isready
+Response sent: bestmove g2g3
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+startpos moves g1f3 g8f6 d2d4 d7d6 e2e3
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600190 winc 100 binc 100
+Response sent: bestmove g2g3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove c2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600193 winc 100 binc 100
+Response sent: bestmove d4d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5
+Make moves after setting position: 4
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600100 btime 600197 winc 100 binc 100
+Response sent: bestmove f1d3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600196 btime 600196 winc 100 binc 100
+Response sent: bestmove c8b7
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600193 btime 600197 winc 100 binc 100
+Response sent: bestmove f8g7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+on startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600196 btime 600197 winc 100 binc 100
+Response sent: bestmove c8f5
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600196 btime 600197 winc 100 binc 100
+Response sent: bestmove c8b7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600129 btime 600197 winc 100 binc 100
+Response sent: bestmove g7g6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600197 winc 100 binc 100
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600159 winc 100 binc 100
+Response sent: bestmove c8b7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600161 btime 600196 winc 100 binc 100
+Response sent: bestmove d8b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600197 winc 100 binc 100
+Response sent: bestmove f8b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600195 btime 600190 winc 100 binc 100
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600190 btime 600196 winc 100 binc 100
+Response sent: bestmove c8b7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600197 winc 100 binc 100
+Response sent: bestmove b8d7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600196 winc 100 binc 100
+Response sent: bestmove b7b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600197 winc 100 binc 100
+Response sent: bestmove g7g6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600193 winc 100 binc 100
+Response sent: bestmove d7d6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 5
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600188 btime 600197 winc 100 binc 100
+Response sent: bestmove c8b7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600196 btime 600295 winc 100 binc 100
+Response sent: bestmove b1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600193 btime 600296 winc 100 binc 100
+Response sent: bestmove f1g2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 6
+Command received: isready
+Command received: go wtime 600196 btime 600296 winc 100 binc 100
+Response sent: readyok
+Command received: go wtime 600196 btime 600296 winc 100 binc 100
+Response sent: bestmove g1f3
+Response sent: bestmove f2f3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600129 btime 600297 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3
+Make moves after setting position: 6
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600161 btime 600295 winc 100 binc 100
+Command received: isready
+Response sent: bestmove b1c3
+Response sent: readyok
+Command received: isready
+Command received: go wtime 600197 btime 600259 winc 100 binc 100
+Response sent: readyok
+Response sent: bestmove f1d3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600190 btime 600295 winc 100 binc 100
+Response sent: bestmove g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600296 winc 100 binc 100
+Response sent: bestmove e4e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600296 winc 100 binc 100
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600292 winc 100 binc 100
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600296 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 600293 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600188 btime 600296 winc 100 binc 100
+Response sent: bestmove g1e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 600295 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600292 btime 600296 winc 100 binc 100
+Response sent: bestmove d7d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 600296 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600259 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 600296 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600228 btime 600297 winc 100 binc 100
+Response sent: bestmove f8g7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600260 btime 600295 winc 100 binc 100
+Response sent: bestmove a7a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600289 btime 600295 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600296 winc 100 binc 100
+Response sent: bestmove f6e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4
+Response sent: bestmove c8g4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4
+Response sent: bestmove f1b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600296 winc 100 binc 100
+Response sent: bestmove f8g7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600297 btime 600293 winc 100 binc 100
+Response sent: bestmove g7g6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600287 btime 600296 winc 100 binc 100
+Response sent: bestmove g8f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600292 btime 600395 winc 100 binc 100
+Response sent: bestmove g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 600395 winc 100 binc 100
+Response sent: bestmove c1g5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600228 btime 600390 winc 100 binc 100
+Response sent: bestmove f2f4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600355 winc 100 binc 100
+Response sent: bestmove e1g1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600260 btime 600395 winc 100 binc 100
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600395 winc 100 binc 100
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600197 btime 596485 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598540 btime 600292 winc 100 binc 100
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600296 btime 600396 winc 100 binc 100
+Response sent: bestmove f2f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600297 btime 600392 winc 100 binc 100
+Response sent: bestmove g1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600287 btime 600395 winc 100 binc 100
+Response sent: bestmove b5c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600392 btime 600395 winc 100 binc 100
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 600395 winc 100 binc 100
+Response sent: bestmove f8e7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5 f8e7
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 600355 winc 100 binc 100
+Response sent: bestmove c7c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600327 btime 600390 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 600396 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600396 btime 600392 winc 100 binc 100
+Response sent: bestmove f8g7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599311 btime 600395 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600392 btime 600494 winc 100 binc 100
+Response sent: bestmove e1g1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 600494 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 600454 winc 100 binc 100
+Response sent: bestmove b2b3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600396 btime 600492 winc 100 binc 100
+Response sent: bestmove e2e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600489 btime 600494 winc 100 binc 100
+Response sent: bestmove e8g8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600495 btime 600454 winc 100 binc 100
+Response sent: bestmove d8b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600495 btime 600492 winc 100 binc 100
+Response sent: bestmove e8g8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600489 btime 600593 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3
+Response sent: readyok
+Response sent: bestmove f8d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600395 btime 597985 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600495 btime 600590 winc 100 binc 100
+Response sent: bestmove f1d3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3
+Response sent: bestmove f6h5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600588 btime 600593 winc 100 binc 100
+Response sent: bestmove b8d7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600495 btime 599003 winc 100 binc 100
+Response sent: bestmove b6c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6
+Response sent: bestmove b1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2
+Response sent: bestmove f1d3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600593 btime 600590 winc 100 binc 100
+Response sent: bestmove a7a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6
+Response sent: bestmove f3e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 591489 winc 100 binc 100
+Make moves after setting position: 6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600195 btime 588615 winc 100 binc 100
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598540 btime 593979 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600588 btime 600692 winc 100 binc 100
+Response sent: bestmove c1g5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599311 btime 595601 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593829 btime 600395 winc 100 binc 100
+Response sent: bestmove f8b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4
+Response sent: bestmove f4e3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592814 btime 600395 winc 100 binc 100
+Response sent: bestmove b5c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 14
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600593 btime 600689 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589530 btime 600296 winc 100 binc 100
+Response sent: bestmove d1a4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600684 btime 600692 winc 100 binc 100
+Response sent: bestmove c3d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5
+Response sent: bestmove e4c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3 e4c3
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600289 btime 589822 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599530 btime 591489 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597754 btime 593979 winc 100 binc 100
+Response sent: bestmove b7a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598871 btime 588615 winc 100 binc 100
+Response sent: bestmove b8c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598159 btime 595601 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592814 btime 599498 winc 100 binc 100
+Response sent: bestmove c2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3
+Response sent: bestmove b7a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6
+Response sent: bestmove e4e5
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5
+Response sent: readyok
+Response sent: bestmove g5f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5 f8e7 g5f6
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600295 btime 587524 winc 100 binc 100
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589530 btime 598384 winc 100 binc 100
+Response sent: bestmove f6g4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593829 btime 597590 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599139 btime 589822 winc 100 binc 100
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598068 btime 600689 winc 100 binc 100
+Response sent: bestmove c3e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2
+Response sent: bestmove e4e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590934 btime 600494 winc 100 binc 100
+Make moves after setting position: 7
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588162 btime 596485 winc 100 binc 100
+Response sent: bestmove c8e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6
+Response sent: bestmove b7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600684 btime 597686 winc 100 binc 100
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592898 btime 597985 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599410 btime 587524 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 600327 btime 587870 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597754 btime 590685 winc 100 binc 100
+Response sent: bestmove e7f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5 f8e7 g5f6 e7f6
+Response sent: bestmove g4f3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3
+Response sent: readyok
+Response sent: bestmove b7f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3
+Response sent: bestmove b1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2
+Response sent: bestmove d3a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6
+Response sent: bestmove b6b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590934 btime 598420 winc 100 binc 100
+Response sent: bestmove c6d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588162 btime 594412 winc 100 binc 100
+Response sent: bestmove b2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3 e4c3 b2c3
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599530 btime 585970 winc 100 binc 100
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596841 btime 590685 winc 100 binc 100
+Response sent: bestmove e1f2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2
+Response sent: bestmove e5c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590027 btime 597590 winc 100 binc 100
+Response sent: bestmove d2f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3
+Response sent: bestmove b4d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598159 btime 589763 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592898 btime 595691 winc 100 binc 100
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586951 btime 599498 winc 100 binc 100
+Response sent: bestmove f6h5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5
+Response sent: bestmove d8b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597445 btime 587870 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583899 btime 598384 winc 100 binc 100
+Response sent: bestmove b4c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3 e4c3 b2c3 b4c3
+Response sent: bestmove e2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3
+Response sent: bestmove b8a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588782 btime 599003 winc 100 binc 100
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598607 btime 585970 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599139 btime 584264 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 599410 btime 583557 winc 100 binc 100
+Response sent: bestmove f6d7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7
+Make moves after setting position: 8
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598871 btime 579927 winc 100 binc 100
+Response sent: bestmove e1g1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1
+Response sent: bestmove d7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586951 btime 598579 winc 100 binc 100
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 591823 btime 595691 winc 100 binc 100
+Response sent: bestmove f1a6
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 12
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6
+Command received: go wtime 590027 btime 596157 winc 100 binc 100
+Response sent: bestmove h7h6
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6
+Response sent: readyok
+Response sent: bestmove c1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3 e4c3 b2c3 b4c3 c1d2
+Response sent: bestmove e2f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598068 btime 592808 winc 100 binc 100
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595792 btime 589763 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583899 btime 597115 winc 100 binc 100
+Response sent: bestmove d2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598323 btime 583557 winc 100 binc 100
+Response sent: bestmove d4d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588782 btime 597176 winc 100 binc 100
+Response sent: bestmove e7e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586224 btime 598579 winc 100 binc 100
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583038 btime 594412 winc 100 binc 100
+Response sent: bestmove c4d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5 f8e7 g5f6 e7f6 c4d5
+Response sent: bestmove d8a5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5
+Response sent: bestmove c3a1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 e7e6 e2e4 f8b4 e4e5 f6e4 f1d3 e4c3 b2c3 b4c3 c1d2 c3a1
+Response sent: bestmove b8d7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596271 btime 584264 winc 100 binc 100
+Response sent: bestmove e5d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6
+Make moves after setting position: 9
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596664 btime 579927 winc 100 binc 100
+Response sent: bestmove d8c8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598607 btime 582397 winc 100 binc 100
+Response sent: bestmove g2h3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 584056 btime 598420 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596841 btime 584384 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586224 btime 597972 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 591823 btime 592717 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595976 btime 592808 winc 100 binc 100
+Response sent: bestmove f3e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6 f3e5
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583038 btime 593176 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589444 btime 597686 winc 100 binc 100
+Response sent: bestmove e4e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5
+Response sent: bestmove c2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3
+Response sent: bestmove e6d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d5 b1c3 c8f5 g1f3 e7e6 c1g5 f8e7 g5f6 e7f6 c4d5 e6d5
+Response sent: bestmove b8a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6 b8a6
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597513 btime 582397 winc 100 binc 100
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 584872 btime 596157 winc 100 binc 100
+Response sent: bestmove g8f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6
+Response sent: bestmove d7b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595477 btime 584384 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 584056 btime 596870 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 598323 btime 579492 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595792 btime 584296 winc 100 binc 100
+Response sent: bestmove e7d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6
+Response sent: bestmove f6d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589444 btime 595974 winc 100 binc 100
+Response sent: bestmove g2g4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6 b8a6 g2g4
+Response sent: bestmove d1e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595976 btime 589273 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 584872 btime 594572 winc 100 binc 100
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597105 btime 579492 winc 100 binc 100
+Response sent: bestmove b1c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595130 btime 584296 winc 100 binc 100
+Response sent: bestmove b8c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6 f3e5 b8c6
+Response sent: bestmove f1b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5
+Response sent: bestmove f6e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4
+Response sent: bestmove c1e3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 575054 btime 597115 winc 100 binc 100
+Response sent: bestmove b8d7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597513 btime 578240 winc 100 binc 100
+Response sent: bestmove c3b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 577527 btime 593176 winc 100 binc 100
+Make moves after setting position: 10
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596664 btime 572355 winc 100 binc 100
+Response sent: bestmove c7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6
+Response sent: bestmove d1a4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594261 btime 589273 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597445 btime 574247 winc 100 binc 100
+Response sent: bestmove e5c6
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6 f3e5 b8c6 e5c6
+Response sent: readyok
+Response sent: bestmove h5f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6 b8a6 g2g4 h5f6
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 578414 btime 597176 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 577527 btime 592838 winc 100 binc 100
+Response sent: bestmove f8d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6
+Response sent: bestmove e2e3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3
+Response sent: readyok
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583168 btime 592717 winc 100 binc 100
+Response sent: bestmove d6e7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7
+Response sent: bestmove d6e7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7
+Response sent: bestmove c3e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596130 btime 578240 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 597105 btime 575663 winc 100 binc 100
+Response sent: bestmove a6a5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5
+Make moves after setting position: 11
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594818 btime 572355 winc 100 binc 100
+Response sent: bestmove b4a4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 575054 btime 594239 winc 100 binc 100
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596271 btime 572496 winc 100 binc 100
+Response sent: bestmove e5f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6 b8a6 g2g4 h5f6 e5f6
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 578414 btime 596244 winc 100 binc 100
+Response sent: bestmove e2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5 e2c3
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 582805 btime 595974 winc 100 binc 100
+Response sent: bestmove c1e3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3
+Response sent: readyok
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 595130 btime 578868 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 583168 btime 591250 winc 100 binc 100
+Response sent: bestmove b5d3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6 b5d3
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596192 btime 575663 winc 100 binc 100
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 578218 btime 594572 winc 100 binc 100
+Response sent: bestmove a5b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5
+Response sent: bestmove d1c2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2
+Response sent: bestmove d8a5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3 d8a5
+Response sent: bestmove g1h1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5 g1h1
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593714 btime 574247 winc 100 binc 100
+Response sent: bestmove d7c6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6 f3e5 b8c6 e5c6 d7c6
+Response sent: bestmove b6c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 574133 btime 592838 winc 100 binc 100
+Response sent: bestmove f8b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5 e2c3 f8b4
+Make moves after setting position: 14
+Command received: isready
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594453 btime 572496 winc 100 binc 100
+Response sent: readyok
+Command received: go wtime 595477 btime 573204 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594261 btime 584282 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593998 btime 578868 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 582805 btime 593766 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596130 btime 574591 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 578218 btime 592980 winc 100 binc 100
+Response sent: bestmove g7f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 b1c3 b7b6 e2e4 c8b7 f2f3 b7a6 e4e5 f6h5 f1a6 b8a6 g2g4 h5f6 e5f6 g7f6
+Response sent: bestmove f3g5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3 d8a5 f3g5
+Response sent: bestmove c8e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6 b5d3 c8e6
+Response sent: bestmove d1c2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 596192 btime 572372 winc 100 binc 100
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592736 btime 584282 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 574133 btime 590852 winc 100 binc 100
+Response sent: bestmove d1f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6 d1f3
+Response sent: bestmove c3a4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4
+Response sent: bestmove b6a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592816 btime 573204 winc 100 binc 100
+Response sent: bestmove d4c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 567866 btime 594239 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 577471 btime 591250 winc 100 binc 100
+Response sent: bestmove d1e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6 b5d3 c8e6 d1e2
+Make moves after setting position: 12
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594818 btime 564630 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 570493 btime 596244 winc 100 binc 100
+Response sent: bestmove a8a7
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5 g1h1 a8a7
+Response sent: bestmove g7d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 572095 btime 590852 winc 100 binc 100
+Response sent: bestmove a4a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6 a4a6
+Response sent: bestmove g7c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3 d8a5 f3g5 g7c3
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593998 btime 572917 winc 100 binc 100
+Response sent: bestmove e6e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6 b5d3 c8e6 d1e2 e6e2
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 577471 btime 589976 winc 100 binc 100
+Response sent: bestmove e7c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5
+Response sent: bestmove d1c2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2
+Make moves after setting position: 13
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593544 btime 564630 winc 100 binc 100
+Response sent: bestmove c3d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5 e2c3 f8b4 c3d5
+Response sent: bestmove d6e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6 d1f3 d6e5
+Response sent: bestmove e2c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5 g1h1 a8a7 e2c4
+Make moves after setting position: 22
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592736 btime 579936 winc 100 binc 100
+Response sent: bestmove e1f1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3 d8a5 f3g5 g7c3 e1f1
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 572095 btime 589794 winc 100 binc 100
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 570493 btime 594342 winc 100 binc 100
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 574916 btime 593766 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 571073 btime 592980 winc 100 binc 100
+Response sent: bestmove e1e2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 d7d6 b2b3 c8g4 b1c3 g4f3 e2f3 d8c8 f1b5 c7c6 b5d3 c8e6 d1e2 e6e2 e1e2
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 567866 btime 590460 winc 100 binc 100
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592861 btime 572917 winc 100 binc 100
+Make moves after setting position: 23
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592681 btime 579936 winc 100 binc 100
+Response sent: bestmove b4d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5 e2c3 f8b4 c3d5 b4d2
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 571539 btime 589794 winc 100 binc 100
+Response sent: bestmove b8a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6 a4a6 b8a6
+Response sent: bestmove f7f5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5
+Response sent: bestmove c4b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2 c4b6
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 571073 btime 591949 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593544 btime 560463 winc 100 binc 100
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 594453 btime 559568 winc 100 binc 100
+Make moves after setting position: 22
+Command received: isready
+Response sent: readyok
+Command received: go wtime 574916 btime 591003 winc 100 binc 100
+Response sent: bestmove b1d2
+Response sent: bestmove g1e2
+Command received: isready
+Command received: isready
+Response sent: readyok
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6 a4a6 b8a6 b1d2
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2
+Response sent: bestmove h7h6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6
+Response sent: bestmove f6d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5 g1h1 a8a7 e2c4 f6d5
+Response sent: bestmove e4f5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 570397 btime 589976 winc 100 binc 100
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592776 btime 560463 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592816 btime 561572 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592861 btime 567447 winc 100 binc 100
+Response sent: bestmove d4f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6
+Response sent: bestmove c1b2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592252 btime 559568 winc 100 binc 100
+Response sent: bestmove c3b2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 c7c5 d4d5 d7d6 b1c3 g7g6 g1f3 f8g7 e2e4 e8g8 f1d3 a7a6 e4e5 f6d7 e5d6 e7d6 c1e3 d8a5 f3g5 g7c3 e1f1 c3b2
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 570397 btime 588959 winc 100 binc 100
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 562307 btime 594342 winc 100 binc 100
+Response sent: bestmove c4d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 b8c6 f1b5 d8b6 b1c3 a7a6 b5c6 b6c6 c3d5 c6d6 e1g1 g8f6 d1e2 a6a5 g1h1 a8a7 e2c4 f6d5 c4d5
+Response sent: bestmove c6d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6 a4a6 b8a6 b1d2 c6d5
+Response sent: bestmove d2e4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4
+Make moves after setting position: 24
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592681 btime 571635 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592776 btime 557201 winc 100 binc 100
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590642 btime 567447 winc 100 binc 100
+Response sent: bestmove a7a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589751 btime 561572 winc 100 binc 100
+Response sent: bestmove g5f4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2 c4b6 g5f4
+Response sent: bestmove f3h5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6 d1f3 d6e5 f3h5
+Response sent: bestmove c4d5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 d7d6 g2g3 c7c6 d1a4 d8b6 d4d5 f6e4 e2e3 b6a6 a4a6 b8a6 b1d2 c6d5 c4d5
+Make moves after setting position: 23
+Command received: isready
+Response sent: readyok
+Command received: go wtime 567223 btime 591003 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 562307 btime 591855 winc 100 binc 100
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555991 btime 590460 winc 100 binc 100
+Response sent: bestmove c1e3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 591728 btime 557201 winc 100 binc 100
+Response sent: bestmove d8b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 565531 btime 588959 winc 100 binc 100
+Response sent: bestmove e5c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6 d1f3 d6e5 f3h5 e5c3
+Response sent: bestmove g4f2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2 c4b6 g5f4 g4f2
+Response sent: bestmove b6b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5
+Response sent: bestmove d7e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5
+Make moves after setting position: 14
+Command received: isready
+Response sent: readyok
+Command received: go wtime 593714 btime 547084 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555991 btime 588195 winc 100 binc 100
+Response sent: bestmove c1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 f1d3 c8b7 g1e2 g8f6 b1d2 b7a6 d3a6 b8a6 e4e5 f6d5 e2c3 f8b4 c3d5 b4d2 c1d2
+Make moves after setting position: 24
+Command received: isready
+Response sent: readyok
+Command received: go wtime 567223 btime 588078 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 592252 btime 550985 winc 100 binc 100
+Make moves after setting position: 22
+Command received: isready
+Response sent: readyok
+Command received: go wtime 565531 btime 587708 winc 100 binc 100
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555905 btime 591949 winc 100 binc 100
+Response sent: bestmove c4a5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5 c4a5
+Response sent: bestmove b5d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4
+Response sent: bestmove d1c2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2
+Response sent: bestmove b5b6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555552 btime 591855 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590382 btime 550985 winc 100 binc 100
+Make moves after setting position: 15
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590443 btime 547084 winc 100 binc 100
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 589751 btime 552707 winc 100 binc 100
+Response sent: bestmove e1g1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1
+Response sent: bestmove e2d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4
+Response sent: bestmove f6g4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588709 btime 552707 winc 100 binc 100
+Response sent: bestmove d2c3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 c7c5 g1f3 e7e6 g2g3 b7b6 f3e5 b8c6 e5c6 d7c6 b1c3 f8d6 d1f3 d6e5 f3h5 e5c3 d2c3
+Make moves after setting position: 22
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555552 btime 589874 winc 100 binc 100
+Make moves after setting position: 23
+Command received: isready
+Response sent: readyok
+Command received: go wtime 560499 btime 587708 winc 100 binc 100
+Response sent: bestmove c6c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 548289 btime 588195 winc 100 binc 100
+Response sent: bestmove e4f2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2 c4b6 g5f4 g4f2 e4f2
+Make moves after setting position: 24
+Command received: isready
+Response sent: readyok
+Command received: go wtime 560499 btime 586619 winc 100 binc 100
+Make moves after setting position: 25
+Command received: isready
+Response sent: readyok
+Command received: go wtime 557969 btime 588078 winc 100 binc 100
+Response sent: bestmove b7f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5 c4a5 b7f3
+Response sent: bestmove c8h3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d6 g1f3 c7c6 e1g1 e8g8 b1c3 b8d7 c1g5 f6g4 g2h3 d7b6 c3e4 b6c4 d1c2 c4b6 g5f4 g4f2 e4f2 c8h3
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590382 btime 541697 winc 100 binc 100
+Make moves after setting position: 26
+Command received: isready
+Response sent: readyok
+Command received: go wtime 557969 btime 585626 winc 100 binc 100
+Response sent: bestmove d4b5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5
+Response sent: bestmove g2f3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5 c4a5 b7f3 g2f3
+Make moves after setting position: 25
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555666 btime 586619 winc 100 binc 100
+Response sent: bestmove c8a6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6
+Response sent: bestmove f6h4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4
+Response sent: bestmove g1h1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588083 btime 541697 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588709 btime 542011 winc 100 binc 100
+Make moves after setting position: 26
+Command received: isready
+Response sent: readyok
+Command received: go wtime 555666 btime 585940 winc 100 binc 100
+Response sent: bestmove f1d1
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1
+Make moves after setting position: 23
+Command received: isready
+Response sent: readyok
+Command received: go wtime 544386 btime 589874 winc 100 binc 100
+Response sent: bestmove e1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4 e1d2
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 587795 btime 542011 winc 100 binc 100
+Make moves after setting position: 27
+Command received: isready
+Response sent: readyok
+Command received: go wtime 554802 btime 585940 winc 100 binc 100
+Response sent: bestmove e8g8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8
+Response sent: bestmove e8f8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4 e1d2 e8f8
+Response sent: bestmove g7d4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2 g7d4
+Make moves after setting position: 24
+Command received: isready
+Response sent: readyok
+Command received: go wtime 544386 btime 587465 winc 100 binc 100
+Response sent: bestmove d1d3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 g8f6 g1f3 b7b6 c1f4 c8b7 b1d2 f6h5 f4e3 b7f3 d2f3 e7e6 f3e5 b8c6 e5c6 d7c6 d1d3
+Make moves after setting position: 28
+Command received: isready
+Response sent: readyok
+Command received: go wtime 554802 btime 584967 winc 100 binc 100
+Make moves after setting position: 16
+Command received: isready
+Response sent: readyok
+Command received: go wtime 590443 btime 526909 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 542970 btime 574591 winc 100 binc 100
+Response sent: bestmove b5b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5 c4a5 b7f3 g2f3 b5b4
+Response sent: bestmove c4c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2 g7d4 c4c5
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588083 btime 533358 winc 100 binc 100
+Make moves after setting position: 17
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588585 btime 526909 winc 100 binc 100
+Response sent: bestmove f5e6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4 b7b6 d2d4 e7e6 b1d2 c8b7 g1f3 f8b4 c2c3 b4d6 d2c4 d6e7 d1c2 f7f5 e4f5 b6b5 c4a5 b7f3 g2f3 b5b4 f5e6
+Make moves after setting position: 21
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586544 btime 533358 winc 100 binc 100
+Response sent: bestmove a6c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1 a6c4
+Make moves after setting position: 22
+Command received: isready
+Response sent: readyok
+Command received: go wtime 587795 btime 531750 winc 100 binc 100
+Response sent: bestmove e3f4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4 e1d2 e8f8 e3f4
+Response sent: bestmove d4e3
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2 g7d4 c4c5 d4e3
+Response sent: bestmove d1d2
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1 a6c4 d1d2
+Make moves after setting position: 29
+Command received: isready
+Response sent: readyok
+Command received: go wtime 546230 btime 584967 winc 100 binc 100
+Make moves after setting position: 18
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588585 btime 522058 winc 100 binc 100
+Response sent: bestmove f2e3
+Command received: isready
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2 g7d4 c4c5 d4e3 f2e3
+Response sent: readyok
+Response sent: bestmove b2c3
+Command received: isready
+Response sent: readyok
+Make moves after setting position: 23
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586802 btime 531750 winc 100 binc 100
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8 b2c3
+Response sent: bestmove g8f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4 e1d2 e8f8 e3f4 g8f6
+Make moves after setting position: 19
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588248 btime 522058 winc 100 binc 100
+Make moves after setting position: 25
+Command received: isready
+Response sent: readyok
+Command received: go wtime 532397 btime 587465 winc 100 binc 100
+Make moves after setting position: 30
+Command received: isready
+Response sent: readyok
+Command received: go wtime 546230 btime 583873 winc 100 binc 100
+Response sent: bestmove g8h8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8 b2c3 g8h8
+Make moves after setting position: 26
+Command received: isready
+Response sent: readyok
+Command received: go wtime 532397 btime 585131 winc 100 binc 100
+Response sent: bestmove e8c8
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1 a6c4 d1d2 e8c8
+Response sent: bestmove f4e5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f3 d8b6 c3e2 b6b4 e2c3 b8d7 d1a4 b4a4 c3a4 g7d4 g1e2 d4f6 c1e3 d7e5 e2d4 c6c5 d4b5 f6h4 e1d2 e8f8 e3f4 g8f6 f4e5
+Make moves after setting position: 24
+Command received: isready
+Response sent: readyok
+Command received: go wtime 586802 btime 524245 winc 100 binc 100
+Make moves after setting position: 31
+Command received: isready
+Response sent: readyok
+Command received: go wtime 540116 btime 583873 winc 100 binc 100
+Response sent: bestmove e4f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1 a6c4 d1d2 e8c8 e4f6
+Response sent: bestmove b6c5
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves d2d4 d7d6 e2e4 c7c6 c2c4 g7g6 b1c3 f8g7 f2f4 c8e6 e1f2 b8d7 c1e3 d8b6 d1c2 g7d4 c4c5 d4e3 f2e3 b6c5
+Make moves after setting position: 25
+Command received: isready
+Response sent: readyok
+Command received: go wtime 585684 btime 524245 winc 100 binc 100
+Make moves after setting position: 20
+Command received: isready
+Response sent: readyok
+Command received: go wtime 588248 btime 511976 winc 100 binc 100
+Response sent: bestmove b3b4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8 b2c3 g8h8 b3b4
+Make moves after setting position: 27
+Command received: isready
+Response sent: readyok
+Command received: go wtime 522510 btime 585131 winc 100 binc 100
+Response sent: bestmove c5d6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8 b2c3 g8h8 b3b4 c5d6
+Make moves after setting position: 28
+Command received: isready
+Response sent: readyok
+Command received: go wtime 522510 btime 583903 winc 100 binc 100
+Response sent: bestmove g7f6
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 d7d6 e2e3 b8d7 f1b5 c7c6 b5c6 b7c6 b1d2 d8a5 c2c3 a5b5 d1c2 h7h6 d2e4 b5b6 e1g1 c8a6 f1d1 a6c4 d1d2 e8c8 e4f6 g7f6
+Make moves after setting position: 26
+Command received: isready
+Response sent: readyok
+Command received: go wtime 585684 btime 514645 winc 100 binc 100
+Response sent: bestmove d3c4
+Command received: isready
+Response sent: readyok
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves g1f3 g8f6 d2d4 b7b6 e2e3 c8b7 f1d3 e7e6 e1g1 c7c5 b2b3 f8d6 b1c3 h7h6 c3b5 d6e7 d4c5 e7c5 c1b2 a7a6 b5d4 f6g4 g1h1 e8g8 b2c3 g8h8 b3b4 c5d6 d3c4
