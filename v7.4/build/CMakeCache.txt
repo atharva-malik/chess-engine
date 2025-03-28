@@ -186,6 +186,15 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+chess_bot_2_BINARY_DIR:STATIC=C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.4/build
+
+//Value Computed by CMake
+chess_bot_2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+chess_bot_2_SOURCE_DIR:STATIC=C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.4
+
+//Value Computed by CMake
 chess_bot_BINARY_DIR:STATIC=C:/Atharva/Programming/Python/Python Scripts/chess-engine/v7.4/build
 
 //Value Computed by CMake

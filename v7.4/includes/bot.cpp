@@ -2,21 +2,27 @@
 
 //5806 milliseconds
 Bot::Bot() {
-    this->load_openings_data();
     this->board.setFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     this->game_stage = 'o';
+    if (!this->load_openings_data()) {
+        this->game_stage = 'm';
+    }
 }
 
 Bot::Bot(std::string fen) {
     this->board.setFen(fen);
-    this->load_openings_data();
     this->game_stage = 'o';
+    if (!this->load_openings_data()) {
+        this->game_stage = 'm';
+    }
 }
 
 Bot::Bot(std::string fen, char game_stage) {
     this->board.setFen(fen);
-    this->load_openings_data();
     this->game_stage = game_stage;
+    if (!this->load_openings_data()) {
+        this->game_stage = 'm';
+    }
 }
 
 bool Bot::load_openings_data() {
@@ -35,15 +41,101 @@ bool Bot::load_openings_data() {
     }
 }
 
-std::string Bot::get_best_move(Board& board, char colour) {
+std::string Bot::get_best_move(Board& board, char colour, int depth=-1) {
+    this->killer_moves.clear();
+    this->transpositionTable.clear();
     if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen(), colour);
     else if (this->game_stage == 'm'){
-        int d = Bot::determineDepth(board);
+        int d = depth == -1 ? Bot::determineDepth(board) : depth;
         return this->middle_game_move(d, board, colour);
     }else {
         // int d = Bot::determineDepth(board); //* This will always return 11, as the game stage is 'e'
-        return this->middle_game_move(11, board, colour); // TODO: Implement endgame move selection
+        return this->end_game_move(11, board, colour); // TODO: Implement endgame move selection
     }
+}
+
+std::string Bot::best_experimental(int depth, Board& board, char colour){
+    float best_eval;
+    Move best_move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    float evaluation;
+    float e_evaluation;
+    Move move = Move();
+    int move_count = moves.size();
+    int iterator_max = move_count < 4 ? move_count : 4; //* Strike a good middle ground between risk and reward
+
+    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_mid(b); };
+
+    if (move_count == 1) {
+        return uci::moveToUci(moves[0]);
+    }
+
+    Bot::order_moves(moves, board);
+
+    if (colour == 'w') {
+        best_eval = -99999999999.0f;
+        for (int i=0; i<iterator_max; i++){
+            move = moves[i];
+            board.makeMove(move);
+            e_evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
+            board.unmakeMove(move);
+            if (e_evaluation > best_eval) {
+                best_eval = e_evaluation;
+                best_move = move;
+                if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+            }
+        }
+
+        best_eval = -99999999999.0f;
+        for (int i=iterator_max; i<move_count; i++){
+            move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth-2, -9999, 9999, false, board, eval_mid);
+            board.unmakeMove(move);
+            if (evaluation > e_evaluation) {
+                evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
+                if (evaluation > e_evaluation){
+                    best_eval = evaluation;
+                    e_evaluation = evaluation;
+                    best_move = move;
+                }
+                if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+            }
+        }
+    }
+    else {
+        best_eval = 99999999999.0f;
+        for (int i=0; i<iterator_max; i++){
+            Move move = moves[i];
+            board.makeMove(move);
+            e_evaluation = this->minimax(depth, -9999, 9999, true, board, eval_mid);
+            board.unmakeMove(move);
+            if (e_evaluation < best_eval) {
+                best_eval = e_evaluation;
+                best_move = move;
+                if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+            }
+        }
+
+        best_eval = 99999999999.0f;
+        for (int i=iterator_max; i<move_count; i++){
+            Move move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth-2, -9999, 9999, true, board, eval_mid);
+            board.unmakeMove(move);
+            if (evaluation < e_evaluation) {
+                evaluation = this->minimax(depth-2, -9999, 9999, true, board, eval_mid);
+                if (evaluation < e_evaluation){
+                    best_eval = evaluation;
+                    e_evaluation = evaluation;
+                    best_move = move;
+                }
+                if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+            }
+        }
+    }
+    return uci::moveToUci(best_move);
 }
 
 std::string Bot::get_opening_move(const std::string& fen, char colour) {
@@ -129,15 +221,60 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
     float evaluation;
     Move move = Move();
 
+    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_mid(b); };
+
+    order_moves(moves, board);
+
+    if (colour == 'w') {
+        best_eval = -99999999999.0f;
+        for (int i = 0; i < moves.size(); i++) {
+            std::cout << uci::moveToUci(moves[i]) << " ";
+            move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
+            std::cout << evaluation << std::endl;
+            board.unmakeMove(move);
+            if (evaluation > best_eval) {
+                best_eval = evaluation;
+                best_move = move;
+                if (best_eval == 9999.0f) break; //* Break if mate
+            }
+        }
+    }
+    else {
+        best_eval = 99999999999.0f;
+        for (int i = 0; i < moves.size(); i++){
+            Move move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, true, board, eval_mid);
+            board.unmakeMove(move);
+            if (evaluation < best_eval){
+                best_eval = evaluation;
+                best_move = move;
+                if (best_eval == -9999.0f) break; //* Break if mate
+            }
+        }
+    }
+    return uci::moveToUci(best_move);
+}
+
+std::string Bot::end_game_move(int depth, Board& board, char colour){
+    float best_eval;
+    Move best_move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    float evaluation;
+    Move move = Move();
+
+    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_end(b); };
+
     if (colour == 'w') {
         best_eval = -99999999999.0f;
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++) {
             move = moves[i];
-            // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, false, board);
-            // Bot::int_unmove(move, board);
+            evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
             board.unmakeMove(move);
             if (evaluation > best_eval) {
                 best_eval = evaluation;
@@ -151,10 +288,8 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             Move move = moves[i];
-            // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, true, board);
-            // Bot::int_unmove(move, board);
+            evaluation = this->minimax(depth, -9999, 9999, true, board, eval_mid);
             board.unmakeMove(move);
             if (evaluation < best_eval){
                 best_eval = evaluation;
@@ -166,7 +301,7 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
     return uci::moveToUci(best_move);
 }
 
-float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board){
+float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate){
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
         if (board.sideToMove() == Color::WHITE) return -9999.0f;
@@ -175,7 +310,15 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         return 0.0f;
     }
     // else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
-    else if (depth == 0) return this->eval_mid(board);
+    else if (depth == 0) {
+        uint64_t hash = board.hash();
+        if (transpositionTable.find(hash) != transpositionTable.end()){
+            return transpositionTable[hash];
+        }
+        float eval = evaluate(board);
+        transpositionTable[hash] = eval;
+        return eval;
+    }
 
     Move move = Move();
     Movelist moves = Movelist();
@@ -187,14 +330,12 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             move = moves[i];
-            // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth - 1, alpha, beta, false, board);
-            // Bot::int_unmove(move, board);
+            evaluation = this->minimax(depth - 1, alpha, beta, false, board, evaluate);
             board.unmakeMove(move);
             maxEval = std::max(maxEval, evaluation);
             alpha = std::max(alpha, evaluation);
-            if (beta <= alpha) break;  // Beta cutoff
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
         }
         return maxEval;
     }
@@ -204,14 +345,12 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         order_moves(moves, board);
         for (int i = 0; i < moves.size(); i++){
             move = moves[i];
-            // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth - 1, alpha, beta, true, board);
-            // Bot::int_unmove(move, board);
+            evaluation = this->minimax(depth - 1, alpha, beta, true, board, evaluate);
             board.unmakeMove(move);
             minEval = std::min(minEval, evaluation);
             beta = std::min(beta, evaluation);
-            if (beta <= alpha) break;  // Beta cutoff
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
         }
         return minEval;
     }
@@ -459,29 +598,61 @@ void Bot::order_moves(Movelist& moves, Board& board){
     std::vector<std::pair<int, Move>> scored_moves;
     int scores[13] = {1, 3, 3, 5, 9, 10, 1, 3, 3, 5, 9, 10, 0};
 
-    for (const auto& move : moves) {
-        int score = 0;
+    if (this->killer_moves.empty()){
+        for (const auto& move : moves) {
+            int score = 0;
 
-        if (move.typeOf() == Move::CASTLING){
-            score += 100; // prioritize castling
-        } else if (board.isCapture(move)) {
-            Square from = move.from();
-            Square to = move.to();
-            int capturedPiece = board.at(to);
-            int aggressivePiece = board.at(from);
-            score += 1000 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
+            if (move.typeOf() == Move::CASTLING){
+                score += 100; // prioritize castling
+            } else if (board.isCapture(move)) {
+                Square from = move.from();
+                Square to = move.to();
+                int capturedPiece = board.at(to);
+                int aggressivePiece = board.at(from);
+                score += 950 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
+            }
+            
+            if (this->isCheck(move, board)) {
+                score += 300; // prioritize checks
+            }
+
+            if (move.typeOf() == Move::PROMOTION) {
+                score += 500; // prioritize promotions
+            }
+            scored_moves.push_back({score, move});
         }
-        
-        if (this->isCheck(move, board)) {
-            score += 300; // prioritize checks
+    }else {
+        for (const auto& move : moves) {
+            int score = 0;
+
+            for (auto move2: killer_moves){
+                if (move2 == move){
+                    score += 1000;
+                    break;
+                }
+            }
+
+            if (move.typeOf() == Move::CASTLING){
+                score += 100; // prioritize castling
+            } else if (board.isCapture(move)) {
+                Square from = move.from();
+                Square to = move.to();
+                int capturedPiece = board.at(to);
+                int aggressivePiece = board.at(from);
+                score += 1000 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
+            }
+            
+            if (this->isCheck(move, board)) {
+                score += 300; // prioritize checks
+            }
+
+            if (move.typeOf() == Move::PROMOTION) {
+                score += 500; // prioritize promotions
+            }
+
+
+            scored_moves.push_back({score, move});
         }
-
-        if (move.typeOf() == Move::PROMOTION) {
-            score += 500; // prioritize promotions
-        }
-
-
-        scored_moves.push_back({score, move});
     }
 
     std::sort(scored_moves.begin(), scored_moves.end(), [](const std::pair<int, Move>& a, const std::pair<int, Move>& b) {
@@ -506,19 +677,6 @@ bool Bot::isCheck(Move move, Board& board) {
     board.makeMove(move);
     bool is_check = board.isAttacked(king, stm);
     board.unmakeMove(move);
-    return is_check;
-}
-
-bool Bot::inCheck(Board& board) {
-    Color stm = board.sideToMove();
-    int square = 0;
-    if (stm == Color(0)) {
-        square = board.pieces(PieceType("KING"), Color(1)).lsb();
-    } else {
-        square = board.pieces(PieceType("KING"), Color(0)).lsb();
-    }
-    Square king(square);
-    bool is_check = board.isAttacked(king, stm);
     return is_check;
 }
 

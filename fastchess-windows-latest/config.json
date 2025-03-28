@@ -48,17 +48,17 @@
     },
     "config_name": "",
     "output": 0,
-    "seed": 17086271820871894281,
+    "seed": 6257054277229406734,
     "variant": 0,
     "ratinginterval": 10,
     "scoreinterval": 1,
     "wait": 0,
     "autosaveinterval": 20,
     "games": 2,
-    "rounds": 100,
-    "concurrency": 16,
+    "rounds": 50,
+    "concurrency": 1,
     "force_concurrency": false,
-    "recover": false,
+    "recover": true,
     "noswap": false,
     "reverse": false,
     "report_penta": true,
@@ -78,9 +78,9 @@
             "options": [],
             "limit": {
                 "tc": {
-                    "increment": 100,
+                    "increment": 10100,
                     "fixed_time": 0,
-                    "time": 600000,
+                    "time": 1800000,
                     "moves": 0,
                     "timemargin": 0
                 },
@@ -97,9 +97,9 @@
             "options": [],
             "limit": {
                 "tc": {
-                    "increment": 100,
+                    "increment": 10100,
                     "fixed_time": 0,
-                    "time": 600000,
+                    "time": 1800000,
                     "moves": 0,
                     "timemargin": 0
                 },
@@ -109,5 +109,28 @@
             "variant": 0
         }
     ],
-    "stats": null
+    "stats": {
+        "EngineV7.4-optimisations vs EngineV7.4.1-Tapered": {
+            "wins": 43,
+            "losses": 28,
+            "draws": 9,
+            "penta_WW": 12,
+            "penta_WD": 4,
+            "penta_WL": 15,
+            "penta_DD": 0,
+            "penta_LD": 5,
+            "penta_LL": 4
+        },
+        "EngineV7.4.1-Tapered vs EngineV7.4-optimisations": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0,
+            "penta_WW": 0,
+            "penta_WD": 0,
+            "penta_WL": 0,
+            "penta_DD": 0,
+            "penta_LD": 0,
+            "penta_LL": 0
+        }
+    }
 }

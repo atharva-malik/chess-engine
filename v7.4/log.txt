@@ -1,0 +1,12 @@
+Command received:             std::cout << "Score: " << score << std::endl;
+Unrecognized command: std::cout | std::cout << "Score: " << score << std::endl;
+
+
+STARTING UCI bot
+Command received: 
+
+
+STARTING UCI bot
+
+
+STARTING UCI bot
