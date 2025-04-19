@@ -1,0 +1,5 @@
+1. cd build;cmake ..;cmake --build . --config Debug;cd ..;echo "";echo "";build/Debug/chess_bot
+1. cls;cd build;cmake ..;cmake --build . --config Release;cd ..;echo "";echo "";build/Release/chess_bot
+3. g++ main.cpp -o main;./main
+
+(Measure-Command { build/Debug/chess_bot }).ToString()

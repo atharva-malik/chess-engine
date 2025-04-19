@@ -1,0 +1,3 @@
+Thinking for: 0.000000 ms.
+Response sent: bestmove 
+Response sent: bestmove d1c2

@@ -6,6 +6,7 @@
 #include <thread>
 #include <future>
 #include <functional>
+#include <chrono>
 #include "json.hpp"
 #include "chess.hpp"
 
@@ -230,10 +231,10 @@ class Bot{
         void print_board(const std::string& fen);
         
         std::string get_best_move(Board& board, char colour, int depth);
-        std::string best_experimental(Board& board, char colour, int depth);
-        static void Bot::LogToFile(const std::string& message);
-        std::string convert_fen(std::string fen);
-
+        std::string get_best_move_tl(Board& board, char colour, double time_limit, int depth);
+        
+        static void LogToFile(const std::string& message);
+        
     private:
         std::unordered_map<uint64_t, float> transpositionTable;
         json openings_data;
@@ -241,19 +242,26 @@ class Bot{
         char game_stage = 'o';
         int piece_values[13] = {1, 3, 3, 5, 9, 100, 1, 3, 3, 5, 9, 100, 0};
         std::vector<Move> killer_moves;
+        std::chrono::high_resolution_clock::time_point start_time = std::chrono::high_resolution_clock::now();
+        double time_limit = 999999;
         
         std::string get_opening_move(const std::string& fen, char colour);
         std::string middle_game_move(int depth, Board& board, char colour);
-        std::pair<std::string, float> n_middle_game_move(int depth, Board& board, char colour);
         std::string end_game_move(int depth, Board& board, char colour);
+
+        std::string middle_game_move_tl(int depth, Board& board, char colour);
+        std::string end_game_move_tl(int depth, Board& board, char colour);
 
         // Helper functions
         float minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate);
-        float quiescence(Board& board, float alpha, float beta, int depth);
+        float minimax_tl(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate);
+        float quiescence(Board& board, float alpha, float beta, std::function<float(Board)> evaluate);
+        float quiescence_tl(Board& board, float alpha, float beta, std::function<float(Board)> evaluate);
         float eval_mid(Board board);
         float eval_end(Board board);
         
         // Helpers for the Helpers
+        std::string convert_fen(std::string fen);
         std::string OpeningBookPath = "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json";
         
         std::vector<Move> generateCaptures(Board& board);
@@ -267,6 +275,8 @@ class Bot{
         
         bool isCheck(Move move, Board& board);
         bool load_openings_data();
-        
+        bool time_exceeded(std::chrono::high_resolution_clock::time_point startTime, double time_limit_milliseconds);
+
         void order_moves(Movelist& moves, Board& board);
+        void order_moves_eval(Movelist& moves, std::vector<std::pair<int, Move>> moves_eval);
 };

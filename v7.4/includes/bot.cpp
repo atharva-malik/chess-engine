@@ -41,6 +41,333 @@ bool Bot::load_openings_data() {
     }
 }
 
+std::string Bot::get_best_move_tl(Board& board, char colour, double time_limit, int depth=-1) {
+    this->killer_moves.clear();
+    this->transpositionTable.clear();
+    this->start_time = std::chrono::high_resolution_clock::now();
+    this->time_limit = time_limit-100;
+    if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen(), colour);
+    else if (this->game_stage == 'm'){
+        int d = depth == -1 ? Bot::determineDepth(board) : depth;
+        return this->middle_game_move_tl(d, board, colour);
+    }else {
+        // int d = Bot::determineDepth(board); //* This will always return 11, as the game stage is 'e'
+        return this->middle_game_move_tl(11, board, colour); // TODO: Implement endgame move selection
+    }
+}
+
+std::string Bot::middle_game_move_tl(int depth, Board& board, char colour){
+    float best_eval;
+    float best_eval_so_far;
+    Movelist moves = Movelist();
+    Move best_move = Move();
+    movegen::legalmoves(moves, board);
+    std::vector<std::pair<int, chess::Move>> moves_eval = {};
+    std::pair<int, chess::Move> temp;
+    Move best_move_so_far = moves[0];
+    float evaluation;
+    float e_evaluation;
+    Move move = Move();
+    int move_count = moves.size();
+    int lower_depth = depth;
+    int iterator_max = move_count < 4 ? move_count : 4; //* Strike a good middle ground between risk and reward
+
+    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_mid(b); };
+
+    if (move_count == 1) {
+        return uci::moveToUci(moves[0]);
+    }
+
+    Bot::order_moves(moves, board);
+
+    if (colour == 'w') {
+        best_eval_so_far = -99999999999.0f;
+        for (int j=1; j <= depth; j+=2){
+            best_eval = -99999999999.0f;
+            Bot::order_moves_eval(moves, moves_eval);
+            //* search the first 4 moves with full depth as they are most likely to be good *//
+            for (int i=0; i<iterator_max; i++){
+                move = moves[i];
+                board.makeMove(move);
+                e_evaluation = this->minimax(j, -9999, 9999, false, board, eval_mid);
+                board.unmakeMove(move);
+                temp.first = e_evaluation;
+                temp.second = move;
+                moves_eval.push_back(temp);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (e_evaluation > best_eval) {
+                    if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    best_eval = e_evaluation;
+                    best_move = move;
+                }
+            }
+
+            e_evaluation = best_eval;
+            if (best_eval > best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+
+            //* search the rest at a lower depth, but full depth if they turn out to be decent *//
+            best_eval = -99999999999.0f;
+            lower_depth = depth > 2 ? depth - 2 : 2;
+            for (int i=iterator_max; i<move_count; i++){
+                move = moves[i];
+                board.makeMove(move);
+                evaluation = this->minimax(lower_depth, -9999, 9999, false, board, eval_mid);
+                board.unmakeMove(move);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (evaluation > e_evaluation) {
+                    if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    evaluation = this->minimax(lower_depth, -9999, 9999, false, board, eval_mid);
+                    if (evaluation > e_evaluation){
+                        best_eval = evaluation;
+                        e_evaluation = evaluation;
+                        best_move = move;
+                        temp.first = evaluation;
+                        temp.second = move;
+                        moves_eval.push_back(temp);
+                    }
+                }else{
+                    temp.first = evaluation;
+                    temp.second = move;
+                    moves_eval.push_back(temp);
+                }
+            }
+            if (best_eval > best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+        }
+    }
+    else {
+        best_eval_so_far = 99999999999.0f;
+        for (int j=1; j <= depth; j+=2){
+            best_eval = 99999999999.0f;
+            Bot::order_moves_eval(moves, moves_eval);
+            //* search the first 4 moves with full depth as they are most likely to be good *//
+            for (int i=0; i<iterator_max; i++){
+                Move move = moves[i];
+                board.makeMove(move);
+                e_evaluation = this->minimax(j, -9999, 9999, true, board, eval_mid);
+                board.unmakeMove(move);
+                temp.first = e_evaluation;
+                temp.second = move;
+                moves_eval.push_back(temp);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (e_evaluation < best_eval) {
+                    if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    best_eval = e_evaluation;
+                    best_move = move;
+                }
+            }
+
+            e_evaluation = best_eval;
+            if (best_eval < best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+
+            //* search the rest at a lower depth, but full depth if they turn out to be decent *//
+            best_eval = 99999999999.0f;
+            lower_depth = depth > 2 ? depth - 2 : 2;
+            for (int i=iterator_max; i<move_count; i++){
+                Move move = moves[i];
+                board.makeMove(move);
+                evaluation = this->minimax(lower_depth, -9999, 9999, true, board, eval_mid);
+                board.unmakeMove(move);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (evaluation < e_evaluation) {
+                    evaluation = this->minimax(lower_depth, -9999, 9999, true, board, eval_mid);
+                    if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    if (evaluation < e_evaluation){
+                        best_eval = evaluation;
+                        e_evaluation = evaluation;
+                        best_move = move;
+                        temp.first = evaluation;
+                        temp.second = move;
+                        moves_eval.push_back(temp);
+                    }
+                }else{
+                    temp.first = evaluation;
+                    temp.second = move;
+                    moves_eval.push_back(temp);
+                }
+            }
+
+            if (best_eval < best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+        }
+    }
+    return uci::moveToUci(best_move_so_far);
+}
+
+std::string Bot::end_game_move_tl(int depth, Board& board, char colour){
+    float best_eval;
+    float best_eval_so_far;
+    Movelist moves = Movelist();
+    Move best_move = Move();
+    movegen::legalmoves(moves, board);
+    std::vector<std::pair<int, chess::Move>> moves_eval = {};
+    std::pair<int, chess::Move> temp;
+    Move best_move_so_far = moves[0];
+    float evaluation;
+    float e_evaluation;
+    Move move = Move();
+    int move_count = moves.size();
+    int lower_depth = depth;
+    int iterator_max = move_count < 4 ? move_count : 4; //* Strike a good middle ground between risk and reward
+
+    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_end(b); };
+
+    if (move_count == 1) {
+        return uci::moveToUci(moves[0]);
+    }
+
+    Bot::order_moves(moves, board);
+
+    if (colour == 'w') {
+        best_eval_so_far = -99999999999.0f;
+        for (int j=1; j <= depth; j+=2){
+            best_eval = -99999999999.0f;
+            Bot::order_moves_eval(moves, moves_eval);
+            //* search the first 4 moves with full depth as they are most likely to be good *//
+            for (int i=0; i<iterator_max; i++){
+                move = moves[i];
+                board.makeMove(move);
+                e_evaluation = this->minimax(j, -9999, 9999, false, board, eval_mid);
+                board.unmakeMove(move);
+                temp.first = e_evaluation;
+                temp.second = move;
+                moves_eval.push_back(temp);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (e_evaluation > best_eval) {
+                    if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    best_eval = e_evaluation;
+                    best_move = move;
+                }
+            }
+
+            e_evaluation = best_eval;
+            if (best_eval > best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+
+            //* search the rest at a lower depth, but full depth if they turn out to be decent *//
+            best_eval = -99999999999.0f;
+            lower_depth = depth > 2 ? depth - 2 : 2;
+            for (int i=iterator_max; i<move_count; i++){
+                move = moves[i];
+                board.makeMove(move);
+                evaluation = this->minimax(lower_depth, -9999, 9999, false, board, eval_mid);
+                board.unmakeMove(move);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (evaluation > e_evaluation) {
+                    if (best_eval == 9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    evaluation = this->minimax(lower_depth, -9999, 9999, false, board, eval_mid);
+                    if (evaluation > e_evaluation){
+                        best_eval = evaluation;
+                        e_evaluation = evaluation;
+                        best_move = move;
+                        temp.first = evaluation;
+                        temp.second = move;
+                        moves_eval.push_back(temp);
+                    }
+                }else{
+                    temp.first = evaluation;
+                    temp.second = move;
+                    moves_eval.push_back(temp);
+                }
+            }
+            if (best_eval > best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+        }
+    }
+    else {
+        best_eval_so_far = 99999999999.0f;
+        for (int j=1; j <= depth; j+=2){
+            best_eval = 99999999999.0f;
+            Bot::order_moves_eval(moves, moves_eval);
+            //* search the first 4 moves with full depth as they are most likely to be good *//
+            for (int i=0; i<iterator_max; i++){
+                Move move = moves[i];
+                board.makeMove(move);
+                e_evaluation = this->minimax(j, -9999, 9999, true, board, eval_mid);
+                board.unmakeMove(move);
+                temp.first = e_evaluation;
+                temp.second = move;
+                moves_eval.push_back(temp);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (e_evaluation < best_eval) {
+                    if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    best_eval = e_evaluation;
+                    best_move = move;
+                }
+            }
+
+            e_evaluation = best_eval;
+            if (best_eval < best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+
+            //* search the rest at a lower depth, but full depth if they turn out to be decent *//
+            best_eval = 99999999999.0f;
+            lower_depth = depth > 2 ? depth - 2 : 2;
+            for (int i=iterator_max; i<move_count; i++){
+                Move move = moves[i];
+                board.makeMove(move);
+                evaluation = this->minimax(lower_depth, -9999, 9999, true, board, eval_mid);
+                board.unmakeMove(move);
+                if (time_exceeded(this->start_time, this->time_limit)) {
+                    return uci::moveToUci(best_move_so_far); // Time limit reached, return best move found so far.
+                }
+                if (evaluation < e_evaluation) {
+                    evaluation = this->minimax(lower_depth, -9999, 9999, true, board, eval_mid);
+                    if (best_eval == -9999.0f) return uci::moveToUci(best_move); //* Break if mate
+                    if (evaluation < e_evaluation){
+                        best_eval = evaluation;
+                        e_evaluation = evaluation;
+                        best_move = move;
+                        temp.first = evaluation;
+                        temp.second = move;
+                        moves_eval.push_back(temp);
+                    }
+                }else{
+                    temp.first = evaluation;
+                    temp.second = move;
+                    moves_eval.push_back(temp);
+                }
+            }
+
+            if (best_eval < best_eval_so_far) {
+                best_eval_so_far = best_eval;
+                best_move_so_far = best_move;
+            }
+        }
+    }
+    return uci::moveToUci(best_move_so_far);
+}
+
 std::string Bot::get_best_move(Board& board, char colour, int depth=-1) {
     this->killer_moves.clear();
     this->transpositionTable.clear();
@@ -50,11 +377,11 @@ std::string Bot::get_best_move(Board& board, char colour, int depth=-1) {
         return this->middle_game_move(d, board, colour);
     }else {
         // int d = Bot::determineDepth(board); //* This will always return 11, as the game stage is 'e'
-        return this->end_game_move(11, board, colour); // TODO: Implement endgame move selection
+        return this->middle_game_move(11, board, colour); // TODO: Implement endgame move selection
     }
 }
 
-std::string Bot::best_experimental(int depth, Board& board, char colour){
+std::string Bot::middle_game_move(int depth, Board& board, char colour){
     float best_eval;
     Move best_move = Move();
     Movelist moves = Movelist();
@@ -87,6 +414,7 @@ std::string Bot::best_experimental(int depth, Board& board, char colour){
             }
         }
 
+        e_evaluation = best_eval;
         best_eval = -99999999999.0f;
         for (int i=iterator_max; i<move_count; i++){
             move = moves[i];
@@ -118,6 +446,7 @@ std::string Bot::best_experimental(int depth, Board& board, char colour){
             }
         }
 
+        e_evaluation = best_eval;
         best_eval = 99999999999.0f;
         for (int i=iterator_max; i<move_count; i++){
             Move move = moves[i];
@@ -213,95 +542,7 @@ void Bot::print_board(const std::string& fen) {
     }
 }
 
-std::string Bot::middle_game_move(int depth, Board& board, char colour){
-    float best_eval;
-    Move best_move = Move();
-    Movelist moves = Movelist();
-    movegen::legalmoves(moves, board);
-    float evaluation;
-    Move move = Move();
-
-    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_mid(b); };
-
-    order_moves(moves, board);
-
-    if (colour == 'w') {
-        best_eval = -99999999999.0f;
-        for (int i = 0; i < moves.size(); i++) {
-            std::cout << uci::moveToUci(moves[i]) << " ";
-            move = moves[i];
-            board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
-            std::cout << evaluation << std::endl;
-            board.unmakeMove(move);
-            if (evaluation > best_eval) {
-                best_eval = evaluation;
-                best_move = move;
-                if (best_eval == 9999.0f) break; //* Break if mate
-            }
-        }
-    }
-    else {
-        best_eval = 99999999999.0f;
-        for (int i = 0; i < moves.size(); i++){
-            Move move = moves[i];
-            board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, true, board, eval_mid);
-            board.unmakeMove(move);
-            if (evaluation < best_eval){
-                best_eval = evaluation;
-                best_move = move;
-                if (best_eval == -9999.0f) break; //* Break if mate
-            }
-        }
-    }
-    return uci::moveToUci(best_move);
-}
-
-std::string Bot::end_game_move(int depth, Board& board, char colour){
-    float best_eval;
-    Move best_move = Move();
-    Movelist moves = Movelist();
-    movegen::legalmoves(moves, board);
-    float evaluation;
-    Move move = Move();
-
-    std::function<float(chess::Board)> eval_mid = [this](chess::Board b) { return this->eval_end(b); };
-
-    if (colour == 'w') {
-        best_eval = -99999999999.0f;
-        order_moves(moves, board);
-        for (int i = 0; i < moves.size(); i++) {
-            move = moves[i];
-            board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, false, board, eval_mid);
-            board.unmakeMove(move);
-            if (evaluation > best_eval) {
-                best_eval = evaluation;
-                best_move = move;
-                if (best_eval == 9999.0f) break; //* Break if mate
-            }
-        }
-    }
-    else {
-        best_eval = 99999999999.0f;
-        order_moves(moves, board);
-        for (int i = 0; i < moves.size(); i++){
-            Move move = moves[i];
-            board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, true, board, eval_mid);
-            board.unmakeMove(move);
-            if (evaluation < best_eval){
-                best_eval = evaluation;
-                best_move = move;
-                if (best_eval == -9999.0f) break; //* Break if mate
-            }
-        }
-    }
-    return uci::moveToUci(best_move);
-}
-
-float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate){
+float Bot::minimax_tl(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate){
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
         if (board.sideToMove() == Color::WHITE) return -9999.0f;
@@ -310,12 +551,13 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
         return 0.0f;
     }
     // else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
+    if (time_exceeded(this->start_time, this->time_limit)) return 1234.567f; //* Time limit reached, return a flag value.
     else if (depth == 0) {
         uint64_t hash = board.hash();
         if (transpositionTable.find(hash) != transpositionTable.end()){
             return transpositionTable[hash];
         }
-        float eval = evaluate(board);
+        float eval = quiescence_tl(board, alpha, beta, evaluate);
         transpositionTable[hash] = eval;
         return eval;
     }
@@ -356,13 +598,65 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     }
 }
 
-float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
-    float stand_pat = this->eval_mid(board); // Static evaluation
-    float DELTA_MARGIN = 6.0f; // Delta pruning margin. This function can be made better by tuning DELTA_MARGIN.
-
-    if (depth == 0) {
-        return stand_pat;
+float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate){
+    std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
+    if (isGameOver.first == GameResultReason::CHECKMATE){
+        if (board.sideToMove() == Color::WHITE) return -9999.0f;
+        else return 9999.0f;
+    } else if (!(isGameOver.first == GameResultReason::NONE)){
+        return 0.0f;
     }
+    // else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
+    else if (depth == 0) {
+        uint64_t hash = board.hash();
+        if (transpositionTable.find(hash) != transpositionTable.end()){
+            return transpositionTable[hash];
+        }
+        float eval = quiescence(board, alpha, beta, evaluate);
+        transpositionTable[hash] = eval;
+        return eval;
+    }
+
+    Move move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+
+    if (maximizing_player){
+        float maxEval = -9999.0f;
+        float evaluation = 0;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth - 1, alpha, beta, false, board, evaluate);
+            board.unmakeMove(move);
+            maxEval = std::max(maxEval, evaluation);
+            alpha = std::max(alpha, evaluation);
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
+        }
+        return maxEval;
+    }
+    else{
+        float minEval = 9999.0f;
+        float evaluation = 0;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth - 1, alpha, beta, true, board, evaluate);
+            board.unmakeMove(move);
+            minEval = std::min(minEval, evaluation);
+            beta = std::min(beta, evaluation);
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
+        }
+        return minEval;
+    }
+}
+
+float Bot::quiescence_tl(Board& board, float alpha, float beta, std::function<float(Board)> evaluate) {
+    float stand_pat = evaluate(board); // Static evaluation
+
+    if (time_exceeded(this->start_time, this->time_limit)) return 1234.567f; //* Time limit reached, return a flag value.
 
     if (stand_pat >= beta) {
         return beta;
@@ -371,18 +665,16 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
         alpha = stand_pat;
     }
 
-    std::vector<Move> captures = this->generateCaptures(board); // Generate capture moves.
-    std::vector<Move> checks = this->generateChecks(board); // Generate check moves.
+    // std::vector<Move> captures = this->generateCaptures(board); // Generate capture moves.
+    // std::vector<Move> checks = this->generateChecks(board); // Generate check moves.
+    Movelist captures = Movelist();
+    movegen::legalmoves<movegen::MoveGenType::CAPTURE>(captures, board);
 
     for (const auto& move : captures) {
-        int capturedPieceValue = piece_values[board.at(move.to())]; // Get captured piece value.
-
-        if (stand_pat + capturedPieceValue + DELTA_MARGIN < alpha) { // Delta pruning
-            continue; // Skip this capture
-        }
+        // int capturedPieceValue = piece_values[board.at(move.to())]; // Get captured piece value.
 
         board.makeMove(move);
-        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        float score = -Bot::quiescence(board, -beta, -alpha, evaluate); // Recursive call.
         board.unmakeMove(move);
         if (score >= beta) {
             return score;
@@ -391,10 +683,29 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
             alpha = score;
         }
     }
+    return alpha;
+}
 
-    for (const auto& move : checks) {
+float Bot::quiescence(Board& board, float alpha, float beta, std::function<float(Board)> evaluate) {
+    float stand_pat = evaluate(board); // Static evaluation
+
+    if (stand_pat >= beta) {
+        return beta;
+    }
+    if (alpha < stand_pat) {
+        alpha = stand_pat;
+    }
+
+    // std::vector<Move> captures = this->generateCaptures(board); // Generate capture moves.
+    // std::vector<Move> checks = this->generateChecks(board); // Generate check moves.
+    Movelist captures = Movelist();
+    movegen::legalmoves<movegen::MoveGenType::CAPTURE>(captures, board);
+
+    for (const auto& move : captures) {
+        // int capturedPieceValue = piece_values[board.at(move.to())]; // Get captured piece value.
+
         board.makeMove(move);
-        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        float score = -Bot::quiescence(board, -beta, -alpha, evaluate); // Recursive call.
         board.unmakeMove(move);
         if (score >= beta) {
             return score;
@@ -403,7 +714,6 @@ float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
             alpha = score;
         }
     }
-
     return alpha;
 }
 
@@ -450,7 +760,7 @@ float Bot::eval_mid(Board board){
 
     Square sq;
 
-    std::future<float> future_result = std::async(std::launch::async, &Bot::eval_end, this, board);
+    // std::future<float> future_result = std::async(std::launch::async, &Bot::eval_end, this, board);
 
     for (int rank = 0; rank < 8; ++rank) {
         for (int file = 0; file < 8; ++file) {
@@ -513,11 +823,11 @@ float Bot::eval_mid(Board board){
             }
         }
     }
-    float end_eval = future_result.get() * 100.0f;
+    // float end_eval = future_result.get() * 100.0f;
     //todo: make it hate losing castling rights
-    float phase = Bot::calculate_phase(board);
-    float eval = ((score * (256 - phase)) + (end_eval * phase)) / 256;
-    return eval/100.0f;
+    // float phase = Bot::calculate_phase(board);
+    // float eval = ((score * (256 - phase)) + (end_eval * phase)) / 256;
+    return score/100.0f;
 }
 
 float Bot::eval_end(Board board){
@@ -665,6 +975,19 @@ void Bot::order_moves(Movelist& moves, Board& board){
     }
 }
 
+void Bot::order_moves_eval(Movelist& moves, std::vector<std::pair<int, Move>> moves_eval){
+    if (!moves_eval.empty()){
+        std::sort(moves_eval.begin(), moves_eval.end(), [](const std::pair<int, Move>& a, const std::pair<int, Move>& b) {
+            return a.first > b.first;
+        });
+        
+        moves.clear();
+        for (const auto& scored_move : moves_eval) {
+            moves.add(scored_move.second);
+        }
+    }
+}
+
 bool Bot::isCheck(Move move, Board& board) {
     Color stm = board.sideToMove();
     int square = 0;
@@ -724,9 +1047,9 @@ int Bot::determineDepth(const Board& board) {
     } else if (pieceCount > 22 && pawnCount > 8) {
         return 5;
     } else if (pieceCount > 12 && pawnCount > 2) {
-        return 5;
+        return 7;
     } else if (pieceCount > 5 && pawnCount > 1) {
-        return 5;
+        return 9;
     } else {
         this->game_stage = 'e';
         return 11;
@@ -757,4 +1080,10 @@ float Bot::calculate_phase(Board board){
 
     phase = (phase * 256 + (TotalPhase / 2)) / TotalPhase;
     return phase;
+}
+
+bool Bot::time_exceeded(std::chrono::high_resolution_clock::time_point startTime, double time_limit_milliseconds){
+    auto now = std::chrono::high_resolution_clock::now();
+    auto elapsed_milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now - startTime);
+    return elapsed_milliseconds.count() >= time_limit_milliseconds;
 }
