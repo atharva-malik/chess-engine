@@ -8,76 +8,20 @@ Command received: quit
 CLOSING UCI bot
 Command received: quit
 CLOSING UCI bot
-Command received: position fen 6k1/1p1N3p/p5p1/3p1pP1/5Qnr/2P5/PP4K1/8 w - - 0 1
-Command received: go
-Response sent: bestmove d7f6
-Command received: go movetime 104000
-Response sent: bestmove d7f6
-Command received: position fen 8/8/8/8/1B6/Pk6/1N5r/1K6 b - - 0 1
-Command received: go movetime 104000
-Command received: position fen 8/8/8/8/1B6/Pk6/1N5r/1K6 b - - 0 1
-Command received: go
-Response sent: bestmove h2b2
-Command received: position fen 3r1rk1/4Qp1p/5p2/8/2P5/P4R2/1PK2P2/5q2 w - - 0 1
-Command received: go
-Response sent: bestmove f3g3
-Command received: position fen 3r1rk1/4Qp1p/5p2/8/2P5/P4R2/1PK2P2/5q2 w - - 0 1 moves f3g3 g8h8
-Make moves after setting position: 2
-Command received: go
-Response sent: bestmove e7e4
-Command received: go
-Response sent: bestmove e7e4
+Command received: quit
+CLOSING UCI bot
+Command received: quit
+CLOSING UCI bot
 Command received: 
-Command received: position fen 3r1rk1/4Qp1p/5p2/8/2P5/P4R2/1PK2P2/5q2 w - - 0 1
-Command received: go
-Response sent: bestmove f3g3
-Command received: position fen 3r1rk1/4Qp1p/5p2/8/2P5/P4R2/1PK2P2/5q2 w - - 0 1 move f3g3 g8h8
-Command received: go
-Response sent: bestmove f3g3
-Command received: position fen 3r1rk1/4Qp1p/5p2/8/2P5/P4R2/1PK2P2/5q2 w - - 0 1 moves f3g3 g8h8
-Make moves after setting position: 2
-Command received: go
-Response sent: bestmove e7f6
-Command received: position fen 8/8/8/8/1B6/Pk5r/1N6/1K6 b - - 0 1
-Command received: go
-Response sent: bestmove h3h1
-Command received: position fen 8/8/8/8/1B6/Pk5r/1N6/1K6 b - - 0 1 moves h3h1 b4e1
-Make moves after setting position: 2
-Command received: go
-Response sent: bestmove h1e1
-Command received: position fen 8/8/8/8/1B6/Pk5r/1N6/1K6 b - - 0 1 moves h3h1 b4e1 h1e1 b2d1
-Make moves after setting position: 4
-Command received: go
-Response sent: bestmove e1d1
-Command received: position fen 6k1/1p1N3p/p5p1/3p1pP1/5Qnr/2P1r3/PP4K1/8 w - - 0 1
-Command received: go
-Response sent: bestmove f4b8
-Command received: position fen 6k1/1p1N3p/p5p1/3p1pP1/5Qnr/2P1r3/PP4K1/8 w - - 0 1 moves f4b8 g8f7
-Make moves after setting position: 2
-Command received: go
-Response sent: bestmove b8f8
-Command received: position fen 6k1/1p1N3p/p5p1/3p1pP1/5Qnr/2P1r3/PP4K1/8 w - - 0 1 moves f4b8 g8f7 b8f8 f7e6
-Make moves after setting position: 4
-Command received: go
-Response sent: bestmove d7c5
-Command received: position fen 6k1/1p1N3p/p5p1/3p1pP1/5Qnr/2P1r3/PP4K1/8 w - - 0 1 moves f4b8 g8f7 b8f8 f7e6 d7c5 e6e5
-Make moves after setting position: 6
-Command received: go
-Response sent: bestmove f8b8
-Command received: position fen 2r1k3/R6p/2p2Qp1/8/1q2P3/2nP3P/2P3P1/5R1K w - - 1 32
-Command received: go
-Response sent: bestmove a7h7
-Command received: position fen 2r1k3/R6p/2p2Qp1/8/1q2P3/2nP3P/2P3P1/5R1K w - - 1 32 moves a7h7 c3b1
-Make moves after setting position: 2
-Command received: go
-Response sent: bestmove f6g6
-Command received: position fen 2r1k3/R6p/2p2Qp1/8/1q2P3/2nP3P/2P3P1/5R1K w - - 1 32 moves a7h7 c3b1 f6g6 e8d8
-Make moves after setting position: 4
-Command received: go
-Response sent: bestmove g6g8
-Command received: position fen 2r1k3/R6p/2p2Qp1/8/1q2P3/2nP3P/2P3P1/5R1K w - - 1 32 moves a7h7 c3b1 f6g6 e8d8 g6g8 b4f8
-Make moves after setting position: 6
-Command received: go
-Response sent: bestmove f1f8
+Command received: quit
+CLOSING UCI bot
+Command received: 
+Command received: quit
+CLOSING UCI bot
+Command received: 
+Command received: quit
+CLOSING UCI bot
+Command received: quit
+CLOSING UCI bot
 Command received: quit
 CLOSING UCI bot

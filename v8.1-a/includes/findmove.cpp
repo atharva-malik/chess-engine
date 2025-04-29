@@ -403,6 +403,147 @@ std::string Bot::end_game_move_tl(int depth, Board& board, char colour){
 //     return uci::moveToUci(best_move);
 // }
 
+double square(int x) {
+    // Simulate some computation
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    double result = static_cast<double>(x) * x;
+    // std::cout << "Thread " << std::this_thread::get_id() << " calculated square of " << x << " is " << result << std::endl;
+    return result;
+}
+
+std::string Bot::mid_40_thread(int depth, Board& board, char colour){
+    // float best_eval;
+    // Move best_move = Move();
+    // Movelist moves = Movelist();
+    // movegen::legalmoves(moves, board);
+    // float evaluation;
+    // Move move = Move();
+
+    // if (colour == 'w') {
+    //     best_eval = -99999999999.0f;
+    //     order_moves(moves, board);
+    //     for (int i = 0; i < moves.size(); i++) {
+    //         move = moves[i];
+    //         evaluation = this->search_move(move, board, depth, 1);
+    //         if (evaluation > best_eval) {
+    //             best_eval = evaluation;
+    //             best_move = move;
+    //             if (best_eval == 9999.0f) break; //* Break if mate
+    //         }
+    //     }
+    // }
+    // else {
+    //     best_eval = 99999999999.0f;
+    //     order_moves(moves, board);
+    //     for (int i = 0; i < moves.size(); i++){
+    //         Move move = moves[i];
+    //         evaluation = this->search_move(move, board, depth, 1);
+    //         if (evaluation < best_eval){
+    //             best_eval = evaluation;
+    //             best_move = move;
+    //             if (best_eval == -9999.0f) break; //* Break if mate
+    //         }
+    //     }
+    // }
+    // return uci::moveToUci(best_move);
+
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    order_moves(moves, board);
+    
+    float evaluation;
+    Move move = Move();
+
+    const int num_iterations = moves.size();
+    std::vector<std::thread> threads;
+    std::vector<double> results(num_iterations); // Vector to store results
+    std::mutex results_mutex; // Mutex to protect access to the results vector.  IMPORTANT!
+
+    // Create and start a thread for each iteration.
+    for (int i = 0; i < num_iterations; ++i) {
+        threads.emplace_back(
+            // Use a lambda function to capture 'i' by value and handle the result.
+            [&, i]() {
+                float result = this->search_move(moves[i], board, depth, 1); // Calculate the result
+                // Use a lock_guard to ensure thread-safe access to the results vector.
+                std::lock_guard<std::mutex> guard(results_mutex);
+                results[i] = result; // Store the result in the correct position.
+            }
+        );
+        // std::cout << "Thread " << threads.back().get_id() << " started for iteration " << i << std::endl;
+    }
+
+    // Wait for all threads to complete.
+    std::cout << "Waiting for threads to finish...\n";
+    for (auto& thread : threads) {
+        if (thread.joinable())
+            thread.join();
+    }
+    std::cout << "All threads finished.\n";
+
+    // Print the results.
+    std::cout << "Results: ";
+    for (double result : results) {
+        std::cout << result << " ";
+    }
+    std::cout << std::endl;
+
+    // Calculate the sum of the results using the accumulator
+    double sum = std::accumulate(results.begin(), results.end(), 0.0);
+    // std::cout << "Sum of results: " << sum << std::endl;
+
+    return "asdf";
+}
+
+std::string Bot::mid_x_threads(int depth, Board& board, char colour){
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    order_moves(moves, board);
+    
+    float evaluation;
+    Move move = Move();
+
+    const int num_iterations = 12; // Number of iterations to run in parallel
+    std::vector<std::thread> threads;
+    std::vector<double> results(num_iterations); // Vector to store results
+    std::mutex results_mutex; // Mutex to protect access to the results vector.  IMPORTANT!
+
+    // Create and start a thread for each iteration.
+    for (int i = 0; i < num_iterations; ++i) {
+        threads.emplace_back(
+            // Use a lambda function to capture 'i' by value and handle the result.
+            [&, i]() {
+                float result = this->search_x_moves(moves, board, depth, 1, i*3, 3); // Calculate the result
+                // Use a lock_guard to ensure thread-safe access to the results vector.
+                std::lock_guard<std::mutex> guard(results_mutex);
+                results[i] = result; // Store the result in the correct position.
+            }
+        );
+        // std::cout << "Thread " << threads.back().get_id() << " started for iteration " << i << std::endl;
+    }
+
+    // Wait for all threads to complete.
+    std::cout << "Waiting for threads to finish...\n";
+    for (auto& thread : threads) {
+        if (thread.joinable())
+            thread.join();
+    }
+    std::cout << "All threads finished.\n";
+
+    // Print the results.
+    std::cout << "Results: ";
+    for (double result : results) {
+        std::cout << result << " ";
+    }
+    std::cout << std::endl;
+
+    // Calculate the sum of the results using the accumulator
+    double sum = std::accumulate(results.begin(), results.end(), 0.0);
+    // std::cout << "Sum of results: " << sum << std::endl;
+
+    return "asdf";
+}
+
 std::string Bot::middle_game_move(int depth, Board& board, char colour){
     float best_eval;
     Move best_move = Move();
@@ -418,7 +559,8 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
             move = moves[i];
             // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, false, board);
+            // evaluation = this->minimax(depth, -9999, 9999, false, board);
+            evaluation = -this->negamax(depth, -9999, 9999, board);
             // Bot::int_unmove(move, board);
             board.unmakeMove(move);
             if (evaluation > best_eval) {
@@ -435,7 +577,8 @@ std::string Bot::middle_game_move(int depth, Board& board, char colour){
             Move move = moves[i];
             // Bot::int_move(move, board);
             board.makeMove(move);
-            evaluation = this->minimax(depth, -9999, 9999, true, board);
+            // evaluation = this->minimax(depth, -9999, 9999, true, board);
+            evaluation = this->negamax(depth, -9999, 9999, board);
             // Bot::int_unmove(move, board);
             board.unmakeMove(move);
             if (evaluation < best_eval){

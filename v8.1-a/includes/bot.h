@@ -238,9 +238,16 @@ class Bot{
         static void LogToFile(const std::string& message);
 
         void timer(std::promise<void>& promise, double time_limit_milliseconds);
-        float eval_mid(Board board);
-        float eval_end(Board board);
+
+        float search_move(Move move, Board board, int depth, int colour);
+        float search_x_moves(Movelist moves, Board board, int depth, int colour, int start, int number_of_moves);
+        std::string mid_40_thread(int depth, Board& board, char colour);
+        std::string mid_x_threads(int depth, Board& board, char colour);
         
+        float negamax(int depth, float alpha, float beta, Board& board);
+        float nigamax(int depth, Board& board, int colour); // -1 for white, 1 for black
+        int determineDepth(const Board& board);
+
     private:
         std::unordered_map<uint64_t, float> transpositionTable;
         json openings_data;
@@ -266,6 +273,9 @@ class Bot{
         float quiescence(Board& board, bool maximizing_player, float alpha, float beta, std::function<float(Board)> evaluate);
         float quiescence_tl(Board& board, bool maximizing_player, float alpha, float beta, std::function<float(Board)> evaluate);
         
+        float eval_mid(Board board);
+        float eval_end(Board board);
+
         // Helpers for the Helpers
         std::string convert_fen(std::string fen);
         std::string OpeningBookPath = "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json";
@@ -274,7 +284,7 @@ class Bot{
         std::vector<Move> generateChecks(Board& board);
         
         int volatility(Board& board);
-        int determineDepth(const Board& board);
+        // int determineDepth(const Board& board);
         int get_random_index(const std::vector<std::string>& vec);
         
         float calculate_phase(Board board);
