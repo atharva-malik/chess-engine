@@ -30,7 +30,7 @@
 //     return best_eval;
 // }
 
-float Bot::negamax(int depth, float alpha, float beta, Board& board, int max_depth){ //todo try do something with max_depth
+float Bot::negamax(int depth, float alpha, float beta, Board& board){ //todo try do something with max_depth
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
         if (board.sideToMove() == Color::WHITE) return -9999.0f;

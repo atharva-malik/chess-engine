@@ -32,7 +32,8 @@ void ReceiveCommand(std::string message, UciPlayer& player){
 }
 
 int main () {
-    init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    // init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
     Bot bot("1r1q1rk1/p1pn1ppp/2Bb1n2/5p2/2p2P2/2N3P1/PP1PP2P/R1BQK2R w KQ - 0 11", 'm');
     // for (int i = 0; i < 3; i++){
     //     auto start = std::chrono::high_resolution_clock::now();
@@ -60,17 +61,6 @@ int main () {
     for (int i = 0; i < 1; i++){ //todo change to 3
         auto start = std::chrono::high_resolution_clock::now();
         std::cout << bot.nigamax(7, bot.board, -1) << std::endl;
-        auto end = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-        std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
-    }
-
-    std::cout << "Get-best-move" << std::endl;
-    std::cout << "------------------------" << std::endl;
-
-    for (int i = 0; i < 3; i++){
-        auto start = std::chrono::high_resolution_clock::now();
-        std::cout << bot.get_best_move(bot.board, 'w', 7) << std::endl;
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
@@ -106,6 +96,17 @@ int main () {
         auto start = std::chrono::high_resolution_clock::now();
         // std::cout << bot.negamax(4, -9999, 9999, bot.board) << std::endl;
         bot.mid_40_thread(7, bot.board, 'w');
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
+    }
+
+    std::cout << "Get-best-move" << std::endl;
+    std::cout << "------------------------" << std::endl;
+
+    for (int i = 0; i < 3; i++){
+        auto start = std::chrono::high_resolution_clock::now();
+        std::cout << bot.get_best_move(bot.board, 'w', 7) << std::endl;
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
