@@ -27,3 +27,4 @@ Command received: quit
 CLOSING UCI bot
 Error: Could not open openings.json
 Error: Could not open openings.json
+Error: Could not open openings.json
