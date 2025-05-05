@@ -32,8 +32,8 @@ void ReceiveCommand(std::string message, UciPlayer& player){
 }
 
 int main () {
-    // init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
-    init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    // init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
     Bot bot("1r1q1rk1/p1pn1ppp/2Bb1n2/5p2/2p2P2/2N3P1/PP1PP2P/R1BQK2R w KQ - 0 11", 'm');
     // for (int i = 0; i < 3; i++){
     //     auto start = std::chrono::high_resolution_clock::now();

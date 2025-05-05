@@ -3,26 +3,28 @@
       'Vazirmatn', 'Inter', ui-sans-serif, system-ui, sans-serif,
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
+
+  
   
   :root {
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(
-      120deg,
+    --vp-home-hero-name-background: linear-gradient(
+      150deg,
       #FFD700,
       #4169E1 70%
     );
     --vp-home-hero-image-background-image: linear-gradient(
       -45deg,
-      #b98e00 50%,
+      #b98e00 40%,
       /* #47caff 50% */
-      #284194 50%
+      #284194 60%
     );
     --vp-home-hero-image-filter: blur(44px);
   }
   
   @media (min-width: 640px) {
     :root {
-      --vp-home-hero-image-filter: blur(56px);
+      --vp-home-hero-image-filter: blur(36px);
     }
   }
   
