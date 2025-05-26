@@ -12,7 +12,7 @@ hero:
       link: /quickstart/quickstart.md
     - theme: alt
       text: Dev Log
-      link: /markdown-examples
+      link: /devlog/test.md #todo FIX THIS ROUTING
     - theme: alt
       text: Documentation
       link: /docs/introduction.md

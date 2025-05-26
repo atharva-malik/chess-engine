@@ -456,7 +456,7 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
 
     const int num_iterations = moves.size();
     std::vector<std::thread> threads;
-    std::vector<double> results(num_iterations); // Vector to store results
+    std::vector<std::pair<double, std::string>> data(num_iterations); // Vector to store results and moves
     std::mutex results_mutex; // Mutex to protect access to the results vector.  IMPORTANT!
 
     // Create and start a thread for each iteration.
@@ -467,7 +467,8 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
                 float result = this->search_move(moves[i], board, depth, 1); // Calculate the result
                 // Use a lock_guard to ensure thread-safe access to the results vector.
                 std::lock_guard<std::mutex> guard(results_mutex);
-                results[i] = result; // Store the result in the correct position.
+                data[i].first = result; // Store the result in the correct position.
+                data[i].second = uci::moveToUci(moves[i]); // Store the move in the correct position.
             }
         );
         // std::cout << "Thread " << threads.back().get_id() << " started for iteration " << i << std::endl;
@@ -480,6 +481,10 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
             thread.join();
     }
     std::cout << "All threads finished.\n";
+
+    std::sort(data.begin(), data.end(), [](auto &a, auto &b) {
+        return a.first < b.first;
+    });
 
     // Print the results.
     std::cout << "Results: ";

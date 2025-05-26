@@ -55,6 +55,18 @@ int main () {
     std::cout << moves.size() << std::endl;
     std::cout << bot.determineDepth(bot.board) << std::endl;
 
+    std::cout << "Mid-40-threads" << std::endl;
+    std::cout << "------------------------" << std::endl;
+
+    for (int i = 0; i < 3; i++){
+        auto start = std::chrono::high_resolution_clock::now();
+        // std::cout << bot.negamax(4, -9999, 9999, bot.board) << std::endl;
+        bot.mid_40_thread(5, bot.board, 'w');
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
+    }
+
     std::cout << "Nigamax" << std::endl;
     std::cout << "------------------------" << std::endl;
 
@@ -84,18 +96,6 @@ int main () {
     for (int i = 0; i < 3; i++){
         auto start = std::chrono::high_resolution_clock::now();
         std::cout << bot.negamax(8, -9999, 9999, bot.board) << std::endl;
-        auto end = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-        std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
-    }
-
-    std::cout << "Mid-40-threads" << std::endl;
-    std::cout << "------------------------" << std::endl;
-
-    for (int i = 0; i < 3; i++){
-        auto start = std::chrono::high_resolution_clock::now();
-        // std::cout << bot.negamax(4, -9999, 9999, bot.board) << std::endl;
-        bot.mid_40_thread(7, bot.board, 'w');
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
