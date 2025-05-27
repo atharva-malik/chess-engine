@@ -488,14 +488,11 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
 
     // Print the results.
     std::cout << "Results: ";
-    for (double result : results) {
-        std::cout << result << " ";
+    for (auto result : data) {
+        std::cout << result.first << " ";
+        std::cout << result.second << std::endl;
     }
     std::cout << std::endl;
-
-    // Calculate the sum of the results using the accumulator
-    double sum = std::accumulate(results.begin(), results.end(), 0.0);
-    // std::cout << "Sum of results: " << sum << std::endl;
 
     return "asdf";
 }

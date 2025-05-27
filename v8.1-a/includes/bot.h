@@ -224,7 +224,7 @@ struct PieceTables {
 class Bot{
     public:
         Bot();
-        Bot(std::string fen, char game_stage);;
+        Bot(std::string fen, char game_stage);
         Bot(std::string fen);
 
         Board board;

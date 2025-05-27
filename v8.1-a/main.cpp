@@ -72,7 +72,7 @@ int main () {
 
     for (int i = 0; i < 1; i++){ //todo change to 3
         auto start = std::chrono::high_resolution_clock::now();
-        std::cout << bot.nigamax(7, bot.board, -1) << std::endl;
+        std::cout << bot.nigamax(5, bot.board, -1) << std::endl;
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
@@ -84,7 +84,7 @@ int main () {
     for (int i = 0; i < 3; i++){
         auto start = std::chrono::high_resolution_clock::now();
         // std::cout << bot.negamax(4, -9999, 9999, bot.board) << std::endl;
-        bot.mid_x_threads(7, bot.board, 'w');
+        bot.mid_x_threads(5, bot.board, 'w');
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
@@ -95,7 +95,7 @@ int main () {
 
     for (int i = 0; i < 3; i++){
         auto start = std::chrono::high_resolution_clock::now();
-        std::cout << bot.negamax(8, -9999, 9999, bot.board) << std::endl;
+        std::cout << bot.negamax(6, -9999, 9999, bot.board) << std::endl;
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
@@ -106,7 +106,7 @@ int main () {
 
     for (int i = 0; i < 3; i++){
         auto start = std::chrono::high_resolution_clock::now();
-        std::cout << bot.get_best_move(bot.board, 'w', 7) << std::endl;
+        std::cout << bot.get_best_move(bot.board, 'w', 5) << std::endl;
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
