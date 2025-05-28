@@ -482,19 +482,25 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
     }
     std::cout << "All threads finished.\n";
 
-    std::sort(data.begin(), data.end(), [](auto &a, auto &b) {
-        return a.first < b.first;
-    });
+    if (colour == 'w') {
+        std::sort(data.begin(), data.end(), [](auto &a, auto &b) {
+            return a.first > b.first;
+        });
 
-    // Print the results.
-    std::cout << "Results: ";
-    for (auto result : data) {
-        std::cout << result.first << " ";
-        std::cout << result.second << std::endl;
+    } else {
+        std::sort(data.begin(), data.end(), [](auto &a, auto &b) {
+            return a.first < b.first;
+        });
     }
-    std::cout << std::endl;
+    // // Print the results.
+    // std::cout << "Results: ";
+    // for (auto result : data) {
+    //     std::cout << result.first << " ";
+    //     std::cout << result.second << std::endl;
+    // }
+    // std::cout << std::endl;
 
-    return "asdf";
+    return data[0].second;
 }
 
 std::string Bot::mid_x_threads(int depth, Board& board, char colour){
