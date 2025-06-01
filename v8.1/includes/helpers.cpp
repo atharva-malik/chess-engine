@@ -150,55 +150,6 @@ namespace helpers
     }
 
     void ProcessGoCommand(std::string message, UciPlayer& player) {
-        std::string move;
-        if (stringContains(lower(message), "movetime")){
-            // int moveTimeMs = TryGetLabelledValueInt(message, "movetime", {"go", "movetime", "wtime", "btime", "winc", "binc", "movestogo"}, 0);
-
-            // player.bot.isThinking = true;
-            // std::promise<void> promise;
-            // std::future<void> future = promise.get_future();
-
-            // moveTimeMs -= 50; // Give some buffer time to avoid timeout
-
-            // std::thread timerThread([&]() { player.bot.timer(promise, moveTimeMs); });
-            // try {
-            //     std::string move = player.getBestMoveTimed(moveTimeMs);
-            //     player.bot.isThinking = false;
-            //     future.get(); // Wait for the worker thread to finish or throw
-            //     Respond("bestmove " + move);
-            // } catch (const std::exception& e) {
-            //     Respond("bestmove "); // todo: FIX THIS SHIT
-            // }
-            // timerThread.join();
-            Respond("bestmove " + player.getBestMove());
-        } else {
-			// int timeRemainingWhiteMs = TryGetLabelledValueInt(message, "wtime", {"go", "movetime", "wtime", "btime", "winc", "binc", "movestogo"}, 0);
-			// int timeRemainingBlackMs = TryGetLabelledValueInt(message, "btime", {"go", "movetime", "wtime", "btime", "winc", "binc", "movestogo"}, 0);
-			// int incrementWhiteMs = TryGetLabelledValueInt(message, "winc", {"go", "movetime", "wtime", "btime", "winc", "binc", "movestogo"}, 0);
-			// int incrementBlackMs = TryGetLabelledValueInt(message, "binc", {"go", "movetime", "wtime", "btime", "winc", "binc", "movestogo"}, 0);
-
-            // // todo: implement timed searches
-			// double thinkTime = player.ChooseThinkTime(timeRemainingWhiteMs, timeRemainingBlackMs, incrementWhiteMs, incrementBlackMs);
-			// player.bot.LogToFile("Thinking for: " + std::to_string(thinkTime) + " ms.");
-
-            // player.bot.isThinking = true;
-            // std::promise<void> promise;
-            // std::future<void> future = promise.get_future();
-
-            // thinkTime -= 50; // Give some buffer time to avoid timeout
-
-            // std::thread timerThread([&]() { player.bot.timer(promise, thinkTime); });
-            // try {
-            //     std::string move = player.getBestMoveTimed(thinkTime);
-            //     player.bot.isThinking = false;
-            //     future.get(); // Wait for the worker thread to finish or throw
-            //     Respond("bestmove " + move);
-            // } catch (const std::exception& e) {
-            //     Respond("bestmove "); // todo: FIX THIS SHIT
-            // }
-            // timerThread.join();
-            Respond("bestmove " + player.getBestMove());
-		}
-
+        Respond("bestmove " + player.getBestMove());
     }
 } // namespace helpers

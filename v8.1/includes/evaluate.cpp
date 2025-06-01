@@ -84,7 +84,6 @@ float Bot::eval_end(Board board){
             // As the game gets towards the end of the game, the value of the pieces change
             // They no longer have 'bad' squares except for the king and the pawns. The other
             // pieces should just support these pieces and help them promote.
-            // todo: If this makes it worse, rewrite piece tables to be more active
             switch (board.at(sq)){
                 case 12:
                     // Nothing

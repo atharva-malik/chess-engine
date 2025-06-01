@@ -9,7 +9,6 @@
 #include <chrono>
 #include "3rdparty/json.hpp"
 #include "3rdparty/chess.hpp"
-#include "exceptions.cpp"
 
 using json = nlohmann::json;
 using namespace chess;
@@ -228,71 +227,49 @@ class Bot{
         Bot(std::string fen);
 
         Board board;
-        bool isThinking = false;
 
-        void print_board(const std::string& fen);
+        void print_board(const std::string& fen); //todo implement this
         
         std::string get_best_move(Board& board, char colour, int depth);
-        std::string get_best_move_tl(Board& board, char colour, double time_limit, int depth);
         
         static void LogToFile(const std::string& message);
 
-        void timer(std::promise<void>& promise, double time_limit_milliseconds);
-
-        float search_move(Move move, Board board, int depth, int colour);
-        float search_x_moves(Movelist moves, Board board, int depth, int colour, int start, int number_of_moves);
-        std::string mid_40_thread(int depth, Board& board, char colour);
-        std::string mid_x_threads(int depth, Board& board, char colour);
         
-        float negamax(int depth, float alpha, float beta, Board& board);
-        float nigamax(int depth, Board& board, int colour); // -1 for white, 1 for black
-        int determineDepth(const Board& board);
+        
 
     private:
         std::unordered_map<uint64_t, float> transpositionTable;
+        std::vector<Move> killer_moves; //todo add killer moves and transposition table back
+        
         json openings_data;
         PieceTables piece_tables;
         char game_stage = 'o';
         int piece_values[13] = {1, 3, 3, 5, 9, 100, 1, 3, 3, 5, 9, 100, 0};
-        std::vector<Move> killer_moves;
-        //todo: REMOVE THIS
-        std::chrono::high_resolution_clock::time_point start_time = std::chrono::high_resolution_clock::now();
-        double time_limit = 999999;
         
-        std::string get_opening_move(const std::string& fen, char colour);
+        std::string opening_move(const std::string& fen, char colour);
         std::string middle_game_move(int depth, Board& board, char colour);
+        std::string middle_game_x_thread(int depth, Board& board, char colour);
         std::string end_game_move(int depth, Board& board, char colour);
-
-        std::string get_opening_move_tl(const std::string& fen, char colour);
-        std::string middle_game_move_tl(int depth, Board& board, char colour);
-        std::string end_game_move_tl(int depth, Board& board, char colour);
 
         // Helper functions
         float minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board);
-        float minimax_tl(int depth, float alpha, float beta, bool maximizing_player, Board& board, std::function<float(Board)> evaluate);
-        float quiescence(Board& board, bool maximizing_player, float alpha, float beta, std::function<float(Board)> evaluate);
-        float quiescence_tl(Board& board, bool maximizing_player, float alpha, float beta, std::function<float(Board)> evaluate);
+        float negamax(int depth, float alpha, float beta, Board& board);
         
         float eval_mid(Board board);
         float eval_end(Board board);
-
+        
         // Helpers for the Helpers
         std::string convert_fen(std::string fen);
-        std::string OpeningBookPath = "C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\OpeningBook\\book.json";
+        std::string OpeningBookPath = "includes\\OpeningBook\\book.json";
         
-        std::vector<Move> generateCaptures(Board& board);
-        std::vector<Move> generateChecks(Board& board);
-        
-        int volatility(Board& board);
-        // int determineDepth(const Board& board);
+        int determineDepth(const Board& board);
         int get_random_index(const std::vector<std::string>& vec);
         
+        float search_move(Move move, Board board, int depth, int colour);
         float calculate_phase(Board board);
         
         bool isCheck(Move move, Board& board);
         bool load_openings_data();
-        bool time_exceeded(std::chrono::high_resolution_clock::time_point startTime, double time_limit_milliseconds);
 
         void order_moves(Movelist& moves, Board& board);
-        void order_moves_eval(Movelist& moves, std::vector<std::pair<int, Move>>& moves_eval);
 };

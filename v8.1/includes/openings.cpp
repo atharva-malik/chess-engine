@@ -14,23 +14,7 @@ bool Bot::load_openings_data() {
     }
 }
 
-std::string Bot::get_opening_move(const std::string& fen, char colour) {
-    if (this->openings_data.empty()) { // Check if the JSON data is loaded
-        Bot::LogToFile("Error: Openings data not loaded.");
-        this->game_stage = 'm';
-        return Bot::get_best_move(this->board, colour, -1);
-    }
-    std::string converted_fen = Bot::convert_fen(fen);
-    if (this->openings_data.contains(converted_fen)) {
-        std::vector<std::string> moves = this->openings_data[converted_fen].get<std::vector<std::string>>();
-        return (moves)[this->get_random_index(moves)];
-    } else {
-        this->game_stage = 'm';
-        return Bot::get_best_move(this->board, colour, -1);
-    }
-}
-
-std::string Bot::get_opening_move_tl(const std::string& fen, char colour) {
+std::string Bot::opening_move(const std::string& fen, char colour) {
     if (this->openings_data.empty()) { // Check if the JSON data is loaded
         Bot::LogToFile("Error: Openings data not loaded.");
         this->game_stage = 'm';
