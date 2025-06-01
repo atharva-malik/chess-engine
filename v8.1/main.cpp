@@ -32,8 +32,8 @@ void ReceiveCommand(std::string message, UciPlayer& player){
 }
 
 int main () {
-    // init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
-    init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    // init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
     // Bot bot("1r1q1rk1/p1pn1ppp/2Bb1n2/5p2/2p2P2/2N3P1/PP1PP2P/R1BQK2R b KQ - 0 11", 'm');
     
     // Movelist moves = Movelist();
@@ -74,3 +74,4 @@ int main () {
     Bot::LogToFile("CLOSING UCI bot");
     return 0;
 }
+//todo: check checkmates again

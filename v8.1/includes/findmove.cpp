@@ -486,12 +486,12 @@ std::string Bot::mid_40_thread(int depth, Board& board, char colour){
         return a.first > b.first;
     });
     // // Print the results.
-    // std::cout << "Results: ";
-    // for (auto result : data) {
-    //     std::cout << result.first << " ";
-    //     std::cout << result.second << std::endl;
-    // }
-    // std::cout << std::endl;
+    std::cout << "Results: ";
+    for (auto result : data) {
+        std::cout << result.first << " ";
+        std::cout << result.second << std::endl;
+    }
+    std::cout << std::endl;
 
     return data[0].second;
 }
