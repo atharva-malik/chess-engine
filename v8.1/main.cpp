@@ -24,8 +24,7 @@ void ReceiveCommand(std::string message, UciPlayer& player){
 }
 
 int main () {
-    init_nnue("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
-    // init_nnue("C:\\Users\\atharva.malik\\Documents\\GitHub\\chess-engine\\v8.1-a\\includes\\NNUE\\v4.nnue");
+    init_nnue("includes\\NNUE\\v4.nnue");
     
     UciPlayer player;
     std::string command = "";
