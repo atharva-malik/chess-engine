@@ -157,3 +157,8 @@ int Bot::get_random_index(const std::vector<std::string>& vec){
     return distrib(gen);
 
 }
+
+void Bot::print_board(Board board) {
+    std::cout << board << std::endl;
+    Bot::LogToFile("Board printed: " + board.getFen());
+}

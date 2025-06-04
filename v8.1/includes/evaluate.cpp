@@ -67,7 +67,6 @@ float Bot::eval_mid(Board board){
         }
     }
     float end_eval = future_result.get() * 100.0f;
-    //todo: make it hate losing castling rights
     float phase = Bot::calculate_phase(board);
     float eval = ((score * (256 - phase)) + (end_eval * phase)) / 256;
     return eval/100.0f;

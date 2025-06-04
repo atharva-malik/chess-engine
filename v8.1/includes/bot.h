@@ -228,18 +228,15 @@ class Bot{
 
         Board board;
 
-        void print_board(const std::string& fen); //todo implement this
+        static void print_board(Board board);
         
         std::string get_best_move(Board& board, char colour, int depth);
         
         static void LogToFile(const std::string& message);
 
-        
-        
-
     private:
         std::unordered_map<uint64_t, float> transpositionTable;
-        std::vector<Move> killer_moves; //todo add killer moves and transposition table back
+        std::vector<Move> killer_moves;
         
         json openings_data;
         PieceTables piece_tables;

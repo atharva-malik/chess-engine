@@ -19,7 +19,7 @@ void ReceiveCommand(std::string message, UciPlayer& player){
     else if (messageType == "position") ProcessPositionCommand(message, player);
     else if (messageType == "go") ProcessGoCommand(message, player);
     else if (messageType == "quit") player.Quit();
-    else if (messageType == "d") Respond(player.getFen()); //* display the board
+    else if (messageType == "d") Bot::print_board(player.bot.board); //* display the board
     else Bot::LogToFile("Unrecognized command: " + messageType + " | " + message);
 }
 

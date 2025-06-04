@@ -1,6 +1,6 @@
 #include "nnue_eval.cpp"
 
-float Bot::negamax(int depth, float alpha, float beta, Board& board){ //todo try do something with max_depth
+float Bot::negamax(int depth, float alpha, float beta, Board& board){
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
         if (board.sideToMove() == Color::WHITE) return -9999.0f * depth; //* Prefer faster checkmates
@@ -8,7 +8,15 @@ float Bot::negamax(int depth, float alpha, float beta, Board& board){ //todo try
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
-    else if (depth == 0) return evaluate_fen_nnue(board.getFen());
+    else if (depth == 0) {
+        uint64_t hash = board.hash();
+        if (transpositionTable.find(hash) != transpositionTable.end()){
+            return transpositionTable[hash];
+        }
+        float eval = evaluate_fen_nnue(board.getFen());
+        transpositionTable[hash] = eval;
+        return eval;
+    }
 
     Move move = Move();
     Movelist moves = Movelist();
@@ -23,7 +31,7 @@ float Bot::negamax(int depth, float alpha, float beta, Board& board){ //todo try
         board.unmakeMove(move);
         best_eval = std::max(best_eval, evaluation);
         alpha = std::max(alpha, evaluation);
-        if (beta <= alpha) break;  // Beta cutoff
+        if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
     }
     return best_eval;
 }
@@ -36,7 +44,15 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
-    else if (depth == 0) return eval_mid(board);
+    else if (depth == 0) {
+        uint64_t hash = board.hash();
+        if (transpositionTable.find(hash) != transpositionTable.end()){
+            return transpositionTable[hash];
+        }
+        float eval = this->eval_mid(board);
+        transpositionTable[hash] = eval;
+        return eval;
+    }
 
     Move move = Move();
     Movelist moves = Movelist();
@@ -52,7 +68,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
             board.unmakeMove(move);
             maxEval = std::max(maxEval, evaluation);
             alpha = std::max(alpha, evaluation);
-            if (beta <= alpha) break;  // Beta cutoff
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
         }
         return maxEval;
     }
@@ -67,7 +83,7 @@ float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, B
             board.unmakeMove(move);
             minEval = std::min(minEval, evaluation);
             beta = std::min(beta, evaluation);
-            if (beta <= alpha) break;  // Beta cutoff
+            if (beta <= alpha) {killer_moves.push_back(move);break;};  // Beta cutoff
         }
         return minEval;
     }
