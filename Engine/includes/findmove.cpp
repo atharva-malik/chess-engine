@@ -38,12 +38,53 @@ std::string Bot::middle_game_x_thread(int depth, Board& board, char colour){
         return a.first > b.first;
     });
     // Print the results.
-    std::cout << "Results: ";
-    for (auto result : data) {
-        std::cout << result.first << " ";
-        std::cout << result.second << std::endl;
-    }
-    std::cout << std::endl;
+    // std::cout << "Results: ";
+    // for (auto result : data) {
+    //     std::cout << result.first << " ";
+    //     std::cout << result.second << std::endl;
+    // }
+    // std::cout << std::endl;
 
     return data[0].second;
+}
+
+std::string Bot::middle_game_move(int depth, Board& board, char colour){
+    float best_eval;
+    Move best_move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    float evaluation;
+    Move move = Move();
+
+    if (colour == 'w') {
+        best_eval = -99999999999.0f;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++) {
+            move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, false, board);
+            board.unmakeMove(move);
+            if (evaluation > best_eval) {
+                best_eval = evaluation;
+                best_move = move;
+                if (best_eval == 9999.0f) break; //* Break if mate
+            }
+        }
+    }
+    else {
+        best_eval = 99999999999.0f;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            Move move = moves[i];
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, true, board);
+            board.unmakeMove(move);
+            if (evaluation < best_eval){
+                best_eval = evaluation;
+                best_move = move;
+                if (best_eval == -9999.0f) break; //* Break if mate
+            }
+        }
+    }
+    return uci::moveToUci(best_move);
 }

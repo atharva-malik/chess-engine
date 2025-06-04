@@ -235,19 +235,18 @@ class Bot{
         static void LogToFile(const std::string& message);
 
     private:
-        std::unordered_map<uint64_t, float> transpositionTable;
-        std::vector<Move> killer_moves;
-        
         json openings_data;
         PieceTables piece_tables;
         char game_stage = 'o';
         int piece_values[13] = {1, 3, 3, 5, 9, 100, 1, 3, 3, 5, 9, 100, 0};
         
         std::string opening_move(const std::string& fen, char colour);
+        std::string middle_game_move(int depth, Board& board, char colour);
         std::string middle_game_x_thread(int depth, Board& board, char colour);
         std::string end_game_move(int depth, Board& board, char colour);
 
         // Helper functions
+        float minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board);
         float negamax(int depth, float alpha, float beta, Board& board);
         
         float eval_mid(Board board);

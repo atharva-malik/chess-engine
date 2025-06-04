@@ -1,64 +1,28 @@
 void Bot::order_moves(Movelist& moves, Board& board){
     std::vector<std::pair<int, Move>> scored_moves;
     int scores[13] = {1, 3, 3, 5, 9, 10, 1, 3, 3, 5, 9, 10, 0};
+    for (const auto& move : moves) {
+        int score = 0;
 
-    if (this->killer_moves.empty()){
-        for (const auto& move : moves) {
-            int score = 0;
-
-            if (move.typeOf() == Move::CASTLING){
-                score += 100; // prioritize castling
-            } else if (board.isCapture(move)) {
-                Square from = move.from();
-                Square to = move.to();
-                int capturedPiece = board.at(to);
-                int aggressivePiece = board.at(from);
-                score += 950 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
-            }
-            
-            if (this->isCheck(move, board)) {
-                score += 300; // prioritize checks
-            }
-
-            if (move.typeOf() == Move::PROMOTION) {
-                score += 500; // prioritize promotions
-            }
-            scored_moves.push_back({score, move});
+        if (move.typeOf() == Move::CASTLING){
+            score += 100; // prioritize castling
+        } else if (board.isCapture(move)) {
+            Square from = move.from();
+            Square to = move.to();
+            int capturedPiece = board.at(to);
+            int aggressivePiece = board.at(from);
+            score += 950 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
         }
-    }else {
-        for (const auto& move : moves) {
-            int score = 0;
-
-            for (auto move2: killer_moves){
-                if (move2 == move){
-                    score += 1000;
-                    break;
-                }
-            }
-
-            if (move.typeOf() == Move::CASTLING){
-                score += 100; // prioritize castling
-            } else if (board.isCapture(move)) {
-                Square from = move.from();
-                Square to = move.to();
-                int capturedPiece = board.at(to);
-                int aggressivePiece = board.at(from);
-                score += 1000 + (scores[capturedPiece] - scores[aggressivePiece]) * 100;
-            }
-            
-            if (this->isCheck(move, board)) {
-                score += 300; // prioritize checks
-            }
-
-            if (move.typeOf() == Move::PROMOTION) {
-                score += 500; // prioritize promotions
-            }
-
-
-            scored_moves.push_back({score, move});
+        
+        if (this->isCheck(move, board)) {
+            score += 300; // prioritize checks
         }
+
+        if (move.typeOf() == Move::PROMOTION) {
+            score += 500; // prioritize promotions
+        }
+        scored_moves.push_back({score, move});
     }
-
     std::sort(scored_moves.begin(), scored_moves.end(), [](const std::pair<int, Move>& a, const std::pair<int, Move>& b) {
         return a.first > b.first;
     });

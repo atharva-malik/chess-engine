@@ -235,9 +235,6 @@ class Bot{
         static void LogToFile(const std::string& message);
 
     private:
-        std::unordered_map<uint64_t, float> transpositionTable;
-        std::vector<Move> killer_moves;
-        
         json openings_data;
         PieceTables piece_tables;
         char game_stage = 'o';

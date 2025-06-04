@@ -1,2 +1,150 @@
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: setoption name Move Overhead value 100
+Unrecognized command: setoption | setoption name Move Overhead value 100
+Command received: setoption name Threads value 16
+Unrecognized command: setoption | setoption name Threads value 16
+Command received: setoption name Hash value 512
+Unrecognized command: setoption | setoption name Hash value 512
+Command received: setoption name SyzygyPath value ./syzygy/
+Unrecognized command: setoption | setoption name SyzygyPath value ./syzygy/
+Command received: setoption name UCI_ShowWDL value true
+Unrecognized command: setoption | setoption name UCI_ShowWDL value true
+Command received: isready
+Response sent: readyok
 Command received: quit
 CLOSING UCI bot
+Command received: uci
+Response sent: id name Fury
+Response sent: id author Atharva
+
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name Debug Log File type string default <empty>
+Response sent: option name NumaPolicy type string default auto
+Response sent: option name Threads type spin default 1 min 1 max 1024
+Response sent: option name Hash type spin default 16 min 1 max 33554432
+Response sent: option name Clear Hash type button
+Response sent: option name Ponder type check default false
+Response sent: option name MultiPV type spin default 1 min 1 max 256
+Response sent: option name Skill Level type spin default 20 min 0 max 20
+Response sent: option name Move Overhead type spin default 10 min 0 max 5000
+Response sent: option name nodestime type spin default 0 min 0 max 10000
+Response sent: option name UCI_Chess960 type check default false
+Response sent: option name UCI_LimitStrength type check default false
+Response sent: option name UCI_Elo type spin default 1320 min 1320 max 3190
+Response sent: option name UCI_ShowWDL type check default false
+Response sent: option name SyzygyPath type string default <empty>
+Response sent: option name SyzygyProbeDepth type spin default 1 min 1 max 100
+Response sent: option name Syzygy50MoveRule type check default true
+Response sent: option name SyzygyProbeLimit type spin default 7 min 0 max 7
+Response sent: option name EvalFile type string default nn-1111cefa1111.nnue
+Response sent: option name EvalFileSmall type string default nn-37f18f62d772.nnue
+Response sent: uciok
+Command received: setoption name Move Overhead value 100
+Unrecognized command: setoption | setoption name Move Overhead value 100
+Command received: setoption name Threads value 16
+Unrecognized command: setoption | setoption name Threads value 16
+Command received: setoption name Hash value 512
+Unrecognized command: setoption | setoption name Hash value 512
+Command received: setoption name SyzygyPath value ./syzygy/
+Unrecognized command: setoption | setoption name SyzygyPath value ./syzygy/
+Command received: setoption name UCI_ShowWDL value true
+Unrecognized command: setoption | setoption name UCI_ShowWDL value true
+Command received: ucinewgame
+Command received: isready
+Response sent: readyok
+Command received: position startpos moves e2e4
+Make moves after setting position: 1
+Command received: go movetime 10000
+Response sent: bestmove d7d5
+Command received: position startpos moves e2e4 d7d5 e4d5
+Make moves after setting position: 3
+Command received: go movetime 300000
+Response sent: bestmove g8f6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4
+Make moves after setting position: 5
+Command received: go movetime 300000
+Response sent: bestmove c8g4
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5
+Make moves after setting position: 7
+Command received: go movetime 300000
+Response sent: bestmove c7c6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6
+Make moves after setting position: 9
+Command received: go movetime 300000
+Response sent: bestmove b7c6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2
+Make moves after setting position: 11
+Command received: go movetime 300000
+Response sent: bestmove g4e2
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2
+Make moves after setting position: 13
+Command received: go movetime 300000
+Response sent: bestmove d8d4
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3
+Make moves after setting position: 15
+Command received: go movetime 300000
+Response sent: bestmove d4e4
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4
+Make moves after setting position: 17
+Command received: go movetime 300000
+Response sent: bestmove f6e4
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2
+Make moves after setting position: 19
+Command received: go movetime 300000
+Response sent: bestmove e4d6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3
+Make moves after setting position: 21
+Command received: go movetime 300000
+Response sent: bestmove b8d7
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4
+Make moves after setting position: 23
+Command received: go movetime 300000
+Response sent: bestmove g7g6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3
+Make moves after setting position: 25
+Command received: go movetime 300000
+Response sent: bestmove f8h6
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3 f8h6 e1g1
+Make moves after setting position: 27
+Command received: go movetime 300000
+Response sent: bestmove c6c5
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3 f8h6 e1g1 c6c5 a1d1
+Make moves after setting position: 29
+Command received: go movetime 300000
+Response sent: bestmove e8c8
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3 f8h6 e1g1 c6c5 a1d1 e8c8 f1e1
+Make moves after setting position: 31
+Command received: go movetime 300000
+Response sent: bestmove h8e8
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3 f8h6 e1g1 c6c5 a1d1 e8c8 f1e1 h8e8 d2e4
+Make moves after setting position: 33
+Command received: go movetime 300000
+Response sent: bestmove d6e4
+Command received: position startpos moves e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f1b5 c7c6 d5c6 b7c6 b5e2 g4e2 d1e2 d8d4 g1f3 d4e4 e2e4 f6e4 b1d2 e4d6 b2b3 b8d7 a2a4 g7g6 c1a3 f8h6 e1g1 c6c5 a1d1 e8c8 f1e1 h8e8 d2e4 d6e4 e1e4
+Make moves after setting position: 35
+Command received: go movetime 300000
