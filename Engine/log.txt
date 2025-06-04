@@ -1,0 +1,2 @@
+Command received: quit
+CLOSING UCI bot

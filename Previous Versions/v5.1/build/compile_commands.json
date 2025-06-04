@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/chess_bot.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\chess_bot.dir\\main.cpp.obj -c \"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v5.1\\main.cpp\"",
+  "file": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/main.cpp",
+  "output": "CMakeFiles/chess_bot.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/chess_bot.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\chess_bot.dir\\includes\\bot.cpp.obj -c \"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v5.1\\includes\\bot.cpp\"",
+  "file": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/includes/bot.cpp",
+  "output": "CMakeFiles/chess_bot.dir/includes/bot.cpp.obj"
+},
+{
+  "directory": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/chess_bot.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\chess_bot.dir\\includes\\chess.cpp.obj -c \"C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v5.1\\includes\\chess.cpp\"",
+  "file": "C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/includes/chess.cpp",
+  "output": "CMakeFiles/chess_bot.dir/includes/chess.cpp.obj"
+}
+]

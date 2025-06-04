@@ -1,0 +1,9 @@
+Niels Lohmann - https://github.com/nlohmann/json/
+
+Max (Disservin) - https://github.com/Disservin/chess-library
+
+Sebastian Lague - https://github.com/SebLague/Chess-Coding-Adventure
+
+Chess Programming - https://github.com/maksimKorzh
+
+Stockfish Evaluation Guide - https://hxim.github.io/Stockfish-Evaluation-Guide/

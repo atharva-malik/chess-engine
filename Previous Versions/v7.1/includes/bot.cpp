@@ -1,0 +1,474 @@
+#include "bot.h"
+//5806 milliseconds
+Bot::Bot() {
+    this->load_openings_data();
+    this->board.setFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
+    this->game_stage = 'o';
+}
+
+Bot::Bot(std::string fen) {
+    this->board.setFen(fen);
+    this->load_openings_data();
+    this->game_stage = 'o';
+}
+
+Bot::Bot(std::string fen, char game_stage) {
+    this->board.setFen(fen);
+    this->load_openings_data();
+    this->game_stage = game_stage;
+}
+
+bool Bot::load_openings_data() {
+    std::ifstream file("C:\\Atharva\\Programming\\Python\\Python Scripts\\chess-engine\\v5.2\\includes\\OpeningBook\\book.json");
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open openings.json" << std::endl;
+        return false;
+    }
+
+    try {
+        this->openings_data = json::parse(file);
+        return true;
+    } catch (json::parse_error& e) {
+        std::cerr << "JSON parse error: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+std::string Bot::get_best_move(Board& board, char colour) {
+    if (this->game_stage == 'o') return Bot::get_opening_move(board.getFen());
+    else if (this->game_stage == 'm'){
+        // isEndgame(board);
+        int d = Bot::determineDepth(board);
+        return this->middle_game_move(d, board, colour);
+    }else {
+        int d = Bot::determineDepth(board);
+        return this->middle_game_move(d, board, colour); // TODO: Implement endgame move selection
+    }
+}
+
+std::string Bot::get_opening_move(const std::string& fen) {
+    if (this->openings_data.empty()) { // Check if the JSON data is loaded
+        std::cerr << "Error: Openings data not loaded." << std::endl;
+        return {};
+    }
+    std::string converted_fen = Bot::convert_fen(fen);
+    if (this->openings_data.contains(converted_fen)) {
+        std::vector<std::string> moves = this->openings_data[converted_fen].get<std::vector<std::string>>();
+        return (moves)[this->get_random_index(moves)];
+    } else {
+        this->game_stage = 'm';
+        Color colour = this->board.sideToMove();
+        char colour_char = (colour == Color::WHITE) ? 'w' : 'b';
+        return Bot::get_best_move(this->board, colour_char);
+    }
+}
+
+std::string Bot::convert_fen(std::string fen) {
+    std::string converted_fen;
+    converted_fen = fen.erase(fen.length() - 4, 4);
+    return converted_fen;
+}
+
+int Bot::get_random_index(const std::vector<std::string>& vec){
+    if (vec.empty()) {
+        std::cerr << "Warning: Vector is empty. Returning 0." << std::endl;
+        return 0;
+    }
+
+    static std::random_device rd; // Static for persistent engine
+    static std::mt19937 gen(rd());  // Static for persistent engine
+
+    std::uniform_int_distribution<> distrib(0, vec.size() - 1);
+    return distrib(gen);
+
+}
+
+void Bot::print_board(const std::string& fen) {
+    char pieceChars[] = {
+        'r', 'n', 'b', 'q', 'k', 'p',
+        'R', 'N', 'B', 'Q', 'K', 'P'
+    };
+
+    char board[8][8];
+    int rank = 0; // Start at rank 0 (white's back rank)
+    int file = 0;
+
+    for (char c : fen) {
+        if (c == ' ') {
+            break;
+        } else if (c == '/') {
+            rank++; // Increment rank
+            file = 0;
+        } else if (isdigit(c)) {
+            int emptySquares = c - '0';
+            for (int i = 0; i < emptySquares; ++i) {
+                board[rank][file++] = '.';
+            }
+        } else {
+            for (char piece : pieceChars) {
+                if (c == piece) {
+                    board[rank][file++] = c;
+                    break;
+                }
+            }
+        }
+    }
+
+    for (int r = 7; r >= 0; --r) { //reverse the printing of the ranks.
+        for (int f = 0; f < 8; ++f) {
+            std::cout << board[r][f] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+std::string Bot::middle_game_move(int depth, Board& board, char colour){
+    float best_eval;
+    Move best_move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    float evaluation;
+    Move move = Move();
+
+    if (colour == 'w') {
+        best_eval = -99999999999.0f;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++) {
+            move = moves[i];
+            // Bot::int_move(move, board);
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, false, board);
+            // Bot::int_unmove(move, board);
+            board.unmakeMove(move);
+            if (evaluation > best_eval) {
+                best_eval = evaluation;
+                best_move = move;
+            }
+        }
+    }
+    else {
+        best_eval = 99999999999.0f;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            Move move = moves[i];
+            // Bot::int_move(move, board);
+            board.makeMove(move);
+            evaluation = this->minimax(depth, -9999, 9999, true, board);
+            // Bot::int_unmove(move, board);
+            board.unmakeMove(move);
+            if (evaluation < best_eval){
+                best_eval = evaluation;
+                best_move = move;
+            }
+        }
+    }
+    return uci::moveToUci(best_move);
+}
+
+float Bot::minimax(int depth, float alpha, float beta, bool maximizing_player, Board& board){
+    std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
+    if (isGameOver.first == GameResultReason::CHECKMATE){
+        if (board.sideToMove() == Color::WHITE) return 9999.0f;
+        else return -9999.0f;
+    } else if (!(isGameOver.first == GameResultReason::NONE)){
+        return 0.0f;
+    }
+    else if (depth == 0) return Bot::quiescence(board, alpha, beta, Bot::volatility(board));
+
+    Move move = Move();
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    if (maximizing_player){
+        float maxEval = -9999.0f;
+        float evaluation = 0;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            move = moves[i];
+            // Bot::int_move(move, board);
+            board.makeMove(move);
+            evaluation = this->minimax(depth - 1, alpha, beta, false, board);
+            // Bot::int_unmove(move, board);
+            board.unmakeMove(move);
+            maxEval = std::max(maxEval, evaluation);
+            alpha = std::max(alpha, evaluation);
+            if (beta <= alpha) break;  // Beta cutoff
+        }
+        return maxEval;
+    }
+    else{
+        float minEval = 9999.0f;
+        float evaluation = 0;
+        order_moves(moves, board);
+        for (int i = 0; i < moves.size(); i++){
+            move = moves[i];
+            // Bot::int_move(move, board);
+            board.makeMove(move);
+            evaluation = this->minimax(depth - 1, alpha, beta, true, board);
+            // Bot::int_unmove(move, board);
+            board.unmakeMove(move);
+            minEval = std::min(minEval, evaluation);
+            beta = std::min(beta, evaluation);
+            if (beta <= alpha) break;  // Beta cutoff
+        }
+        return minEval;
+    }
+}
+
+float Bot::quiescence(Board& board, float alpha, float beta, int depth) {
+    float stand_pat = this->evaluate(board); // Static evaluation
+    float DELTA_MARGIN = 6.0f; // Delta pruning margin. This function can be made better by tuning DELTA_MARGIN.
+
+    if (depth == 0) {
+        return stand_pat;
+    }
+
+    if (stand_pat >= beta) {
+        return beta;
+    }
+    if (alpha < stand_pat) {
+        alpha = stand_pat;
+    }
+
+    std::vector<Move> captures = this->generateCaptures(board); // Generate capture moves.
+    std::vector<Move> checks = this->generateChecks(board); // Generate check moves.
+
+    for (const auto& move : captures) {
+        int capturedPieceValue = piece_values[board.at(move.to())]; // Get captured piece value.
+
+        if (stand_pat + capturedPieceValue + DELTA_MARGIN < alpha) { // Delta pruning
+            continue; // Skip this capture
+        }
+
+        board.makeMove(move);
+        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        board.unmakeMove(move);
+        if (score >= beta) {
+            return score;
+        }
+        if (score > alpha) {
+            alpha = score;
+        }
+    }
+
+    for (const auto& move : checks) {
+        board.makeMove(move);
+        float score = -Bot::quiescence(board, -beta, -alpha, depth - 1); // Recursive call.
+        board.unmakeMove(move);
+        if (score >= beta) {
+            return score;
+        }
+        if (score > alpha) {
+            alpha = score;
+        }
+    }
+
+    return alpha;
+}
+
+std::vector<Move> Bot::generateCaptures(Board& board) {
+    std::vector<Move> captures;
+    Move move;
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    for (int i = 0; i < moves.size(); i++) {
+        move = moves[i];
+        if (!board.isCapture(move)) {
+            continue;
+        }
+        captures.push_back(move);
+    }
+    return captures;
+}
+
+std::vector<Move> Bot::generateChecks(Board& board) {
+    std::vector<Move> checks;
+    Move move;
+    Movelist moves = Movelist();
+    movegen::legalmoves(moves, board);
+    for (int i = 0; i < moves.size(); i++) {
+        move = moves[i];
+        if (!Bot::isCheck(move, board)) {
+            continue;
+        }
+        checks.push_back(move);
+    }
+    return checks;
+}
+
+int Bot::volatility(Board& board){
+    int volatility;
+    Movelist moves = Movelist();
+    movegen::legalmoves<movegen::MoveGenType::CAPTURE>(moves, board);
+    volatility = moves.size();
+    return volatility+4;
+}
+
+float Bot::evaluate(Board& board){
+    int score = 0;
+
+    Square sq;
+
+    //todo: find a way to make it more efficient
+    for (int rank = 0; rank < 8; ++rank) {
+        for (int file = 0; file < 8; ++file) {
+            sq = Square(rank * 8 + file);
+            switch (board.at(sq)){
+                case 12:
+                    // Nothing
+                    break;
+                case 0:
+                    // White Pawn
+                    score += this->piece_tables.w_pawn[rank][file];
+                    break;
+                case 1:
+                    // White Knight
+                    score += this->piece_tables.w_knight[rank][file];
+                    break;
+                case 2:
+                    // White Bishop
+                    score += this->piece_tables.w_bishop[rank][file];
+                    break;
+                case 3:
+                    // White Rook
+                    score += this->piece_tables.w_rook[rank][file];
+                    break;
+                case 4:
+                    // White Queen
+                    score += this->piece_tables.w_queen[rank][file];
+                    break;
+                case 5:
+                    // White King
+                    if (this->game_stage != 'e') score += this->piece_tables.w_king_mid[rank][file];
+                    else score += this->piece_tables.w_king_end[rank][file];
+                    break;
+                case 6:
+                    // Black Pawn
+                    score -= this->piece_tables.b_pawn[rank][file];
+                    break;
+                case 7:
+                    // Black Knight
+                    score -= this->piece_tables.b_knight[rank][file];
+                    break;
+                case 8:
+                    // Black Bishop
+                    score -= this->piece_tables.b_bishop[rank][file];
+                    break;
+                case 9:
+                    // Black Rook
+                    score -= this->piece_tables.b_rook[rank][file];
+                    break;
+                case 10:
+                    // Black Queen
+                    score -= this->piece_tables.b_queen[rank][file];
+                    break;
+                case 11:
+                    // Black King
+                    if (this->game_stage != 'e') score -= this->piece_tables.b_king_mid[rank][file];
+                    else score -= this->piece_tables.b_king_end[rank][file];
+                    break;
+                default:
+                    std::cout << "Error" << std::endl;
+                    break;
+            }
+        }
+    }
+    //todo: make it hate losing castling rights
+    return score/100.0f;
+}
+
+void Bot::order_moves(Movelist& moves, Board& board){
+    std::vector<std::pair<int, Move>> scored_moves;
+
+    for (const auto& move : moves) {
+        int score = 0;
+
+        if (board.isCapture(move)) {
+            score += 1000; // prioritize captures
+        }
+        // if (board.isPromotion(move)) {
+        //     score += 500; // prioritize promotions
+        // }
+        if (this->isCheck(move, board)) {
+            score += 300; // prioritize checks
+        }
+
+        scored_moves.push_back({score, move});
+    }
+
+    std::sort(scored_moves.begin(), scored_moves.end(), [](const std::pair<int, Move>& a, const std::pair<int, Move>& b) {
+        return a.first > b.first;
+    });
+
+    moves.clear();
+    for (const auto& scored_move : scored_moves) {
+        moves.add(scored_move.second);
+    }
+}
+
+bool Bot::isCheck(Move move, Board& board) {
+    Color stm = board.sideToMove();
+    int square = 0;
+    if (stm == Color(0)) {
+        square = board.pieces(PieceType("KING"), Color(1)).lsb();
+    } else {
+        square = board.pieces(PieceType("KING"), Color(0)).lsb();
+    }
+    Square king(square);
+    board.makeMove(move);
+    bool is_check = board.isAttacked(king, stm);
+    board.unmakeMove(move);
+    return is_check;
+}
+
+int Bot::determineDepth(const Board& board) {
+    int pieceCount = 0;
+    int pawnCount = 0;
+    Bitboard pawns = board.pieces(PieceType::PAWN);
+    pawnCount = pawns.count();
+    Bitboard r = board.pieces(PieceType::ROOK);
+    Bitboard b = board.pieces(PieceType::BISHOP);
+    Bitboard q = board.pieces(PieceType::QUEEN);
+    Bitboard k = board.pieces(PieceType::KNIGHT);
+    Bitboard K  = board.pieces(PieceType::KING);
+    pieceCount = r.count() + b.count() + q.count() + k.count() + K.count() + pawnCount;
+    // todo: use the queen later for better evaluation
+    // bool queenOnBoard = false;
+
+    if (this->game_stage == 'e') {
+        return 11;
+    }
+
+    //TWEAK THESE VALUES
+
+    //! IDEALISTICALLY, THESE ARE THE VALUES
+    // if (pieceCount > 28 && pawnCount > 12) {
+    //     return 3;
+    // } else if (pieceCount > 22 && pawnCount > 8) {
+    //     return 4;
+    // }
+    // // else if (pieceCount > 19 && pawnCount > 4) {
+    // //     return 5;}
+    // else if (pieceCount > 12 && pawnCount > 2) {
+    //     return 5;
+    // } else if (pieceCount > 8 && pawnCount > 1) {
+    //     return 6;
+    // } else if (pieceCount > 5 && pawnCount > 1) {
+    //     return 7;
+    // } else {
+    //     this->game_stage = 'e';
+    //     return 11;
+    // }
+
+    if (pieceCount > 28 && pawnCount > 12) {
+        return 3;
+    } else if (pieceCount > 22 && pawnCount > 8) {
+        return 4;
+    } else if (pieceCount > 12 && pawnCount > 2) {
+        return 5;
+    } else if (pieceCount > 5 && pawnCount > 1) {
+        return 6;
+    } else {
+        this->game_stage = 'e';
+        return 7;
+    }
+}

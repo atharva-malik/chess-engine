@@ -1,0 +1,126 @@
+/**
+File for testing the chess implementation
+**/
+#include <iostream>
+#include "includes/chess.hpp"
+#include "includes/bot.cpp"
+#include <chrono>
+
+using namespace chess;
+
+int main () {
+    // Bot bot;
+    Bot bot("8/7p/5kp1/p1b1r3/P1P5/1P3B1P/4p2K/4B3 w - - 2 45", 'm');
+    // Bot bot("", 'm');
+    // Bot bot("8/8/8/k7/4Q3/8/8/3K4 w - - 0 1");
+    
+    auto start = std::chrono::high_resolution_clock::now();
+    std::cout << bot.get_best_move(5, bot.board, 'w') << std::endl;
+    // std::cout << bot.evaluate(bot.board) << std::endl;
+    // std::cout << bot.evaluation << std::endl;
+    // bot.move("e1a5", bot.board);
+    // std::cout << bot.evaluate(bot.board) << std::endl;
+    // std::cout << bot.evaluation << std::endl << std::endl;
+
+    // std::cout << bot.evaluate(bot.board) << std::endl;
+    // std::cout << bot.evaluation << std::endl;
+    // bot.move("e1a5", bot.board);
+    // std::cout << bot.evaluate(bot.board) << std::endl;
+    // std::cout << bot.evaluation << std::endl;
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
+
+    // start = std::chrono::high_resolution_clock::now();
+    // bot.better_evaluate(bot.board);
+    // // bot.move("e1a5", bot.board);
+    // end = std::chrono::high_resolution_clock::now();
+    // duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+    // std::cout << "Function execution time: " << duration.count() << " microseconds" << std::endl;
+
+    // char turn = 'w';
+    // std::string move;
+    // for (int i = 0; i < 25; i++) {
+    //     if (turn == 'w') {
+    //         move = bot.get_best_move(5, bot.board, 'w');
+    //         std::cout << move << std::endl;
+    //         bot.board.makeMove(uci::uciToMove(bot.board, move));
+    //         std::cout << bot.board.getFen() << std::endl;
+    //         turn = 'b';
+    //     } else {
+    //         move = bot.get_best_move(5, bot.board, 'b');
+    //         std::cout << move << std::endl;
+    //         bot.board.makeMove(uci::uciToMove(bot.board, move));
+    //         std::cout << bot.board.getFen() << std::endl;
+    //         turn = 'w';
+    //     }
+
+    // }
+
+    return 0;
+}
+
+
+/**
+File for the uci implementation
+**/
+#include <iostream>
+#include "includes/chess.hpp"
+#include "includes/helpers.cpp"
+// #include "includes/ucibot.cpp" //* Already included in helpers
+
+using namespace chess;
+using namespace helpers;
+
+void ReceiveCommand(std::string message, UciPlayer& player){
+    LogToFile("Command received: " + message);
+    message = trim(message);
+	std::string messageType = lower(split(message, ' ')[0]);
+    
+    if (messageType == "uci") DisplayOptions();
+    else if (messageType == "isready") Respond("readyok");
+    else if (messageType == "ucinewgame") player.NotifyNewGame();
+    else if (messageType == "position") ProcessPositionCommand(message, player);
+    else if (messageType == "go") ProcessGoCommand(message, player);
+    // else if (messageType == "stop") { //TODO: Implement stop command
+    // // if (player.IsThinking)
+    // // {
+    // //     player.StopThinking();
+    // // }
+    // }
+    else if (messageType == "quit") player.Quit(); //todo implement this
+    else if (messageType == "d") Respond(player.getFen()); //* display the board
+    else LogToFile("Unrecognized command: " + messageType + " | " + message);
+}
+
+int main () {
+    UciPlayer player;
+    std::string command = "";
+    LogToFile("\n\nSTARTING UCI bot");
+    while (lower(command) != "quit")
+    {
+        std::getline(std::cin, command);
+        ReceiveCommand(command, player);
+    }
+    LogToFile("CLOSING UCI bot");
+    return 0;
+}
+
+int main () {
+    // Bot bot = Bot("r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1");
+    Bot bot = Bot("5k2/p6p/5Pp1/3Br3/2P4B/1P2b2P/P2pp2K/4R3 w - - 0 40");
+    
+    auto start = std::chrono::high_resolution_clock::now();
+    std::cout << bot.middle_game_move(1, bot.board, 'w') << std::endl;
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
+
+    start = std::chrono::high_resolution_clock::now();
+    std::cout << bot.middle_game_move_threading(1, bot.board, 'w') << std::endl;
+    end = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "Function execution time: " << duration.count() << " milliseconds" << std::endl;
+    return 0;
+}

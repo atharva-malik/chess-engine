@@ -1,3 +1,0 @@
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/Match Manager - C++/build/CMakeFiles/chess_bot_match_manager.dir
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/Match Manager - C++/build/CMakeFiles/ALL_BUILD.dir
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/Match Manager - C++/build/CMakeFiles/ZERO_CHECK.dir

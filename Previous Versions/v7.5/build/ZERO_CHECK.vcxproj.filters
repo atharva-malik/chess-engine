@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Atharva\Programming\Python\Python Scripts\chess-engine\v7.4\build\CMakeFiles\f22101d814365ef3e419c6c620e0bd7b\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{51BD6276-4436-36AB-A8F8-20464748549E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

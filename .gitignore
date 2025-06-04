@@ -19,6 +19,7 @@ docs/.vitepress/cache
 
 Hosting/
 lichess-bot-1.1.3/
+*.exe
 
 # Mono auto generated files
 mono_crash.*

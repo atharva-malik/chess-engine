@@ -1,3 +1,0 @@
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/CMakeFiles/chess_bot.dir
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/CMakeFiles/ALL_BUILD.dir
-C:/Atharva/Programming/Python/Python Scripts/chess-engine/v5.1/CMakeFiles/ZERO_CHECK.dir
