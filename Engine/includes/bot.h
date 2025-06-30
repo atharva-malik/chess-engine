@@ -1,3 +1,29 @@
+/**
+ *  @file bot.h
+ *  @brief Defines the Bot class and supporting evaluation structures for a chess engine.
+ *
+ ** This header provides the declaration of the Bot class responsible for handling move generation, 
+ ** board evaluation, and decision-making within different phases of a chess game (opening, middle, and endgame).
+ *
+ ** It also defines the PieceTables struct, which contains hand-tuned positional evaluation matrices
+ ** for all chess pieces, tailored to reflect strategic concepts like center control, castling, piece activity, 
+ ** and king safety across different game stages.
+ *
+ *! Features:
+ *! - Multiple constructors for FEN initialisation and game stage control.
+ *! - Heuristics for evaluation using handcrafted piece-square tables and material values.
+ *! - Opening book integration using JSON-based storage.
+ *! - Static utilities for logging and board visualisation.
+ *! - Search algorithms including minimax and negamax with alpha-beta pruning.
+ *! - Move ordering and utility functions to assist in efficient decision-making.
+ *
+ *? Dependencies:
+ *? - chess.hpp: Board representation and move generation.
+ *? - json.hpp: Parsing of opening book data.
+ *
+ ** This class forms the core decision-making module of the UCI engine backend.
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -221,6 +247,38 @@ struct PieceTables {
 };
 
 class Bot{
+    /**
+     *  @class Bot
+     *  @brief Implements a chess engine capable of move evaluation and decision-making across all phases of the game.
+     *
+     ** The Bot class encapsulates the primary logic and structure required for a UCI-compatible chess engine.
+     ** It supports position evaluation, strategic move selection, and integration with an optional opening book.
+     *
+     *? Key capabilities:
+     *? - Position evaluation via piece-square tables and phase-based heuristics.
+     *? - Move selection using minimax/negamax with alpha-beta pruning.
+     *? - Game phase segmentation: opening (using book), middlegame (multi-threaded), endgame (specialized logic).
+     *? - Integration with a JSON-formatted opening book file for deterministic early play.
+     *? - Logging utilities for diagnostics.
+     *
+     *! Construction options:
+     *! - Empty constructor initializes default board state.
+     *! - FEN-based constructors allow custom game state setup with or without explicit game phase.
+     *
+     *? Public methods:
+     *? - print_board: Static utility for console output of board state.
+     *? - get_best_move: Returns the engine’s best move based on the current board and configuration.
+     *? - LogToFile: Static logger for recording diagnostic messages.
+     *
+     *! Internal mechanisms include:
+     *! - Evaluation tables for all pieces and game stages.
+     *! - Search helpers for move pruning, ordering, and scoring.
+     *! - Phase-aware logic to adjust strategy dynamically.
+     *
+     *? Dependencies:
+     *? - Board and Move types from chess.hpp.
+     *? - nlohmann::json for opening book handling.
+    */
     public:
         Bot();
         Bot(std::string fen, char game_stage);
