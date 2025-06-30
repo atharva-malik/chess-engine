@@ -1,3 +1,19 @@
+/**
+ *  @file nnue_eval.cpp
+ *  @brief Provides wrapper functions for evaluating chess positions using an embedded NNUE network.
+ *
+ ** This file serves as the interface between the chess engine and an external NNUE (Efficiently Updatable Neural Network)
+ ** evaluator. It supports initialization and evaluation of positions using piece/square data arrays or a full FEN string.
+ ** Returned scores are normalized for better heuristic integration within the engine's evaluation framework.
+ *
+ *? Features:
+ *? - Lightweight wrappers over lower-level NNUE probing functions
+ *? - Score normalization from centipawns to pawn units
+ *? - FEN-based direct evaluation support for easy debugging or position analysis
+ *
+ *  @note The scores returned by `evaluate_fen_nnue` are halved for scaling compatibility with classical evaluation.
+*/
+
 #include "NNUE/nnue.cpp"
 #include "NNUE/misc.cpp"
 
@@ -15,7 +31,7 @@ int evaluate_nnue(int player, int *pieces, int *squares)
     return nnue_evaluate(player, pieces, squares);
 }
 
-// det NNUE score from FEN input
+// get NNUE score from FEN input
 float evaluate_fen_nnue(std::string fen)
 {
     // call NNUE probe lib function

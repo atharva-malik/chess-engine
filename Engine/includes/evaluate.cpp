@@ -1,4 +1,31 @@
+/**
+ *  @file evaluate.cpp
+ *  @brief Implements board evaluation functions for the Bot class in a chess engine.
+ *
+ ** This file defines evaluation logic used to estimate the strength of a board position
+ ** from White's perspective, based on heuristics such as piece-square tables and static
+ ** material values. It includes phase-weighted midgame evaluation as well as specialised
+ ** endgame evaluation tailored for different strategic priorities. These scores are used
+ ** by the engine to make decisions and compare candidate moves.
+ *
+ ** The evaluation pipeline leverages asynchronous computation to calculate endgame
+ ** evaluations concurrently with midgame analysis, improving overall performance.
+*/
+
+
 float Bot::eval_mid(Board board){
+    /**
+     * @brief Evaluates the board state during the midgame phase.
+     *
+     ** Calculates the midgame positional score based on piece-square tables for both sides.
+     ** Launches an asynchronous evaluation of the endgame using Bot::eval_end(), and blends the result
+     ** based on the current game phase (calculated by Bot::calculate_phase()) for a smooth transition
+     ** between midgame and endgame heuristics.
+     *
+     *  @param board The current game board to evaluate.
+     *  @return A floating-point score representing the evaluation from white's perspective
+     *          (positive = advantage to white, negative = advantage to black).
+    */
     int score = 0;
 
     Square sq;
@@ -73,6 +100,18 @@ float Bot::eval_mid(Board board){
 }
 
 float Bot::eval_end(Board board){
+    /**
+     *  @brief Evaluates the board state during the endgame phase.
+     *
+     ** Calculates a simplified endgame score by combining fixed piece values and endgame
+     ** piece-square tables. Emphasises king and pawn positioning, while assigning static values
+     ** to other pieces to reflect their strategic utility in the late game.
+     *
+     *  @param board The current game board to evaluate.
+     *  @return A floating-point score representing the evaluation from white's perspective
+     *          (positive = advantage to white, negative = advantage to black).
+    */
+
     int score = 0;
 
     Square sq;

@@ -1,1 +1,0 @@
-fastchess-windows-latest.exe -engine cmd=7.4.2.exe name=EngineV7.4.2-time-control -engine cmd=7.4.exe name=EngineV7.4-optimisations -each tc=10:00+1 -rounds 50 -repeat -concurrency 16 -openings file=book.pgn format=pgn order=random plies=5 -pgnout file=OUT.pgn notation=san

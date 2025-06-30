@@ -1,14 +1,50 @@
+/**
+ *  @file helpers.cpp
+ *  @brief Defines utility functions used throughout the chess engine for string manipulation,
+ *         UCI protocol message parsing, and standardised engine responses.
+ *
+ ** This file provides support routines for handling and parsing commands compliant with the
+ ** Universal Chess Interface (UCI), managing user input, formatting strings, and delegating
+ ** communication between the chess engine and the graphical user interface.
+ *
+ *? Key helper functions include:
+ *? - String manipulation: `trim()`, `lower()`, `split()`
+ *? - UCI protocol parsing and option handling: `ProcessPositionCommand()`, `DisplayOptions()`, `ProcessGoCommand()`
+ *? - Response formatting and logging: `Respond()`, `TryGetLabelledValue()`, `TryGetLabelledValueInt()`
+ *
+ ** These functions help simplify logic in higher-level modules like the UciPlayer and Bot classes,
+ ** improving modularity and code clarity across the engine’s control flow.
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
 #include "ucibot.cpp"
 
 
 namespace helpers
 {
+    /**
+     * @namespace helpers
+     * @brief A collection of utility functions that support UCI command parsing, string manipulation,
+     *        and communication for the chess engine.
+     *
+     ** The helpers namespace modularizes auxiliary tasks such as parsing engine options,
+     ** sanitizing input, formatting UCI-compliant responses, and extracting data from command strings.
+     ** These functions simplify engine logic and improve separation of concerns.
+    */
+    
     std::string trim(const std::string& str) {
+        /**
+         *  @brief Trims leading and trailing whitespace from a string.
+         *
+         *  @param str The input string to be trimmed.
+         *  @return A copy of the string with whitespace removed from both ends.
+        */
+
         // Find first non-whitespace character
         auto start = str.find_first_not_of(" \t\n\r");
     
@@ -25,11 +61,26 @@ namespace helpers
     }
 
     std::string lower(std::string s){
+        /**
+         *  @brief Splits a string into substrings based on the 'space' character
+         *         as a delimiter.
+         *
+         *  @param s The string to split.
+         *  @return A vector of substrings resulting from the split operation.
+        */
         std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c){ return std::tolower(c); });
         return s;
     }
 
     std::vector<std::string> split(const std::string& str, char delimiter) {
+        /**
+         * @brief Splits a string into substrings based on a delimiter.
+         *
+         * @param str The string to split.
+         * @param delimiter The character to split the string at.
+         * @return A vector of substrings resulting from the split operation.
+        */
+
         std::vector<std::string> tokens;
         std::stringstream ss(str);
         std::string token;
@@ -43,15 +94,39 @@ namespace helpers
     }
 
     void Respond(std::string message) {
+        /**
+         * @brief Outputs a message to the console and logs it to file.
+         *
+         * @param message The message string to output and log.
+        */
+
         std::cout << message << std::endl;
         Bot::LogToFile("Response sent: " + message);
     }
 
     bool stringContains(const std::string& str, const std::string& substring) {
+        /**
+         * @brief Checks if a substring exists within a string.
+         *
+         * @param str The string to search in.
+         * @param substring The substring to search for.
+         * @return True if substring exists within str; otherwise, false.
+        */
+
         return str.find(substring) != std::string::npos;
     }
 
     std::string TryGetLabelledValue(const std::string& text, const std::string& label, const std::vector<std::string>& allLabels, const std::string& defaultValue = "") {
+        /**
+         *  @brief Extracts the value associated with a given label from a UCI-style string.
+         *
+         *  @param text The input text containing multiple labels and values.
+         *  @param label The label to locate.
+         *  @param allLabels All known labels that might appear in the text.
+         *  @param defaultValue The value to return if no match is found.
+         *  @return The value corresponding to the label, or the defaultValue if not found.
+        */
+        
         std::string trimmedText = trim(text);
     
         if (trimmedText.find(label) != std::string::npos) {
@@ -74,6 +149,15 @@ namespace helpers
     }
 
     void DisplayOptions() {
+        /**
+         * @brief Displays the available UCI engine options to the interface.
+         *
+         * Outputs engine identification and declares a set of configurable UCI options.
+        */
+
+        //! These options are NOT changeable by the user.
+        //! They only exist to pass the UCI protocol requirements.
+
         Respond("id name Fury");
         Respond("id author Atharva\n");
 
@@ -102,6 +186,16 @@ namespace helpers
     }
 
     int TryGetLabelledValueInt(const std::string& text, const std::string& label, const std::vector<std::string>& allLabels, int defaultValue = 0) {
+        /**
+         *  @brief Extracts an integer value associated with a given label from a UCI-style string.
+         *
+         *  @param text The input string with labelled values.
+         *  @param label The label whose associated value is desired.
+         *  @param allLabels A list of all known labels.
+         *  @param defaultValue The default value to return if parsing fails.
+         *  @return The extracted integer value, or defaultValue if parsing fails.
+        */
+
         // Convert the default integer value to a string
         std::string defaultValueStr = std::to_string(defaultValue);
         
@@ -125,6 +219,16 @@ namespace helpers
 	// Or: 'position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 moves e2e4 e7e5'
 	// Note: 'moves' section is optional
     void ProcessPositionCommand(std::string message, UciPlayer& player) {
+        /**
+         *  @brief Parses a "position" command string and sets up the board for the UciPlayer.
+         *
+         ** Interprets FEN strings or standard starting positions and applies subsequent move history
+         ** if provided. Useful for setting the board in preparation for a "go" command.
+         *
+         *  @param message The UCI position command.
+         *  @param player A reference to the UciPlayer receiving the updated position.
+        */
+
         // FEN
         if (stringContains(lower(message), "startpos")){
             player.SetPosition("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
@@ -150,6 +254,51 @@ namespace helpers
     }
 
     void ProcessGoCommand(std::string message, UciPlayer& player) {
+        /**
+         *  @brief Handles the UCI "go" command by triggering move calculation.
+         *
+         **  Responds with the best move calculated by the UciPlayer and outputs it in UCI format.
+         *
+         *  @param message The raw UCI "go" command text.
+         *  @param player The UciPlayer instance tasked with move generation.
+        */
+        
         Respond("bestmove " + player.getBestMove());
+    }
+
+    void clearScreen() {
+        /**
+         *  @brief Clears the console screen.
+         *
+         **  Uses system-specific commands to clear the terminal or console output.
+        */
+        #if defined(_WIN32) || defined(_WIN64)
+            std::system("cls"); // For Windows
+        #else
+            std::system("clear"); // For Unix-based systems
+        #endif
+    } 
+
+    void PrintHelp() {
+        /**
+         *  @brief Outputs a help message listing available commands and their descriptions.
+         *
+         **  Provides users with a quick reference for interacting with the UCI engine.
+        */
+
+        Respond("Available commands:");
+        Respond("------------------------------------------------");
+        Respond("uci            - Display engine identification and options.");
+        Respond("isready        - Confirm engine is ready to process commands.");
+        Respond("ucinewgame     - Notify engine of a new game start.");
+        Respond("position <fen> - Set up the board with a specific FEN string.");
+        Respond("go commands:");
+        Respond("   go movetime [time in ms]                                                               - Calculate the best move based on current position.");
+        Respond("   go wtime [time in ms] btime [time in ms]                                               - Calculate the best move based on current position.");
+        Respond("   go wtime [time in ms] btime [time in ms] winc [increment in ms] binc [increment in ms] - Calculate the best move based on current position.");
+        Respond("quit           - Exit the engine gracefully.");
+        Respond("d              - Display the current board state");
+        Respond("cls            - Clear the screen.");
+        Respond("------------------------------------------------");
     }
 } // namespace helpers
