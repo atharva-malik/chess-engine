@@ -1,6 +1,3 @@
-// You are an expert in writing code documentation. I will provide you with the file/function and you are to write: - A header docstring if it is a file - A in-place docstring if it is function Follow industry standards
-// Doxygen-style in-place docstrings for each function
-
 /**
  *  @file main.cpp
  *  @brief Entry point for the UCI-compatible chess engine interface.
