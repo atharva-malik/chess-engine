@@ -58,8 +58,9 @@ void ReceiveCommand(std::string message, UciPlayer& player){
     else if (messageType == "quit") player.Quit();
     else if (messageType == "d") Bot::print_board(player.bot.board); //* display the board
     else if (messageType == "h" || messageType == "help") PrintHelp();
+    else if (messageType == "perft") ProcessPerftCommand(message, player);
     else if (messageType == "cls") clearScreen();
-    else Bot::LogToFile("Unrecognised command: " + messageType + " | " + message);
+    else Respond("Unrecognised command: " + messageType + " | " + message);
 }
 
 int main () {

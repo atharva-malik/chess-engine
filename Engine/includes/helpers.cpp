@@ -291,14 +291,122 @@ namespace helpers
         Respond("uci            - Display engine identification and options.");
         Respond("isready        - Confirm engine is ready to process commands.");
         Respond("ucinewgame     - Notify engine of a new game start.");
-        Respond("position <fen> - Set up the board with a specific FEN string.");
+        Respond("position commands:");
+        Respond("   position startpos               - Set up the board with the starting position.");
+        Respond("   position startpos moves <moves> - Set up the board with the starting position and apply a sequence of moves.");
+        Respond("   position <fen>                  - Set up the board with a specific FEN string.");
+        Respond("   position <fen> moves <moves>    - Set up the board with a specific FEN string and apply a sequence of moves.");
         Respond("go commands:");
         Respond("   go movetime [time in ms]                                                               - Calculate the best move based on current position.");
         Respond("   go wtime [time in ms] btime [time in ms]                                               - Calculate the best move based on current position.");
         Respond("   go wtime [time in ms] btime [time in ms] winc [increment in ms] binc [increment in ms] - Calculate the best move based on current position.");
+        Respond("perft commands:");
+        Respond("   perft [depth]    - Run a perft test at a given depth.");
+        Respond("   perft -v [depth] - Run a verbose perft test at a given depth.");
         Respond("quit           - Exit the engine gracefully.");
         Respond("d              - Display the current board state");
         Respond("cls            - Clear the screen.");
         Respond("------------------------------------------------");
+    }
+
+    uint64_t perft(int depth, Board board) {
+        /**
+         *  @brief Computes the perft (performance test) node count for a given search depth.
+         *
+         ** Recursively calculates the number of legal move sequences (nodes) from the current board
+         ** position up to the specified depth. This is typically used for debugging and verifying
+         ** the correctness of move generation in chess engines.
+         *
+         *  @param depth The search depth to explore. A depth of 1 returns the count of legal moves.
+         *  @param board The current board position.
+         *  @return The total number of leaf nodes reachable from this position at the given depth.
+         *
+         *  @note Assumes move generation is fully legal and uses move application with state tracking.
+         *! @warning This function performs a full brute-force enumeration and is computationally expensive.
+        */
+        Movelist moves;
+        movegen::legalmoves(moves, board);
+    
+        if (depth == 1) {
+            return moves.size();
+        }
+    
+        uint64_t nodes = 0;
+    
+        for (const auto& move : moves) {
+            board.makeMove<true>(move);
+            nodes += perft(depth - 1, board);
+            board.unmakeMove(move);
+        }
+    
+        return nodes;
+    }
+
+    void perft_verbose(int depth, Board board) {
+        /**
+         *  @brief Performs a verbose perft test and prints node counts for each legal move.
+         *
+         ** Generates all legal moves from the current position and, for each move, recursively calculates
+         ** the number of leaf nodes reachable within the specified depth. Prints each move and its corresponding
+         ** node count to the console for debugging and verification purposes.
+         *
+         *  @param depth The number of plies to search (depth-1 is passed to the perft function).
+         *  @param board The current board state to begin the test from.
+         *
+         *  @note The output includes per-move node counts followed by a total node count summary.
+         *! @warning As depth increases, this function can become computationally expensive and verbose.
+        */
+
+        Movelist moves;
+        movegen::legalmoves(moves, board);
+        
+        if (depth < 1) {
+            Respond("Depth must be at least 1 for perft_verbose.");
+            return;
+        }
+        else if (depth == 1) {
+            Respond("nodes: " + std::to_string(moves.size()));
+            return;
+        }
+        uint64_t nodes = 0;
+        uint64_t result = 0;
+        auto t0 = std::chrono::high_resolution_clock::now();
+        for (const auto& move : moves) {
+            std::cout << uci::moveToUci(move) << ": ";
+            board.makeMove<true>(move);
+            result = perft(depth - 1, board);
+            std::cout << result << std::endl;
+            board.unmakeMove(move);
+            nodes += result;
+        }
+        auto t1 = std::chrono::high_resolution_clock::now();
+        auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+
+        Respond("\n\nnodes: " + std::to_string(nodes) + " nps: " + std::to_string((nodes * 1000) / (ms + 1)) + " ms: " + std::to_string(ms));
+    }
+
+    void ProcessPerftCommand(std::string message, UciPlayer& player) {
+        /**
+         *  @brief Processes a "perft" command to calculate the number of legal moves from the current position.
+         *
+         **  This function interprets the perft command and outputs the result in a UCI-compliant format.
+         *
+         *  @param message The raw UCI "perft" command text.
+         *  @param player The UciPlayer instance managing the current game state.
+        */
+
+        // Extract depth from command
+        int depth = TryGetLabelledValueInt(message, "depth", {"perft", "depth"}, 1);
+        if (stringContains(lower(message), "-v")) {
+            Respond("Running perft with depth " + std::to_string(depth) + " (verbose mode)");
+            perft_verbose(depth, player.bot.board);
+        } else {
+            Respond("Running perft with depth " + std::to_string(depth));
+            auto t0 = std::chrono::high_resolution_clock::now();
+            auto nodes = perft(depth, player.bot.board);
+            auto t1 = std::chrono::high_resolution_clock::now();
+            auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
+            Respond("nodes: " + std::to_string(nodes) + " nps: " + std::to_string((nodes * 1000) / (ms + 1)) + " ms: " + std::to_string(ms));
+        }
     }
 } // namespace helpers

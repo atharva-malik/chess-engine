@@ -30,8 +30,7 @@ float Bot::negamax(int depth, float alpha, float beta, Board& board){
     */
     std::pair<GameResultReason, GameResult> isGameOver = board.isGameOver();
     if (isGameOver.first == GameResultReason::CHECKMATE){
-        if (board.sideToMove() == Color::WHITE) return -9999.0f * depth; //* Prefer faster checkmates
-        else return -9999.0f * depth; //* Prefer faster checkmates
+        return -9999.0f * depth; //* Prefer faster checkmates
     } else if (!(isGameOver.first == GameResultReason::NONE)){
         return 0.0f;
     }
