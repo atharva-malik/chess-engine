@@ -55,10 +55,11 @@ void ReceiveCommand(std::string message, UciPlayer& player){
     else if (messageType == "ucinewgame") player.NotifyNewGame();
     else if (messageType == "position") ProcessPositionCommand(message, player);
     else if (messageType == "go") ProcessGoCommand(message, player);
-    else if (messageType == "quit") player.Quit();
+    else if (messageType == "quit" || messageType == "exit" || messageType == "q") player.Quit();
     else if (messageType == "d") Bot::print_board(player.bot.board); //* display the board
     else if (messageType == "h" || messageType == "help") PrintHelp();
     else if (messageType == "perft") ProcessPerftCommand(message, player);
+    else if (messageType == "eval") ProcessEvalCommand(message, player);
     else if (messageType == "cls") clearScreen();
     else Respond("Unrecognised command: " + messageType + " | " + message);
 }
@@ -80,7 +81,7 @@ int main () {
     
     UciPlayer player;
     std::string command = "";
-    while (lower(command) != "quit")
+    while (lower(command) != "quit" && lower(command) != "exit" && lower(command) != "q")
     {
         std::getline(std::cin, command);
         ReceiveCommand(command, player);

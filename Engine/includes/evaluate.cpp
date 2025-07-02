@@ -183,3 +183,23 @@ float Bot::eval_end(Board board){
     
     return score/100.0f;
 }
+
+float Bot::stat_eval(Board board, int depth=-1) {
+    /**
+     *  @brief Static evaluation function for the board.
+     *
+     ** This function evaluates the board state using a combination of midgame and endgame evaluations,
+     ** depending on the current game phase. It uses Bot::eval_mid() and Bot::eval_end() to get the scores
+     ** and blends them based on the phase of the game.
+     *
+     *  @param board The current game board to evaluate.
+     *  @param depth The search depth (not used in this static evaluation).
+     *  @return A floating-point score representing the evaluation from white's perspective
+     *          (positive = advantage to white, negative = advantage to black).
+    */
+
+    if (depth != -1){
+        return this->negamax(depth, -1000000.0f, 1000000.0f, board);
+    }
+    return this->negamax(0, -1000000.0f, 1000000.0f, board);
+}

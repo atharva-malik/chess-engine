@@ -288,9 +288,10 @@ namespace helpers
 
         Respond("Available commands:");
         Respond("------------------------------------------------");
-        Respond("uci            - Display engine identification and options.");
-        Respond("isready        - Confirm engine is ready to process commands.");
-        Respond("ucinewgame     - Notify engine of a new game start.");
+        Respond("uci               - Display engine identification and options.");
+        Respond("isready           - Confirm engine is ready to process commands.");
+        Respond("ucinewgame        - Notify engine of a new game start.");
+        Respond("eval [-d] <depth> - Evaluate the current position with a specified depth (defaults to 1).");
         Respond("position commands:");
         Respond("   position startpos               - Set up the board with the starting position.");
         Respond("   position startpos moves <moves> - Set up the board with the starting position and apply a sequence of moves.");
@@ -407,6 +408,27 @@ namespace helpers
             auto t1 = std::chrono::high_resolution_clock::now();
             auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0).count();
             Respond("nodes: " + std::to_string(nodes) + " nps: " + std::to_string((nodes * 1000) / (ms + 1)) + " ms: " + std::to_string(ms));
+        }
+    }
+
+    void ProcessEvalCommand(std::string message, UciPlayer& player) {
+        /**
+         *  @brief Processes an "eval" command to evaluate the current board position.
+         *
+         **  This function interprets the eval command and outputs the evaluation score in a UCI-compliant format.
+         *
+         *  @param message The raw UCI "eval" command text.
+         *  @param player The UciPlayer instance managing the current game state.
+        */
+
+        int depth = TryGetLabelledValueInt(message, "-d", {"eval", "-d"}, -1);
+        int eval = player.bot.stat_eval(player.bot.board, depth);
+        if (eval > -9999.0f && eval < 9999.0f) {
+            Respond("Eval: " + std::to_string(eval));
+        } else {
+            // If eval is outside the range, we assume it's a mate score
+            int mateScore = depth - std::floor(std::abs(eval) / 9999);
+            Respond("Eval: #" + std::to_string(mateScore));
         }
     }
 } // namespace helpers

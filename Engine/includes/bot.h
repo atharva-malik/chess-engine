@@ -292,6 +292,8 @@ class Bot{
         
         static void LogToFile(const std::string& message);
 
+        float stat_eval(Board board, int depth);
+
     private:
         json openings_data;
         PieceTables piece_tables;
