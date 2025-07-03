@@ -6,6 +6,7 @@
 # User-added files
 docs/.vitepress/dist
 docs/.vitepress/cache
+docs/
 
 # User-specific files
 *.rsuser
