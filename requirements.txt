@@ -1,4 +1,0 @@
-chess
-psutil
-cython
-setuptools
