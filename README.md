@@ -30,7 +30,16 @@ g++ -Ofast -march=native main.cpp -o engine
 If you do not want to compile the engine yourself, you can download the pre-compiled binaries from the [Releases](https://github.com/atharva-malik/chess-engine/releases/tag/v8.1) page. It has been pre-compiled for `x64` on `Windows`. If you encounter any issues with the pre-compiled binaries, please compile your own version using the instructions above.
 
 ### Hosting
-To host the engine on Lichess, you can use the [Lichess Bot Hosting](https://github.com/lichess-bot-devs/lichess-bot) repository. Create a Lichess account, then follow the instructions in the repository to set up your bot. Once you have your bot set up, you can place the compiled `engine` executable in the `engines` folder of the Lichess Bot Hosting repository. Make sure to set the correct permissions for the executable in the `config.yml` file. Again, refer to the Lichess Bot Hosting repository for detailed instructions.
+To host the engine on Lichess, you can use the [Lichess Bot Hosting](https://github.com/lichess-bot-devs/lichess-bot) repository. Create a Lichess account, then follow the instructions in the repository to set up your bot. Once you have your bot set up, you can place the compiled `engine` executable in the `engines` folder of the Lichess Bot Hosting repository. Make sure to set the correct permissions for the executable in the `config.yml` file. Again, refer to the Lichess Bot Hosting 
+repository for detailed instructions.
+
+## Credits
+Finally, I want to thank the following people/organisations for their contributions to this project:
+- [Niels Lohmann](https://github.com/nlohmann/json/) - For providing the JSON library for C++ which allowed the creation of the opening book to be as simple as it was.
+- [Max (Disservin)](https://github.com/Disservin/chess-library) - For providing the blazing fast library that is at the backbone of the chess engine, without which the engine might not be performing as fast as it is.
+- [Sebastian Lague](https://github.com/SebLague/Chess-Coding-Adventure) - For providing the idea and motivation for this project
+- [Chess Programming](https://github.com/maksimKorzh) - For teaching me how chess engines work in the backend.
+- [Stockfish Evaluation Guide](https://hxim.github.io/Stockfish-Evaluation-Guide/) - For providing a simple, yet powerful, graphical tool to understand how NNUEs work
 
 ## Development
 
